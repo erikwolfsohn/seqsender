@@ -3,7 +3,7 @@ ARG micromamba_version
 ARG micromamba_version=${micromamba_version:-1.5.3}
 
 ############# base image ##################
-FROM --platform=$BUILDPLATFORM google/cloud-sdk:489.0.0-stable AS base
+FROM --platform=$BUILDPLATFORM google/cloud-sdk:489.0.0-stable as base
 
 # local apt mirror support
 # start every stage with updated apt sources
@@ -13,13 +13,13 @@ RUN apt-get update --allow-releaseinfo-change --fix-missing
 
 ############# micromamba image ##################
 
-FROM --platform=$BUILDPLATFORM mambaorg/micromamba:${micromamba_version} AS micromamba
+FROM --platform=$BUILDPLATFORM mambaorg/micromamba:${micromamba_version} as micromamba
 RUN echo "Getting micromamba image"
 
 ############# Build Stage: Final ##################
 
 # Build the final image 
-FROM base AS final
+FROM base as final
 
 # if image defaults to a non-root user, then we may want to make the
 # next 3 ARG commands match the values in our image. 
