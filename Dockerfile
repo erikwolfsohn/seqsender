@@ -3,7 +3,7 @@ ARG micromamba_version
 ARG micromamba_version=${micromamba_version:-1.5.3}
 
 ############# base image ##################
-FROM --platform=$BUILDPLATFORM ubuntu:focal as base
+FROM --platform=$BUILDPLATFORM google/cloud-sdk:489.0.0-stable as base
 
 # local apt mirror support
 # start every stage with updated apt sources
@@ -44,15 +44,21 @@ RUN apt-get update --allow-releaseinfo-change --fix-missing \
   && apt-get install --no-install-recommends -y \
   dos2unix \
   ca-certificates \
+  git \
   && apt clean autoclean \
   && apt autoremove --yes \
   && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
+ARG REPO_URL="https://github.com/erikwolfsohn/seqsender.git"
+ARG REPO_BRANCH="seqsender_gisaid_dev"
+
+RUN git clone --branch ${REPO_BRANCH} ${REPO_URL} /seqsender
+
 # Create working directory 
-ENV WORKDIR=/data
+ENV WORKDIR=/seqsender
 
 # Set up volume directory
-VOLUME ${WORKDIR}
+#VOLUME ${WORKDIR}
 
 # Set up working directory
 WORKDIR ${WORKDIR}
@@ -61,18 +67,18 @@ WORKDIR ${WORKDIR}
 RUN chmod -R a+rwx ${WORKDIR}
 
 # Create a program variable
-ENV PROJECT_DIR=/seqsender
+#ENV PROJECT_DIR=/seqsender
 
 # Set up a volume directory 
-VOLUME ${PROJECT_DIR}
+#VOLUME ${PROJECT_DIR}
 
 # Copy all files to project directory
-COPY . ${PROJECT_DIR}
+#COPY . ${PROJECT_DIR}
 
 ############ Set-up micromamba environment ##################
 
 # Copy requirement files to program directory
-COPY env.yaml "${PROJECT_DIR}/env.yaml"
+#COPY env.yaml "${PROJECT_DIR}/env.yaml"
 
 # Set up environments
 RUN micromamba install --yes --name base -f "${PROJECT_DIR}/env.yaml" \
