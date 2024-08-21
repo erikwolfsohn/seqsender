@@ -97,7 +97,6 @@ def filter_table_by_biosample(table, biosample_schema, static_metadata, reposito
 
 def filter_table_by_sra(table, static_metadata, repository_column_map, entity_id, outdir, cloud_uri = None) -> Tuple [pd.DataFrame, list, list]:
 	table = table.copy()
-	
 	# set Terra variables here
 	mandatory_list = [entity_id, "sample_name", "library_name", "library_strategy", "library_source", "library_selection", "library_layout", "platform", "instrument_model", "design_description", "file_1", "platform","file_location"]
 	optional_list = ["file_2","file_3","file_4","assembly","fasta_file", "biosample_accession"]
@@ -121,14 +120,14 @@ def filter_table_by_sra(table, static_metadata, repository_column_map, entity_id
 	filtered_table_df.columns = ['sra-' + col for col in filtered_table_df.columns]
 
 	# prettify the filenames and rename them to be sra compatible
-	filtered_table_df["sra-file_1"] = filtered_table_df["sra-file_1"].map(lambda filename: filename.split('/').pop())
 	filtered_table_df["sra-file_1"].to_csv(f'{outdir}/filepaths.csv', index=False, header=False) # make a file that contains the names of all the reads so we can use gsutil -m cp
 	if cloud_uri:
+		filtered_table_df["sra-file_1"] = filtered_table_df["sra-file_1"].map(lambda filename: filename.split('/').pop())
 		filtered_table_df["sra-file_1"] = filtered_table_df["sra-file_1"].map(lambda filename: cloud_uri + filename if pd.notna(filename) else filename)
-	if "sra-file_2" in filtered_table_df.columns:
-		filtered_table_df["sra-file_2"] = filtered_table_df["sra-file_2"].map(lambda filename2: filename2.split('/').pop())  
+	if "sra-file_2" in filtered_table_df.columns:  
 		filtered_table_df["sra-file_2"].to_csv(f'{outdir}/filepaths.csv', mode='a', index=False, header=False)
 		if cloud_uri:
+			filtered_table_df["sra-file_2"] = filtered_table_df["sra-file_2"].map(lambda filename2: filename2.split('/').pop())
 			filtered_table_df["sra-file_2"] = filtered_table_df["sra-file_2"].map(lambda filename2: cloud_uri + filename2 if pd.notna(filename2) else filename2)
 
 	return filtered_table_df, missing_mandatory, mandatory_list
