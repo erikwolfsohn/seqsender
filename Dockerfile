@@ -52,57 +52,18 @@ RUN apt-get update --allow-releaseinfo-change --fix-missing \
 ARG REPO_URL="https://github.com/erikwolfsohn/seqsender.git"
 ARG REPO_BRANCH="seqsender-terra-submission"
 
-RUN git clone --branch ${REPO_BRANCH} ${REPO_URL} /seqsender
+RUN git clone --branch ${REPO_BRANCH} ${REPO_URL} /seqsender \
+	&& chmod a+x /seqsender/*.py
 
-# Create working directory 
-ENV WORKDIR=/seqsender
+RUN micromamba install --yes --name base -f "/seqsender/env.yaml" \
+    && micromamba clean --all --yes \
+	&& mkdir /data
 
-# Set up volume directory
-#VOLUME ${WORKDIR}
+ENV PATH=${PATH}:/seqsender \
+	LC_ALL=C
 
-# Set up working directory
-WORKDIR ${WORKDIR}
-
-# Allow permission to read and write to working directory
-RUN chmod -R a+rwx ${WORKDIR}
-
-# Create a program variable
-#ENV PROJECT_DIR=/seqsender
-
-# Set up a volume directory 
-#VOLUME ${PROJECT_DIR}
-
-# Copy all files to project directory
-#COPY . ${PROJECT_DIR}
-
-############ Set-up micromamba environment ##################
-
-# Copy requirement files to program directory
-#COPY env.yaml "${PROJECT_DIR}/env.yaml"
-
-# Set up environments
-RUN micromamba install --yes --name base -f "${WORKDIR}/env.yaml" \
-    && micromamba clean --all --yes
-
-############# Launch PROGRAM ##################
-
-# Copy bash script to run PROGRAM to docker image
-# COPY seqsender-kickoff "${PROJECT_DIR}/seqsender-kickoff"
-
-# Convert bash script from Windows style line endings to Unix-like control characters
-RUN dos2unix "${WORKDIR}/seqsender-kickoff"
-
-# Allow permission to excute the bash script
-# RUN chmod a+x "${PROJECT_DIR}/seqsender-kickoff"
-
-# Allow permission to read and write to program directory
-RUN chmod a+rwx ${WORKDIR}
-
-# Export bash script to path
-ENV PATH="$PATH:${WORKDIR}"
-
-# Activate conda environment
 ENV PATH="$PATH:${MAMBA_ROOT_PREFIX}/bin"
 
-# Execute the pipeline 
-# ENTRYPOINT ["tail", "-f", "/dev/null"]
+WORKDIR /data
+
+CMD cd /data && python seqsender.py --help
