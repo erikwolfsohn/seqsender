@@ -124,7 +124,7 @@ def filter_table_by_sra(table, static_metadata, repository_column_map, entity_id
 	filtered_table_df["sra-file_1"] = filtered_table_df["sra-file_1"].map(lambda filename: filename.split('/').pop())
 	if cloud_uri:
 		filtered_table_df["sra-file_1"] = filtered_table_df["sra-file_1"].map(lambda filename: cloud_uri + filename if pd.notna(filename) else filename)
-	filtered_table_df["sra-file_1"].to_csv("/home/ewolfsohn/git_repositories/public_health_bioinformatics/tasks/utilities/submission/filepaths.csv", index=False, header=False) # make a file that contains the names of all the reads so we can use gsutil -m cp
+	filtered_table_df["sra-file_1"].to_csv(f'{outdir}/filepaths.csv', index=False, header=False) # make a file that contains the names of all the reads so we can use gsutil -m cp
 	if "sra-file_2" in filtered_table_df.columns:
 		if cloud_uri:
 			filtered_table_df["sra-file_1"] = filtered_table_df["sra-file_1"].map(lambda filename: cloud_uri + filename if pd.notna(filename) else filename)

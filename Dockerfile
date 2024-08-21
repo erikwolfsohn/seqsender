@@ -3,7 +3,7 @@ ARG micromamba_version
 ARG micromamba_version=${micromamba_version:-1.5.3}
 
 ############# base image ##################
-FROM --platform=$BUILDPLATFORM google/cloud-sdk:489.0.0-stable as base
+FROM --platform=$BUILDPLATFORM google/cloud-sdk:489.0.0-stable AS base
 
 # local apt mirror support
 # start every stage with updated apt sources
@@ -13,13 +13,13 @@ RUN apt-get update --allow-releaseinfo-change --fix-missing
 
 ############# micromamba image ##################
 
-FROM --platform=$BUILDPLATFORM mambaorg/micromamba:${micromamba_version} as micromamba
+FROM --platform=$BUILDPLATFORM mambaorg/micromamba:${micromamba_version} AS micromamba
 RUN echo "Getting micromamba image"
 
 ############# Build Stage: Final ##################
 
 # Build the final image 
-FROM base as final
+FROM base AS final
 
 # if image defaults to a non-root user, then we may want to make the
 # next 3 ARG commands match the values in our image. 
@@ -50,7 +50,7 @@ RUN apt-get update --allow-releaseinfo-change --fix-missing \
   && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 ARG REPO_URL="https://github.com/erikwolfsohn/seqsender.git"
-ARG REPO_BRANCH="seqsender_gisaid_dev"
+ARG REPO_BRANCH="seqsender-terra-submission"
 
 RUN git clone --branch ${REPO_BRANCH} ${REPO_URL} /seqsender
 
@@ -81,28 +81,28 @@ RUN chmod -R a+rwx ${WORKDIR}
 #COPY env.yaml "${PROJECT_DIR}/env.yaml"
 
 # Set up environments
-RUN micromamba install --yes --name base -f "${PROJECT_DIR}/env.yaml" \
+RUN micromamba install --yes --name base -f "${WORKDIR}/env.yaml" \
     && micromamba clean --all --yes
 
 ############# Launch PROGRAM ##################
 
 # Copy bash script to run PROGRAM to docker image
-COPY seqsender-kickoff "${PROJECT_DIR}/seqsender-kickoff"
+# COPY seqsender-kickoff "${PROJECT_DIR}/seqsender-kickoff"
 
 # Convert bash script from Windows style line endings to Unix-like control characters
-RUN dos2unix "${PROJECT_DIR}/seqsender-kickoff"
+RUN dos2unix "${WORKDIR}/seqsender-kickoff"
 
 # Allow permission to excute the bash script
-RUN chmod a+x "${PROJECT_DIR}/seqsender-kickoff"
+# RUN chmod a+x "${PROJECT_DIR}/seqsender-kickoff"
 
 # Allow permission to read and write to program directory
-RUN chmod a+rwx ${PROJECT_DIR}
+RUN chmod a+rwx ${WORKDIR}
 
 # Export bash script to path
-ENV PATH="$PATH:${PROJECT_DIR}"
+ENV PATH="$PATH:${WORKDIR}"
 
 # Activate conda environment
 ENV PATH="$PATH:${MAMBA_ROOT_PREFIX}/bin"
 
 # Execute the pipeline 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+# ENTRYPOINT ["tail", "-f", "/dev/null"]
