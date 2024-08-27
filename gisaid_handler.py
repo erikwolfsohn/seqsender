@@ -16,6 +16,7 @@ from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 import re
+import json
 
 import upload_log
 import tools
@@ -75,6 +76,7 @@ def process_gisaid_log(log_file: str, submission_dir: str) -> pd.DataFrame:
 	with open(log_file, "r") as file:
 		line = file.readline().strip()
 		while line:
+			line2 = json.loads(line)
 			# If accession generated record it
 			# Pattern options: "msg:": "<Sample Name>; <EPI_ISL/EPI_ID>_<Accession Numbers>" OR <epi_isl_id/epi_id>: <Sample Name>; <EPI_ISL/EPI_ID>_<Accession Numbers>
 			# Changed re.match to re.search to return tokens that aren't at the beginning. Changed the regex to capture an arbitrary amount of numbers after EPI_
@@ -88,6 +90,20 @@ def process_gisaid_log(log_file: str, submission_dir: str) -> pd.DataFrame:
 					gisaid_isolate_log.append({"gs-sample_name":sample_name, "gisaid_accession_epi_isl_id":accession})
 				elif re.match("EPI\d+", accession):
 					gisaid_segment_log.append({"gs-segment_name":sample_name, "gisaid_accession_epi_id":accession})
+			# handling if submitting samples that have already been registered in GISAID
+			elif re.search(r'"code":\s*"validation_error".*?already exists;\s*existing_virus_name:', line):
+				sample_name = re.search(r"(hCoV[^;]+);", line)
+				sample_name = sample_name.group(1) if sample_name else None
+				if re.search(r"\['(EPI_ISL_\d+)'\]", line):
+					accession =  re.search(r"\['(EPI_ISL_\d+)'\]", line)
+					accession = accession.group(1)
+					gisaid_isolate_log.append({"gs-sample_name":sample_name, "gisaid_accession_epi_isl_id":accession})
+				elif re.search(r"\['(EPI_\d+)'\]", line):
+					accession = re.search(r"\['(EPI_\d+)'\]", line)
+					accession = accession.group(1)
+					gisaid_segment_log.append({"gs-segment_name":sample_name, "gisaid_accession_epi_id":accession})
+			else:
+				print("Finished reading GISAID log. If workflow has failed here, it's likely no GISAID IDs were returned. Check results in GISAID upload log.")
 			line = file.readline().strip()
 	gisaid_isolate_df = pd.DataFrame(gisaid_isolate_log)
 	gisaid_segment_df = pd.DataFrame(gisaid_segment_log)

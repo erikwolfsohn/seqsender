@@ -1,5 +1,3 @@
-# Create an argument to pull a particular version of micromamba image
-ARG micromamba_version
 ARG micromamba_version=${micromamba_version:-1.5.3}
 
 ############# base image ##################
@@ -18,7 +16,6 @@ RUN echo "Getting micromamba image"
 
 ############# Build Stage: Final ##################
 
-# Build the final image 
 FROM base as final
 
 # if image defaults to a non-root user, then we may want to make the
@@ -59,6 +56,8 @@ RUN micromamba install --yes --name base -f "/seqsender/env.yaml" \
     && micromamba clean --all --yes \
 	&& mkdir /data
 
+RUN micromamba install --yes --name base --channel conda-forge --channel bioconda tqdm=4.66.5=pyhd8ed1ab_0 firecloud=0.16.37=pyhdfd78af_0
+
 ENV PATH=${PATH}:/seqsender \
 	LC_ALL=C
 
@@ -66,4 +65,4 @@ ENV PATH="$PATH:${MAMBA_ROOT_PREFIX}/bin"
 
 WORKDIR /data
 
-CMD cd /data && python seqsender.py --help
+CMD cd /data && python /seqsender/seqsender.py --help
