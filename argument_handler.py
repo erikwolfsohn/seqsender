@@ -72,7 +72,7 @@ def args_parser():
 		required=True)
 	file_parser.add_argument("--fasta_file",
 		help="Fasta file used to generate submission files; fasta header should match the column 'sequence_name' stored in your metadata. Input either full file path or if just file name it must be stored at '<submission_dir>/<submission_name>/<fasta_file>'.",
-		required=True)
+		default = None)
 	file_parser.add_argument("--table2asn",
 		help="Perform a table2asn submission instead of GenBank FTP submission for organism choices 'FLU' or 'COV'.",
 		required=False,
