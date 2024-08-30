@@ -142,8 +142,10 @@ def create_submission_xml(organism: str, database: str, submission_name: str, co
 			# Remove columns with bs-prefix that are not attributes
 			biosample_cols = [col for col in database_df.columns.tolist() if (col.startswith('bs-')) and (col not in ["bs-sample_name", "bs-package", "bs-description"])]
 			for col in biosample_cols:
-				attribute = etree.SubElement(attributes, "Attribute", attribute_name=col.replace("bs-",""))
-				attribute.text = row[col]
+				attribute_value = row[col]
+				if pd.notnull(attribute_value) and attribute_value.strip() != "":
+					attribute = etree.SubElement(attributes, "Attribute", attribute_name=col.replace("bs-",""))
+					attribute.text = row[col]
 			# Add collection date to Attributes
 			attribute = etree.SubElement(attributes, "Attribute", attribute_name="collection_date")
 			attribute.text = row["collection_date"]
@@ -176,8 +178,10 @@ def create_submission_xml(organism: str, database: str, submission_name: str, co
 			# Remove columns with sra- prefix that are not attributes
 			sra_cols = [col for col in database_df.columns.tolist() if col.startswith('sra-') and not re.match("(sra-sample_name|sra-file_location|sra-file_\d*)", col)]
 			for col in sra_cols:
-				attribute = etree.SubElement(addfiles, "Attribute", name=col.replace("sra-",""))
-				attribute.text = row[col]
+				attribute_value = row[col]
+				if pd.notnull(attribute_value) and attribute_value.strip() != "":
+					attribute = etree.SubElement(addfiles, "Attribute", name=col.replace("sra-",""))
+					attribute.text = row[col]
 			if pd.notnull(row["bioproject"]) and row["bioproject"].strip() != "":
 				attribute_ref_id = etree.SubElement(addfiles, "AttributeRefId", name="BioProject")
 				refid = etree.SubElement(attribute_ref_id, "RefId")
