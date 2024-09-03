@@ -16,7 +16,6 @@ from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 import re
-import json
 
 import upload_log
 import tools
@@ -76,7 +75,6 @@ def process_gisaid_log(log_file: str, submission_dir: str) -> pd.DataFrame:
 	with open(log_file, "r") as file:
 		line = file.readline().strip()
 		while line:
-			line2 = json.loads(line)
 			# If accession generated record it
 			# Pattern options: "msg:": "<Sample Name>; <EPI_ISL/EPI_ID>_<Accession Numbers>" OR <epi_isl_id/epi_id>: <Sample Name>; <EPI_ISL/EPI_ID>_<Accession Numbers>
 			# Changed re.match to re.search to return tokens that aren't at the beginning. Changed the regex to capture an arbitrary amount of numbers after EPI_
