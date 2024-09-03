@@ -58,7 +58,7 @@ def create_manual_submission_files(database: str, submission_dir: str, metadata:
 		column_ordered = ["sample_name","library_ID"]
 		prefix = "sra-"
 		# Create SRA specific fields
-		if 'sra-title' not in metadata.columns or (metadata['sra-title'].fillna('') == '').any(): 
+		if 'sra-title' not in metadata.columns or metadata['sra-title'].isnull().any() or (metadata['sra-title'] == '').any():
 			metadata["sra-title"] = config_dict["Description"]["Title"]
 		filename_cols = [col for col in metadata.columns.tolist() if re.match("sra-file_[1-9]\d*", col)]
 		# Correct index for filename column
