@@ -52,7 +52,7 @@ schema = DataFrameSchema(
 			nullable=True,
 			unique=False,
 			coerce=False,
-			required=True,
+			required=False,
 			description="At least one required: Group \"Host\". The natural (as opposed to laboratory) host to the organism from which the sample was obtained. Use the full taxonomic name, eg, \"Homo sapiens\".",
 			title="host",
 		),
@@ -62,7 +62,7 @@ schema = DataFrameSchema(
 			nullable=True,
 			unique=False,
 			coerce=False,
-			required=True,
+			required=False,
 			description="At least one required: Group \"Host\". Scientific name and description of the laboratory host used to propagate the source organism or material from which the sample was obtained, e.g., Escherichia coli DH5a, or Homo sapiens HeLa cells",
 			title="lab host",
 		),
@@ -282,7 +282,7 @@ schema = DataFrameSchema(
 		)
 	},
 	checks=[
-		Check(lambda df: ~(df["bs-host"].isnull() & df["bs-lab_host"].isnull()), ignore_na = False),
+		Check(lambda df, cols=["bs-host", "bs-lab_host"]: ~df.reindex(columns=cols).isnull().all(axis=1), ignore_na = False),
 	],
 	index=None,
 	coerce=False,

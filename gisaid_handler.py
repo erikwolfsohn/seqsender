@@ -105,10 +105,32 @@ def process_gisaid_log(log_file: str, submission_dir: str) -> pd.DataFrame:
 				sample_name = gisaid_string_list[0].strip()
 				accession_string = gisaid_string_list[1].strip()
 				if re.match(r"EPI_ISL_\d+", accession_string):
-					gisaid_isolate_log.append({"gs-sample_name":sample_name, "gisaid_accession_epi_isl_id":accession_string})
+					gisaid_isolate_log.append({"gs-sample_name":sample_name, "gisaid_accession_epi_isl_id":accession_string, "gisaid_message":"Successfully uploaded"})
 				elif re.match(r"EPI\d+", accession_string):
-					gisaid_segment_log.append({"gs-segment_name":sample_name, "gisaid_accession_epi_id":accession_string})
-			# Handling if submitting samples have already been registered in GISAID
+					gisaid_segment_log.append({"gs-segment_name":sample_name, "gisaid_accession_epi_id":accession_string, "gisaid_message":"Successfully uploaded"})
+			elif re.search(r"(?i)SUCCESS;\s+\S.*assigned to accession:\s*EPI_", line):
+				success_search = re.search(r"(?i)SUCCESS;\s+(\S.*?)\s+assigned to accession:\s*(EPI_(?:ISL_)?\d+)", line)
+				if success_search:
+					sample_name = success_search.group(1).strip()
+					accession_string = success_search.group(2).strip()
+					if re.match(r"EPI_ISL_\d+", accession_string):
+						gisaid_isolate_log.append({"gs-sample_name":sample_name, "gisaid_accession_epi_isl_id":accession_string, "gisaid_message":"Successfully uploaded"})
+					elif re.match(r"EPI_\d+", accession_string):
+						gisaid_segment_log.append({"gs-segment_name":sample_name, "gisaid_accession_epi_id":accession_string, "gisaid_message":"Successfully uploaded"})
+			# Handling if submitting samples have already been registered in GISAID (WARNING plain-text format)
+			elif re.search(r"(?i)WARNING;\s+\S.*;\s*validation_error;.*already exists.*existing_ids:", line):
+				sample_name_search = re.search(r"(?i)WARNING;\s+(\S[^;]+);", line)
+				if sample_name_search:
+					sample_name = sample_name_search.group(1).strip()
+					if re.search(r"\['(EPI_ISL_\d+)'\]", line):
+						accession_search = re.search(r"\['(EPI_ISL_\d+)'\]", line)
+						accession = accession_search.group(1) if accession_search else ""
+						gisaid_isolate_log.append({"gs-sample_name":sample_name, "gisaid_accession_epi_isl_id":accession, "gisaid_message":"Already exists in GISAID"})
+					elif re.search(r"\['(EPI_\d+)'\]", line):
+						accession_search = re.search(r"\['(EPI_\d+)'\]", line)
+						accession = accession_search.group(1) if accession_search else ""
+						gisaid_segment_log.append({"gs-segment_name":sample_name, "gisaid_accession_epi_id":accession, "gisaid_message":"Already exists in GISAID"})
+			# Handling if submitting samples have already been registered in GISAID (legacy JSON format)
 			elif re.search(r'"code":\s*"validation_error".*?already exists;\s*existing_virus_name:', line):
 				sample_name_search = re.search(r"(hCoV[^;]+);", line)
 				if sample_name_search:
@@ -119,14 +141,14 @@ def process_gisaid_log(log_file: str, submission_dir: str) -> pd.DataFrame:
 							accession = accession_search.group(1)
 						else:
 							accession = ""
-						gisaid_isolate_log.append({"gs-sample_name":sample_name, "gisaid_accession_epi_isl_id":accession})
+						gisaid_isolate_log.append({"gs-sample_name":sample_name, "gisaid_accession_epi_isl_id":accession, "gisaid_message":"Already exists in GISAID"})
 					elif re.search(r"\['(EPI_\d+)'\]", line):
 						accession_search = re.search(r"\['(EPI_\d+)'\]", line)
 						if accession_search:
 							accession = accession_search.group(1)
 						else:
 							accession = ""
-						gisaid_segment_log.append({"gs-segment_name":sample_name, "gisaid_accession_epi_id":accession})
+						gisaid_segment_log.append({"gs-segment_name":sample_name, "gisaid_accession_epi_id":accession, "gisaid_message":"Already exists in GISAID"})
 			else:
 				print("Finished reading GISAID log. If workflow has failed here, it's likely no GISAID IDs were returned. Check results in GISAID upload log.")
 			line = file.readline().strip()
@@ -145,9 +167,9 @@ def process_gisaid_log(log_file: str, submission_dir: str) -> pd.DataFrame:
 		upload_log.update_submission_status_csv(submission_dir=submission_dir, update_database="GISAID", update_df=gisaid_segment_df)
 	else:
 		print("Warning: no GISAID isolates or segments found")
-	gisaid_isolate_df = gisaid_isolate_df[~gisaid_isolate_df["gisaid_accession_epi_isl_id"].str.contains(r"EPI_ISL_\d*", regex = True, na = False)].copy()
-	gisaid_isolate_df = gisaid_isolate_df[~gisaid_isolate_df["gisaid_accession_epi_isl_id"].str.contains(r"EPI_ISL_\d*", regex = True, na = False)].copy()
-	return gisaid_isolate_df[["gs-sample_name"]]
+	if not gisaid_isolate_df.empty:
+		gisaid_isolate_df = gisaid_isolate_df[~gisaid_isolate_df["gisaid_accession_epi_isl_id"].str.contains(r"EPI_ISL_\d*", regex = True, na = False)].copy()
+	return gisaid_isolate_df[["gs-sample_name"]] if not gisaid_isolate_df.empty else pd.DataFrame(columns=["gs-sample_name"])
 
 # Submit to GISAID
 def submit_gisaid(organism: str, submission_dir: str, submission_name: str, config_dict: Dict[str, Any], submission_type: str) -> str:
