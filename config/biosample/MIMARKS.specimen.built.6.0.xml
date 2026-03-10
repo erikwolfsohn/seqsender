@@ -1,0 +1,1697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package group="MIMARKS.specimen">
+    <Name>MIMARKS.specimen.built.6.0</Name>
+    <DisplayName>MIMARKS: specimen, built; version 6.0</DisplayName>
+    <ShortName>MIMARKS Specimen</ShortName>
+    <EnvPackage>built</EnvPackage>
+    <EnvPackageDisplay>built</EnvPackageDisplay>
+    <NotAppropriateFor>wgs_single;wgs_batch;wgs_diploid</NotAppropriateFor>
+    <Description>Use for any type of marker gene sequences, eg, 16S, 18S, 23S, 28S rRNA or COI obtained from cultured or voucher-identifiable specimens. Organism cannot contain the term 'metagenome'.</Description>
+    <Example>SAMN02905116</Example>
+    <TemplateHeader># This is a submission template for batch deposit of 'MIMARKS: specimen, built; version 6.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# See SAMN02905116 for an example record of this type of BioSample (https://www.ncbi.nlm.nih.gov/biosample/SAMN02905116).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>strain</Name>
+      <HarmonizedName>strain</HarmonizedName>
+      <Description>microbial or eukaryotic strain name</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>isolate</Name>
+      <HarmonizedName>isolate</HarmonizedName>
+      <Description>identification or description of the specific individual from which this sample was obtained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>cultivar</Name>
+      <HarmonizedName>cultivar</HarmonizedName>
+      <Description>cultivar name - cultivated variety of plant</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>ecotype</Name>
+      <HarmonizedName>ecotype</HarmonizedName>
+      <Description>a population within a given species displaying genetically based, phenotypic traits that reflect adaptation to a local habitat, e.g., Columbia</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>absolute air humidity</Name>
+      <HarmonizedName>abs_air_humidity</HarmonizedName>
+      <Description>actual mass of water vapor - mh20 - present in the air water vapor mixture</Description>
+      <Format>
+        <Description>{float} {unit} [kg|lb]</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>air temperature</Name>
+      <HarmonizedName>air_temp</HarmonizedName>
+      <Description>temperature of the air at the time of sampling</Description>
+      <Format>
+        <Description>{float} {unit} [deg C]</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>building occupancy type</Name>
+      <HarmonizedName>build_occup_type</HarmonizedName>
+      <Description>primary function for which a building or discrete part of a building is intended to be used</Description>
+      <Format type="select">
+        <Description>office | market | restaurant | residence | school | residential | commercial | low rise | high rise | wood framed | health care | airport | sports complex | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>office</Choice>
+        <Choice>market</Choice>
+        <Choice>restaurant</Choice>
+        <Choice>residence</Choice>
+        <Choice>school</Choice>
+        <Choice>residential</Choice>
+        <Choice>commercial</Choice>
+        <Choice>low rise</Choice>
+        <Choice>high rise</Choice>
+        <Choice>wood framed</Choice>
+        <Choice>health care</Choice>
+        <Choice>airport</Choice>
+        <Choice>sports complex</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>building setting</Name>
+      <HarmonizedName>building_setting</HarmonizedName>
+      <Description>location (geography) where a building is set</Description>
+      <Format type="select">
+        <Description>urban | suburban | exurban | rural | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>urban</Choice>
+        <Choice>suburban</Choice>
+        <Choice>exurban</Choice>
+        <Choice>rural</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>carbon dioxide</Name>
+      <HarmonizedName>carb_dioxide</HarmonizedName>
+      <Description>carbon dioxide (gas) amount or concentration at the time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>broad-scale environmental context</Name>
+      <HarmonizedName>env_broad_scale</HarmonizedName>
+      <Description>Add terms that identify the major environment type(s) where your sample was collected. Recommend subclasses of biome [ENVO:00000428]. Multiple terms can be separated by one or more pipes e.g.:  mangrove biome [ENVO:01000181]|estuarine biome [ENVO:01000020]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>local-scale environmental context</Name>
+      <HarmonizedName>env_local_scale</HarmonizedName>
+      <Description>Add terms that identify environmental entities having causal influences upon the entity at time of sampling, multiple terms can be separated by pipes, e.g.:  shoreline [ENVO:00000486]|intertidal zone [ENVO:00000316]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>environmental medium</Name>
+      <HarmonizedName>env_medium</HarmonizedName>
+      <Description>Add terms that identify the material displaced by the entity at time of sampling. Recommend subclasses of environmental material [ENVO:00010483]. Multiple terms can be separated by pipes e.g.: estuarine water [ENVO:01000301]|estuarine mud [ENVO:00002160]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>filter type</Name>
+      <HarmonizedName>filter_type</HarmonizedName>
+      <Description>device which removes solid particulates or airborne molecular contaminants</Description>
+      <Format type="select">
+        <Description>particulate air filter | chemical air filter | low-MERV pleated media | HEPA | electrostatic | gas-phase or ultraviolet air treatments | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>particulate air filter</Choice>
+        <Choice>chemical air filter</Choice>
+        <Choice>low-MERV pleated media</Choice>
+        <Choice>HEPA</Choice>
+        <Choice>electrostatic</Choice>
+        <Choice>gas-phase or ultraviolet air treatments</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>heating and cooling system type</Name>
+      <HarmonizedName>heat_cool_type</HarmonizedName>
+      <Description>methods of conditioning or heating a room or building</Description>
+      <Format type="select">
+        <Description>radiant system | heat pump | forced air system | steam forced heat | wood stove | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>radiant system</Choice>
+        <Choice>heat pump</Choice>
+        <Choice>forced air system</Choice>
+        <Choice>steam forced heat</Choice>
+        <Choice>wood stove</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>indoor space</Name>
+      <HarmonizedName>indoor_space</HarmonizedName>
+      <Description>a distinguishable space within a structure, the purpose for which discrete areas of a building is used</Description>
+      <Format type="select">
+        <Description>bedroom | office | bathroom | foyer | kitchen | locker room | hallway | elevator | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>bedroom</Choice>
+        <Choice>office</Choice>
+        <Choice>bathroom</Choice>
+        <Choice>foyer</Choice>
+        <Choice>kitchen</Choice>
+        <Choice>locker room</Choice>
+        <Choice>hallway</Choice>
+        <Choice>elevator</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Nucleic Acid Sequence Source">
+      <Name>isolation and growth condition</Name>
+      <HarmonizedName>isol_growth_condt</HarmonizedName>
+      <Description>PMID or url for isolation and growth condition specifications</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>light type</Name>
+      <HarmonizedName>light_type</HarmonizedName>
+      <Description>application of light to achieve some practical or aesthetic effect. Lighting includes the use of both artificial light sources such as lamps and light fixtures, as well as natural illumination by capturing daylight. Can also include absence of light</Description>
+      <Format type="select">
+        <Description>natural light | electric light | no light | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>natural light</Choice>
+        <Choice>electric light</Choice>
+        <Choice>no light</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>occupancy at sampling</Name>
+      <HarmonizedName>occup_samp</HarmonizedName>
+      <Description>number of occupants present at time of sample within the given space</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>occupant density at sampling</Name>
+      <HarmonizedName>occupant_dens_samp</HarmonizedName>
+      <Description>average number of occupants at time of sampling per square footage</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>organism count</Name>
+      <HarmonizedName>organism_count</HarmonizedName>
+      <Description>total count of any organism per gram or volume of sample,should include name of organism followed by count; can include multiple organism counts</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>relative air humidity</Name>
+      <HarmonizedName>rel_air_humidity</HarmonizedName>
+      <Description>partial vapor and air pressure, density of the vapor and air, or by the actual mass of the vapor and air</Description>
+      <Format>
+        <Description>{float} {unit} [%]</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>space typical state</Name>
+      <HarmonizedName>space_typ_state</HarmonizedName>
+      <Description>customary or normal state of the space</Description>
+      <Format type="select">
+        <Description>typical occupied | typically unoccupied | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>typical occupied</Choice>
+        <Choice>typically unoccupied</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>typical occupant density</Name>
+      <HarmonizedName>typ_occupant_dens</HarmonizedName>
+      <Description>customary or normal density of occupants</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Built">
+      <Name>ventilation type</Name>
+      <HarmonizedName>ventilation_type</HarmonizedName>
+      <Description>ventilation system used in the sampled premises</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>address</Name>
+      <HarmonizedName>address</HarmonizedName>
+      <Description>The street name and building number where the sampling occurred</Description>
+      <Format>
+        <Description>{integer}{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>adjacent rooms</Name>
+      <HarmonizedName>adj_room</HarmonizedName>
+      <Description>List of rooms (room number, room name) immediately adjacent to the sampling room</Description>
+      <Format>
+        <Description>{text};{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>aerospace structure</Name>
+      <HarmonizedName>aero_struc</HarmonizedName>
+      <Description>Aerospace structures typically consist of thin plates with stiffeners for the external surfaces, bulkheads and frames to support the shape and fasteners such as welds, rivets, screws and bolts to hold the components together, e.g., plane, glider</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>amount of light</Name>
+      <HarmonizedName>amount_light</HarmonizedName>
+      <Description>The unit of illuminance and luminous emittance, measuring luminous flux per unit area</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>architectural structure</Name>
+      <HarmonizedName>arch_struc</HarmonizedName>
+      <Description>An architectural structure is a human-made, free-standing, immobile outdoor construction, e.g., building, shed, home</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>average dew point</Name>
+      <HarmonizedName>avg_dew_point</HarmonizedName>
+      <Description>The average of dew point measures taken at the beginning of every hour over a 24 hour period on the sampling day</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>average daily occupancy</Name>
+      <HarmonizedName>avg_occup</HarmonizedName>
+      <Description>Daily average occupancy of room. Indicate the number of person(s) daily occupying the sampling room</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>average temperature</Name>
+      <HarmonizedName>avg_temp</HarmonizedName>
+      <Description>The average of temperatures taken at the beginning of every hour over a 24 hour period on the sampling day</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>bathroom count</Name>
+      <HarmonizedName>bathroom_count</HarmonizedName>
+      <Description>The number of bathrooms in the building</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>bedroom count</Name>
+      <HarmonizedName>bedroom_count</HarmonizedName>
+      <Description>The number of bedrooms in the building</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>observed biotic relationship</Name>
+      <HarmonizedName>biotic_relationship</HarmonizedName>
+      <Description>Free-living or from host (define relationship)</Description>
+      <Format type="select">
+        <Description>free living | parasite | commensal | symbiont</Description>
+        <Choice/>
+        <Choice>free living</Choice>
+        <Choice>parasite</Choice>
+        <Choice>commensal</Choice>
+        <Choice>symbiont</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>design, construction, and operation documents</Name>
+      <HarmonizedName>build_docs</HarmonizedName>
+      <Description>The building design, construction and operation documents, e.g., building information model, commissioning report, complaint logs, contract administration, cost estimate, janitorial schedules or logs, maintenance plans, schedule, sections, shop drawings, submittals, ventilation system, windows</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>built structure age</Name>
+      <HarmonizedName>built_struc_age</HarmonizedName>
+      <Description>The age of the built structure since construction</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>built structure setting</Name>
+      <HarmonizedName>built_struc_set</HarmonizedName>
+      <Description>The characterization of the location of the built structure as high or low human density, e.g., urban, rural</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>built structure type</Name>
+      <HarmonizedName>built_struc_type</HarmonizedName>
+      <Description>A physical structure that is a body or assemblage of bodies in space to form a system capable of supporting loads</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>ceiling area</Name>
+      <HarmonizedName>ceil_area</HarmonizedName>
+      <Description>The area of the ceiling space within the room</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>ceiling condition</Name>
+      <HarmonizedName>ceil_cond</HarmonizedName>
+      <Description>The physical condition of the ceiling at the time of sampling, e.g., new, visible wear, needs repair, damaged, rupture</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>ceiling finish material</Name>
+      <HarmonizedName>ceil_finish_mat</HarmonizedName>
+      <Description>The type of material used to finish a ceiling, e.g., drywall, mineral fibre, tiles, PVC, plasterboard, metal, fiberglass, stucco, mineral wool/calcium silicate, wood</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>ceiling structure</Name>
+      <HarmonizedName>ceil_struc</HarmonizedName>
+      <Description>The construction format of the ceiling, e.g., wood frame, concrete</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>ceiling texture</Name>
+      <HarmonizedName>ceil_texture</HarmonizedName>
+      <Description>The feel, appearance, or consistency of a ceiling surface, e.g., crows feet, crows-foot stomp, double skip, hawk and trowel, knockdown, popcorn, orange peel, rosebud stomp, Santa-Fe texture, skip trowel, smooth, stomp knockdown, swirl</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>ceiling thermal mass</Name>
+      <HarmonizedName>ceil_thermal_mass</HarmonizedName>
+      <Description>The ability of the ceiling to provide inertia against temperature fluctuations. Generally this means concrete that is exposed. A metal deck that supports a concrete slab will act thermally as long as it is exposed to room air flow</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>ceiling type</Name>
+      <HarmonizedName>ceil_type</HarmonizedName>
+      <Description>The type of ceiling according to the ceiling's appearance or construction, e.g., cathedral, dropped, concave, barrel-shaped, coffered, cove, stretched</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>ceiling signs of water/mold</Name>
+      <HarmonizedName>ceil_water_mold</HarmonizedName>
+      <Description>Signs of the presence of mold or mildew on the ceiling, e.g., presence of mold visible, no presence of mold visible</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>collection method </Name>
+      <HarmonizedName>collection_method</HarmonizedName>
+      <Description>Process used to collect the sample, e.g., bronchoalveolar lavage (BAL)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>cooling system identifier</Name>
+      <HarmonizedName>cool_syst_id</HarmonizedName>
+      <Description>The cooling system identifier</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>date last rain</Name>
+      <HarmonizedName>date_last_rain</HarmonizedName>
+      <Description>The date of the last time it rained</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>dew point</Name>
+      <HarmonizedName>dew_point</HarmonizedName>
+      <Description>temperature to which a given parcel of humid air must be cooled, at constant barometric pressure, for water vapor to condense into water.</Description>
+      <Format>
+        <Description>{float} {unit} [deg C]</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>door type, composite</Name>
+      <HarmonizedName>door_comp_type</HarmonizedName>
+      <Description>The composite type of the door, e.g., metal covered, revolving, sliding, telescopic</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>door condition</Name>
+      <HarmonizedName>door_cond</HarmonizedName>
+      <Description>The physical condition of the door, e.g., damaged, needs repair, new, rupture, visible wear</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>door direction of opening</Name>
+      <HarmonizedName>door_direct</HarmonizedName>
+      <Description>The direction the door opens, e.g., inward, outward, sideways</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>door location</Name>
+      <HarmonizedName>door_loc</HarmonizedName>
+      <Description>The relative location of the door in the room, e.g., north, south, east, west</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>door material</Name>
+      <HarmonizedName>door_mat</HarmonizedName>
+      <Description>The material the door is composed of, e.g., aluminum, cellular PVC, engineered plastic, fiberboard, fiberglass, metal, thermoplastic alloy, vinyl, wood, wood/plastic composite</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>door movement</Name>
+      <HarmonizedName>door_move</HarmonizedName>
+      <Description>The type of movement of the door, e.g., collapsible, folding, revolving, rolling shutter, sliding, swinging</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>door area or size</Name>
+      <HarmonizedName>door_size</HarmonizedName>
+      <Description>The size of the door</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>door type</Name>
+      <HarmonizedName>door_type</HarmonizedName>
+      <Description>The type of door material, e.g., composite, metal, wooden</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>door type, metal</Name>
+      <HarmonizedName>door_type_metal</HarmonizedName>
+      <Description>The type of metal door, e.g., collapsible, corrugated steel, hollow, rolling shutters, steel plate</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>door type, wood</Name>
+      <HarmonizedName>door_type_wood</HarmonizedName>
+      <Description>The type of wood door, e.g., bettened and ledged, battened, ledged and braced, battened, ledged and framed, battened, ledged, braced and frame, framed and paneled, glashed or sash, flush, louvered, wire gauged</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>door signs of water/mold</Name>
+      <HarmonizedName>door_water_mold</HarmonizedName>
+      <Description>Signs of the presence of mold or mildew on a door, e.g., presence of mold visible, no presence of mold visible</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>drawings</Name>
+      <HarmonizedName>drawings</HarmonizedName>
+      <Description>The buildings architectural drawings, e.g., operation, as built, construction, bid, design, building navigation map, diagram, sketch</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>elevator count</Name>
+      <HarmonizedName>elevator</HarmonizedName>
+      <Description>The number of elevators within the built structure</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>escalator count</Name>
+      <HarmonizedName>escalator</HarmonizedName>
+      <Description>The number of escalators within the built structure</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>exposed ductwork</Name>
+      <HarmonizedName>exp_duct</HarmonizedName>
+      <Description>The amount of exposed ductwork in the room</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>exposed pipes</Name>
+      <HarmonizedName>exp_pipe</HarmonizedName>
+      <Description>The number of exposed pipes in the room</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>exterior door count</Name>
+      <HarmonizedName>ext_door</HarmonizedName>
+      <Description>The number of exterior doors in the built structure</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>orientations of exterior wall</Name>
+      <HarmonizedName>ext_wall_orient</HarmonizedName>
+      <Description>The orientation of the exterior wall, e.g., north, south, east, west, northeast, southeast, southwest, northwest</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>orientations of exterior window</Name>
+      <HarmonizedName>ext_window_orient</HarmonizedName>
+      <Description>The compass direction the exterior window of the room is facing, e.g., north, south, east, west, northeast, southeast, southwest, northwest</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>extrachromosomal elements</Name>
+      <HarmonizedName>extrachrom_elements</HarmonizedName>
+      <Description>Plasmids that have significance phenotypic consequence</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>fireplace type</Name>
+      <HarmonizedName>fireplace_type</HarmonizedName>
+      <Description>A firebox with chimney, e.g., gas burning, wood burning</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>floor age</Name>
+      <HarmonizedName>floor_age</HarmonizedName>
+      <Description>The time period since installment of the carpet or flooring</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>floor area</Name>
+      <HarmonizedName>floor_area</HarmonizedName>
+      <Description>The area of the floor space within the room</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>floor condition</Name>
+      <HarmonizedName>floor_cond</HarmonizedName>
+      <Description>The physical condition of the floor at the time of sampling, e.g., new, visible wear, needs repair, damaged, rupture</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>floor count</Name>
+      <HarmonizedName>floor_count</HarmonizedName>
+      <Description>The number of floors in the building, including basements and mechanical penthouse</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>floor finish material</Name>
+      <HarmonizedName>floor_finish_mat</HarmonizedName>
+      <Description>The floor covering type; the finished surface that is walked on, e.g., tile, wood strip or parquet, carpet, rug, laminate wood, lineoleum, vinyl composition tile, sheet vinyl, stone, bamboo, cork, terrazo, concrete, none;specify unfinished, sealed, clear finish, paint</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>floor structure</Name>
+      <HarmonizedName>floor_struc</HarmonizedName>
+      <Description>Refers to the structural elements and subfloor upon which the finish flooring is installed, e.g., balcony, floating floor, glass floor, raised floor, sprung floor, wood-framed, concrete</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>floor thermal mass</Name>
+      <HarmonizedName>floor_thermal_mass</HarmonizedName>
+      <Description>The ability of the floor to provide inertia against temperature fluctuations</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>floor signs of water/mold</Name>
+      <HarmonizedName>floor_water_mold</HarmonizedName>
+      <Description>Signs of the presence of mold or mildew in a room, e.g., mold odor, wet floor, water stains, wall discoloration, floor discoloration, ceiling discoloration, peeling paint or wallpaper, bulging walls, condensation</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>frequency of cleaning</Name>
+      <HarmonizedName>freq_clean</HarmonizedName>
+      <Description>The number of times the sample location is cleaned, e.g., daily, weekly, monthly, quarterly, annually</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>frequency of cooking</Name>
+      <HarmonizedName>freq_cook</HarmonizedName>
+      <Description>The number of times a meal is cooked per week</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>furniture</Name>
+      <HarmonizedName>furniture</HarmonizedName>
+      <Description>The types of furniture present in the sampled room, e.g., cabinet, chair, desks</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>gender of restroom</Name>
+      <HarmonizedName>gender_restroom</HarmonizedName>
+      <Description>The gender type of the restroom, e.g., all gender, female, gender neutral, male, male and female, unisex</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>hallway/corridor count</Name>
+      <HarmonizedName>hall_count</HarmonizedName>
+      <Description>The total count of hallways and cooridors in the built structure</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>handidness</Name>
+      <HarmonizedName>handidness</HarmonizedName>
+      <Description>The handidness of the individual sampled, e.g., ambidexterity, left handedness, mixed-handedness, right handedness</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>heating delivery locations</Name>
+      <HarmonizedName>heat_deliv_loc</HarmonizedName>
+      <Description>The location of heat delivery within the room, e.g., north, south, east, west</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>heating system delivery method</Name>
+      <HarmonizedName>heat_sys_deliv_meth</HarmonizedName>
+      <Description>The method by which the heat is delivered through the system, e.g., conductive, radiant</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>heating system identifier</Name>
+      <HarmonizedName>heat_system_id</HarmonizedName>
+      <Description>The heating system identifier</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>height carpet fiber mat</Name>
+      <HarmonizedName>height_carper_fiber</HarmonizedName>
+      <Description>The average carpet fiber height in the indoor environment</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>indoor surface</Name>
+      <HarmonizedName>indoor_surf</HarmonizedName>
+      <Description>type of indoor surface</Description>
+      <Format type="select">
+        <Description>counter top | window | wall | cabinet | ceiling | door | shelving | vent cover | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>counter top</Choice>
+        <Choice>window</Choice>
+        <Choice>wall</Choice>
+        <Choice>cabinet</Choice>
+        <Choice>ceiling</Choice>
+        <Choice>door</Choice>
+        <Choice>shelving</Choice>
+        <Choice>vent cover</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>inside lux light</Name>
+      <HarmonizedName>inside_lux</HarmonizedName>
+      <Description>The recorded value at sampling time (power density)</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>interior wall condition</Name>
+      <HarmonizedName>int_wall_cond</HarmonizedName>
+      <Description>The physical condition of the wall at the time of sampling, e.g., new, visible wear, needs repair, damaged, rupture</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>last time swept/mopped/vacuumed</Name>
+      <HarmonizedName>last_clean</HarmonizedName>
+      <Description>The last time the floor was cleaned (swept, mopped, vacuumed)</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>maximum occupancy</Name>
+      <HarmonizedName>max_occup</HarmonizedName>
+      <Description>The maximum amount of people allowed in the indoor environment</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>mechanical structure</Name>
+      <HarmonizedName>mech_struc</HarmonizedName>
+      <Description>Mechanical structure: a moving structure, e.g., subway, coach, carriage, elevator, escalator, boat, train, car, bus</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>negative control type</Name>
+      <HarmonizedName>neg_cont_type</HarmonizedName>
+      <Description>The substance or equipment used as a negative control in an investigation, e.g., distilled water, phosphate buffer, empty collection device, empty collection tube, DNA-free PCR mix, sterile swab, sterile syringe</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>number of pets</Name>
+      <HarmonizedName>number_pets</HarmonizedName>
+      <Description>The number of pets residing in the sampled space</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>number of houseplants</Name>
+      <HarmonizedName>number_plants</HarmonizedName>
+      <Description>The number of plant(s) in the sampling space</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>number of residents</Name>
+      <HarmonizedName>number_resident</HarmonizedName>
+      <Description>The number of individuals currently occupying in the sampling location</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>occupancy documentation</Name>
+      <HarmonizedName>occup_document</HarmonizedName>
+      <Description>The type of documentation of occupancy, e.g., automated count, estimate, manual count, videos</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>Omics Observatory ID</Name>
+      <HarmonizedName>omics_observ_id</HarmonizedName>
+      <Description>A unique identifier of the omics-enabled observatory (or comparable time series) your data derives from. This identifier should be provided by the OMICON ontology; if you require a new identifier for your time series, contact the ontology's developers. Information is available here: https://github.com/GLOMICON/omicon. This field is only applicable to records which derive from an omics time-series or observatory.</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>positive control type</Name>
+      <HarmonizedName>pos_cont_type</HarmonizedName>
+      <Description>The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive
+</Description>
+      <Format>
+        <Description>{term} or {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>presence of pets, animals, or insects</Name>
+      <HarmonizedName>pres_animal_insect</HarmonizedName>
+      <Description>The type and number of animals or insects present in the sampling space, e.g., cat 10, dog 2, rodent 100, snake 1</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>quadrant position</Name>
+      <HarmonizedName>quad_pos</HarmonizedName>
+      <Description>The quadrant position of the sampling room within the building, e.g., north side, west side, south side, east side</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>outside relative humidity</Name>
+      <HarmonizedName>rel_humidity_out</HarmonizedName>
+      <Description>The recorded outside relative humidity value at the time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>relative sampling location</Name>
+      <HarmonizedName>rel_samp_loc</HarmonizedName>
+      <Description>The sampling location within the train car, e.g., edge of car, center of car, under a seat</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>relationship to oxygen</Name>
+      <HarmonizedName>rel_to_oxygen</HarmonizedName>
+      <Description>Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments, eg, aerobe, anaerobe, facultative, microaerophilic, microanaerobe, obligate aerobe, obligate anaerobe, missing, not applicable, not collected, not provided, restricted access</Description>
+      <Format type="select">
+        <Description>aerobe | anaerobe | facultative | microaerophilic | microanaerobe | obligate aerobe | obligate anaerobe | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>aerobe</Choice>
+        <Choice>anaerobe</Choice>
+        <Choice>facultative</Choice>
+        <Choice>microaerophilic</Choice>
+        <Choice>microanaerobe</Choice>
+        <Choice>obligate aerobe</Choice>
+        <Choice>obligate anaerobe</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room air exchange rate</Name>
+      <HarmonizedName>room_air_exch_rate</HarmonizedName>
+      <Description>The rate at which outside air replaces indoor air in a given space</Description>
+      <Format>
+        <Description>measurement value</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room architectural elements</Name>
+      <HarmonizedName>room_architec_elem</HarmonizedName>
+      <Description>The unique details and component parts that, together, form the architecture of a distinguisahable space within a built structure</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room condition</Name>
+      <HarmonizedName>room_condt</HarmonizedName>
+      <Description>The condition of the room at the time of sampling, e.g., new, visible wear, needs repair, damaged, rupture, visible signs of mold/mildew</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>rooms connected by a doorway</Name>
+      <HarmonizedName>room_connected</HarmonizedName>
+      <Description>List of rooms connected to the sampling room by a doorway, e.g., attic, bathroom, closet, conference room, elevator, examining room, hallway, kitchen, mail room, office, stairwell</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room count</Name>
+      <HarmonizedName>room_count</HarmonizedName>
+      <Description>The total count of rooms in the built structure including all room types</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room dimensions</Name>
+      <HarmonizedName>room_dim</HarmonizedName>
+      <Description>The length, width and height of sampling room</Description>
+      <Format>
+        <Description>{integer} {unit} x {integer} {unit} x {integer} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room door distance</Name>
+      <HarmonizedName>room_door_dist</HarmonizedName>
+      <Description>Distance between doors (meters) in the hallway between the sampling room and adjacent rooms</Description>
+      <Format>
+        <Description>{integer} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>rooms that share a door with sampling room</Name>
+      <HarmonizedName>room_door_share</HarmonizedName>
+      <Description>List of room(s) (room number, room name) sharing a door with the sampling room</Description>
+      <Format>
+        <Description>{text};{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>rooms that are on the same hallway</Name>
+      <HarmonizedName>room_hallway</HarmonizedName>
+      <Description>List of room(s) (room number, room name) located in the same hallway as sampling room</Description>
+      <Format>
+        <Description>{text};{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room location in building</Name>
+      <HarmonizedName>room_loc</HarmonizedName>
+      <Description>The position of the room within the building, e.g., corner room, interior room, exterior wall</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room moisture damage or mold history</Name>
+      <HarmonizedName>room_moist_dam_hist</HarmonizedName>
+      <Description>The history of moisture damage or mold in the past 12 months. Number of events of moisture damage or mold observed</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room net area</Name>
+      <HarmonizedName>room_net_area</HarmonizedName>
+      <Description>The net floor area of sampling room. Net area excludes wall thicknesses</Description>
+      <Format>
+        <Description>{integer} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room occupancy</Name>
+      <HarmonizedName>room_occup</HarmonizedName>
+      <Description>Count of room occupancy at time of sampling</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room sampling position</Name>
+      <HarmonizedName>room_samp_pos</HarmonizedName>
+      <Description>The horizontal sampling position in the room relative to architectural elements, e.g., north corner, south corner, west corner, east corner, northeast corner, northwest corner, southeast corner, southwest corner, center</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room type</Name>
+      <HarmonizedName>room_type</HarmonizedName>
+      <Description>The main purpose or activity of the sampling room. A room is any distinguishable space within a structure, e.g., attic, bathroom, closet, conference room, elevator, examining room, hallway, kitchen, mail room, private office, open office, stairwell,restroom, lobby, vestibule, mechanical or electrical room, data center, laboratory_wet, laboratory_dry, gymnasium, natatorium, auditorium, lockers, cafe, warehouse</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room volume</Name>
+      <HarmonizedName>room_vol</HarmonizedName>
+      <Description>Volume of sampling room</Description>
+      <Format>
+        <Description>{integer} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>rooms that share a wall with sampling room</Name>
+      <HarmonizedName>room_wall_share</HarmonizedName>
+      <Description>List of room(s) (room number, room name) sharing a wall with the sampling room</Description>
+      <Format>
+        <Description>{text};{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>room window count</Name>
+      <HarmonizedName>room_window_count</HarmonizedName>
+      <Description>Number of windows in the room</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample collection device or method</Name>
+      <HarmonizedName>samp_collect_device</HarmonizedName>
+      <Description>Method or device employed for collecting sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>sampling floor</Name>
+      <HarmonizedName>samp_floor</HarmonizedName>
+      <Description>The floor of the building, where the sampling room is located, e.g., 1st floor, 2nd floor, basement, lobby</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample material processing</Name>
+      <HarmonizedName>samp_mat_process</HarmonizedName>
+      <Description>Processing applied to the sample during or after isolation</Description>
+      <Format>
+        <Description>{text|term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>sampling room ID or name</Name>
+      <HarmonizedName>samp_room_id</HarmonizedName>
+      <Description>Sampling room number. This ID should be consistent with the designations on the building floor plans</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample size</Name>
+      <HarmonizedName>samp_size</HarmonizedName>
+      <Description>Amount or size of sample (volume, mass or area) that was collected</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>sample size sorting method</Name>
+      <HarmonizedName>samp_sort_meth</HarmonizedName>
+      <Description>method by which samples are sorted</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>sampling time outside</Name>
+      <HarmonizedName>samp_time_out</HarmonizedName>
+      <Description>The recent and long term history of outside sampling</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample volume or weight for DNA extraction</Name>
+      <HarmonizedName>samp_vol_we_dna_ext</HarmonizedName>
+      <Description>volume (mL) or weight (g) of sample processed for DNA extraction</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>sampling day weather</Name>
+      <HarmonizedName>samp_weather</HarmonizedName>
+      <Description>The weather on the sampling day, e.g., clear sky, cloudy, foggy, hail, rain, snow, sleet, sunny, windy</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>season</Name>
+      <HarmonizedName>season</HarmonizedName>
+      <Description>The season when sampling occurred. Any of the four periods into which the year is divided by the equinoxes and solstices. This field accepts terms listed under season (http://purl.obolibrary.org/obo/NCIT_C94729)</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>seasonal use</Name>
+      <HarmonizedName>season_use</HarmonizedName>
+      <Description>The seasons the space is occupied, e.g., spring, summer, fall, winter</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>shading device signs of water/mold</Name>
+      <HarmonizedName>shad_dev_water_mold</HarmonizedName>
+      <Description>Signs of the presence of mold or mildew on the shading device, e.g., presence of mold visible, no presence of mold visible</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>shading device condition</Name>
+      <HarmonizedName>shading_device_cond</HarmonizedName>
+      <Description>The physical condition of the shading device at the time of sampling, e.g., damaged, needs repair, new, rupture, visible wear</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>shading device location</Name>
+      <HarmonizedName>shading_device_loc</HarmonizedName>
+      <Description>The location of the shading device in relation to the built structure, e.g., exterior, interior</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>shading device material</Name>
+      <HarmonizedName>shading_device_mat</HarmonizedName>
+      <Description>The material the shading device is composed of</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>shading device type</Name>
+      <HarmonizedName>shading_device_type</HarmonizedName>
+      <Description>The type of shading device, e.g., bahama shutters, exterior roll blind, gambrel awning, hood awning, porchroller awning, sarasota shutters, slatted aluminum, solid aluminum awning, sun screen, tree, trellis, venetian awning</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>source material identifiers</Name>
+      <HarmonizedName>source_material_id</HarmonizedName>
+      <Description>unique identifier assigned to a material sample used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>specifications</Name>
+      <HarmonizedName>specific</HarmonizedName>
+      <Description>The building specifications, e.g., operation, as built, construction, bid, design, photos</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>specific humidity</Name>
+      <HarmonizedName>specific_humidity</HarmonizedName>
+      <Description>The mass of water vapour in a unit mass of moist air, usually expressed as grams of vapour per kilogram of air, or, in air conditioning, as grains per pound</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>subspecific genetic lineage</Name>
+      <HarmonizedName>subspecf_gen_lin</HarmonizedName>
+      <Description>Information about the genetic distinctness of the lineage (eg., biovar, serovar)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>substructure type</Name>
+      <HarmonizedName>substructure_type</HarmonizedName>
+      <Description>substructure or under building is that largely hidden section of the building which is built off the foundations to the ground floor level</Description>
+      <Format type="select">
+        <Description>crawlspace | slab on grade | basement</Description>
+        <Choice/>
+        <Choice>crawlspace</Choice>
+        <Choice>slab on grade</Choice>
+        <Choice>basement</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>surface-air contaminant</Name>
+      <HarmonizedName>surf_air_cont</HarmonizedName>
+      <Description>contaminant identified on surface</Description>
+      <Format type="select">
+        <Description>dust | organic matter | particulate matter | volatile organic compounds | biological contaminants | radon | nutrients | biocides</Description>
+        <Choice/>
+        <Choice>dust</Choice>
+        <Choice>organic matter</Choice>
+        <Choice>particulate matter</Choice>
+        <Choice>volatile organic compounds</Choice>
+        <Choice>biological contaminants</Choice>
+        <Choice>radon</Choice>
+        <Choice>nutrients</Choice>
+        <Choice>biocides</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>surface humidity</Name>
+      <HarmonizedName>surf_humidity</HarmonizedName>
+      <Description>surfaces: water activity as a function of air and material moisture</Description>
+      <Format>
+        <Description>{float} {unit} [%]</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>surface material</Name>
+      <HarmonizedName>surf_material</HarmonizedName>
+      <Description>surface materials at the point of sampling</Description>
+      <Format type="select">
+        <Description>concrete | wood | stone | tile | plastic | glass | vinyl | metal | carpet | stainless steel | paint | cinder blocks | hay bales | stucco | adobe | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>concrete</Choice>
+        <Choice>wood</Choice>
+        <Choice>stone</Choice>
+        <Choice>tile</Choice>
+        <Choice>plastic</Choice>
+        <Choice>glass</Choice>
+        <Choice>vinyl</Choice>
+        <Choice>metal</Choice>
+        <Choice>carpet</Choice>
+        <Choice>stainless steel</Choice>
+        <Choice>paint</Choice>
+        <Choice>cinder blocks</Choice>
+        <Choice>hay bales</Choice>
+        <Choice>stucco</Choice>
+        <Choice>adobe</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>surface moisture</Name>
+      <HarmonizedName>surf_moisture</HarmonizedName>
+      <Description>water held on a surface</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>surface moisture pH</Name>
+      <HarmonizedName>surf_moisture_ph</HarmonizedName>
+      <Description>pH measurement of surface</Description>
+      <Format>
+        <Description>{integer [0-14]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>surface temperature</Name>
+      <HarmonizedName>surf_temp</HarmonizedName>
+      <Description>temperature of the surface at the time of sampling</Description>
+      <Format>
+        <Description>{float} {unit} [deg C]</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>temperature outside house</Name>
+      <HarmonizedName>temp_out</HarmonizedName>
+      <Description>The recorded temperature value at sampling time outside</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>train line</Name>
+      <HarmonizedName>train_line</HarmonizedName>
+      <Description>The subway line name, e.g., red, green, orange</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>train station collection location</Name>
+      <HarmonizedName>train_stat_loc</HarmonizedName>
+      <Description>The train station collection location, e.g., south station above ground, south station underground, south station amtrak, forest hills, riverside</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>train stop collection location</Name>
+      <HarmonizedName>train_stop_loc</HarmonizedName>
+      <Description>The train stop collection location, e.g., end, mid, downtown</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>trophic level</Name>
+      <HarmonizedName>trophic_level</HarmonizedName>
+      <Description>Feeding position in food chain (eg., chemolithotroph)</Description>
+      <Format type="select">
+        <Description>autotroph | carboxydotroph | chemoautotroph | chemoheterotroph | chemolithoautotroph | chemolithotroph | chemoorganoheterotroph | chemoorganotroph | chemosynthetic | chemotroph | copiotroph | diazotroph | facultative | heterotroph | lithoautotroph | lithoheterotroph | lithotroph | methanotroph | methylotroph | mixotroph | obligate | chemoautolithotroph | oligotroph | organoheterotroph | organotroph | photoautotroph | photoheterotroph | photolithoautotroph | photolithotroph | photosynthetic | phototroph</Description>
+        <Choice/>
+        <Choice>autotroph</Choice>
+        <Choice>carboxydotroph</Choice>
+        <Choice>chemoautotroph</Choice>
+        <Choice>chemoheterotroph</Choice>
+        <Choice>chemolithoautotroph</Choice>
+        <Choice>chemolithotroph</Choice>
+        <Choice>chemoorganoheterotroph</Choice>
+        <Choice>chemoorganotroph</Choice>
+        <Choice>chemosynthetic</Choice>
+        <Choice>chemotroph</Choice>
+        <Choice>copiotroph</Choice>
+        <Choice>diazotroph</Choice>
+        <Choice>facultative</Choice>
+        <Choice>heterotroph</Choice>
+        <Choice>lithoautotroph</Choice>
+        <Choice>lithoheterotroph</Choice>
+        <Choice>lithotroph</Choice>
+        <Choice>methanotroph</Choice>
+        <Choice>methylotroph</Choice>
+        <Choice>mixotroph</Choice>
+        <Choice>obligate</Choice>
+        <Choice>chemoautolithotroph</Choice>
+        <Choice>oligotroph</Choice>
+        <Choice>organoheterotroph</Choice>
+        <Choice>organotroph</Choice>
+        <Choice>photoautotroph</Choice>
+        <Choice>photoheterotroph</Choice>
+        <Choice>photolithoautotroph</Choice>
+        <Choice>photolithotroph</Choice>
+        <Choice>photosynthetic</Choice>
+        <Choice>phototroph</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>visual media</Name>
+      <HarmonizedName>vis_media</HarmonizedName>
+      <Description>The building visual media, e.g., photos, videos, commonly of the building, site context (adjacent buildings, vegetation, terrain, streets), interiors, equipment, 3D scans</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>wall area</Name>
+      <HarmonizedName>wall_area</HarmonizedName>
+      <Description>The total area of the sampled room's walls</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>wall construction type</Name>
+      <HarmonizedName>wall_const_type</HarmonizedName>
+      <Description>The building class of the wall defined by the composition of the building elements and fire-resistance rating, e.g., frame construction, joisted masonry, light noncombustible, masonry noncombustible, modified fire resistive, fire resistive</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>wall finish material</Name>
+      <HarmonizedName>wall_finish_mat</HarmonizedName>
+      <Description>The material utilized to finish the outer most layer of the wall, e.g., plaster, gypsum plaster, veneer plaster, gypsum board, tile, terrazzo, stone facing, acoustical treatment, wood, metal, masonry</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>wall height</Name>
+      <HarmonizedName>wall_height</HarmonizedName>
+      <Description>The average height of the walls in the sampled room</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>wall location</Name>
+      <HarmonizedName>wall_loc</HarmonizedName>
+      <Description>The relative location of the wall within the room, e.g., north, south, east, west</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>wall surface treatment</Name>
+      <HarmonizedName>wall_surf_treatment</HarmonizedName>
+      <Description>The surface treatment of interior wall, e.g., painted, wall paper, no treatment, paneling, stucco, fabric</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>wall texture</Name>
+      <HarmonizedName>wall_texture</HarmonizedName>
+      <Description>The feel, appearance, or consistency of a wall surface, e.g., crows feet, crows-foot stomp, double skip, hawk and trowel, knockdown, popcorn, orange peel, rosebud stomp, Santa-Fe texture, skip trowel, smooth, stomp knockdown, swirl</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>wall thermal mass</Name>
+      <HarmonizedName>wall_thermal_mass</HarmonizedName>
+      <Description>The ability of the wall to provide inertia against temperature fluctuations. Generally this means concrete or concrete block that is either exposed or covered only with paint</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>wall signs of water/mold</Name>
+      <HarmonizedName>wall_water_mold</HarmonizedName>
+      <Description>Signs of the presence of mold or mildew on a wall, e.g., presence of mold visible, no presence of mold visible</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>water feature size</Name>
+      <HarmonizedName>water_feat_size</HarmonizedName>
+      <Description>The size of the water feature</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>water feature type</Name>
+      <HarmonizedName>water_feat_type</HarmonizedName>
+      <Description>The type of water feature present within the building being sampled, e.g., fountain, pool, standing feature, stream, waterfall</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>weekday</Name>
+      <HarmonizedName>weekday</HarmonizedName>
+      <Description>The day of the week when sampling occurred, e.g., monday, tuesday, wednesday, thursday, friday, saturday, sunday</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>window condition</Name>
+      <HarmonizedName>window_cond</HarmonizedName>
+      <Description>The physical condition of the window at the time of sampling, e.g., damaged, needs repair, new, rupture, visible wear</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>window covering</Name>
+      <HarmonizedName>window_cover</HarmonizedName>
+      <Description>The type of window covering, e.g., blinds, curtains, none</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>window horizontal position</Name>
+      <HarmonizedName>window_horiz_pos</HarmonizedName>
+      <Description>The horizontal position of the window on the wall, e.g., left, middle, right</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>window location</Name>
+      <HarmonizedName>window_loc</HarmonizedName>
+      <Description>The relative location of the window within the room, e.g., north, south, east, west</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>window material</Name>
+      <HarmonizedName>window_mat</HarmonizedName>
+      <Description>The type of material used to finish a window, e.g., clad, fiberglass, metal, vinyl, wood</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>window open frequency</Name>
+      <HarmonizedName>window_open_freq</HarmonizedName>
+      <Description>The number of times windows are opened per week</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>window area/size</Name>
+      <HarmonizedName>window_size</HarmonizedName>
+      <Description>The window's length and width</Description>
+      <Format>
+        <Description>{float} {unit} x {float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>window status</Name>
+      <HarmonizedName>window_status</HarmonizedName>
+      <Description>Defines whether the windows were open or closed during environmental testing, e.g., closed, open</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>window type</Name>
+      <HarmonizedName>window_type</HarmonizedName>
+      <Description>The type of windows, e.g., single-hung sash window, horizontal sash window, fixed window</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>window vertical position</Name>
+      <HarmonizedName>window_vert_pos</HarmonizedName>
+      <Description>The vertical position of the window on the wall, e.g., bottom, middle, top, low, middle, high</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Built">
+      <Name>window signs of water/mold</Name>
+      <HarmonizedName>window_water_mold</HarmonizedName>
+      <Description>Signs of the presence of mold or mildew on the window, e.g., presence of mold visible, no presence of mold visible</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

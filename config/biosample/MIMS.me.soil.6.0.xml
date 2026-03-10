@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package group="MIMS.me">
+    <Name>MIMS.me.soil.6.0</Name>
+    <DisplayName>MIMS: metagenome/environmental, soil; version 6.0</DisplayName>
+    <ShortName>MIMS Environmental/Metagenome</ShortName>
+    <EnvPackage>soil</EnvPackage>
+    <EnvPackageDisplay>soil</EnvPackageDisplay>
+    <NotAppropriateFor>wgs_diploid</NotAppropriateFor>
+    <Description>Use for environmental and metagenome sequences. Organism must be a metagenome, where lineage starts with unclassified sequences and scientific name ends with 'metagenome'.</Description>
+    <Example>SAMN02899785</Example>
+    <TemplateHeader># This is a submission template for batch deposit of 'MIMS: metagenome/environmental, soil; version 6.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# See SAMN02899785 for an example record of this type of BioSample (https://www.ncbi.nlm.nih.gov/biosample/SAMN02899785).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Soil">
+      <Name>depth</Name>
+      <HarmonizedName>depth</HarmonizedName>
+      <Description>Depth is defined as the vertical distance below surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples.</Description>
+      <Format>
+        <Description>{float} m</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Soil">
+      <Name>elevation</Name>
+      <HarmonizedName>elev</HarmonizedName>
+      <Description>The elevation of the sampling site as measured by the vertical distance from mean sea level.</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>broad-scale environmental context</Name>
+      <HarmonizedName>env_broad_scale</HarmonizedName>
+      <Description>Add terms that identify the major environment type(s) where your sample was collected. Recommend subclasses of biome [ENVO:00000428]. Multiple terms can be separated by one or more pipes e.g.:  mangrove biome [ENVO:01000181]|estuarine biome [ENVO:01000020]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>local-scale environmental context</Name>
+      <HarmonizedName>env_local_scale</HarmonizedName>
+      <Description>Add terms that identify environmental entities having causal influences upon the entity at time of sampling, multiple terms can be separated by pipes, e.g.:  shoreline [ENVO:00000486]|intertidal zone [ENVO:00000316]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>environmental medium</Name>
+      <HarmonizedName>env_medium</HarmonizedName>
+      <Description>Add terms that identify the material displaced by the entity at time of sampling. Recommend subclasses of environmental material [ENVO:00010483]. Multiple terms can be separated by pipes e.g.: estuarine water [ENVO:01000301]|estuarine mud [ENVO:00002160]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>agrochemical additions</Name>
+      <HarmonizedName>agrochem_addition</HarmonizedName>
+      <Description>addition of fertilizers, pesticides, etc. - amount and time of applications</Description>
+      <Format>
+        <Description>{text};{float} {unit};{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>aluminium saturation</Name>
+      <HarmonizedName>al_sat</HarmonizedName>
+      <Description>aluminum saturation (esp. for tropical soils)</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>aluminium saturation method</Name>
+      <HarmonizedName>al_sat_meth</HarmonizedName>
+      <Description>reference or method used in determining Al saturation</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>altitude</Name>
+      <HarmonizedName>altitude</HarmonizedName>
+      <Description>The altitude of the sample is the vertical distance between Earth's surface above Sea Level and the sampled position in the air.</Description>
+      <Format>
+        <Description>{float} m</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>mean annual precipitation</Name>
+      <HarmonizedName>annual_precpt</HarmonizedName>
+      <Description>The average of all annual precipitation values known, or an estimated equivalent value derived by such methods as regional indexes or Isohyetal maps</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>mean annual temperature</Name>
+      <HarmonizedName>annual_temp</HarmonizedName>
+      <Description>Mean annual temperature</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>collection method </Name>
+      <HarmonizedName>collection_method</HarmonizedName>
+      <Description>Process used to collect the sample, e.g., bronchoalveolar lavage (BAL)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>crop rotation</Name>
+      <HarmonizedName>crop_rotation</HarmonizedName>
+      <Description>whether or not crop is rotated, and if yes, rotation schedule</Description>
+      <Format>
+        <Description>{boolean};Rn/{timestamp}/{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>current land use</Name>
+      <HarmonizedName>cur_land_use</HarmonizedName>
+      <Description>present state of sample site</Description>
+      <Format type="select">
+        <Description>cities | farmstead | industrial areas | roads/railroads | rock | sand | gravel | mudflats | salt flats | badlands | permanent snow or ice | saline seeps | mines/quarries | oil waste areas | small grains | row crops | vegetable crops | horticultural plants (e.g. tulips) | marshlands (grass,sedges,rushes) | tundra (mosses,lichens) | rangeland | pastureland (grasslands used for livestock grazing) | hayland | meadows (grasses,alfalfa,fescue,bromegrass,timothy) | shrub land (e.g. mesquite,sage-brush,creosote bush,shrub oak,eucalyptus) | successional shrub land (tree saplings,hazels,sumacs,chokecherry,shrub dogwoods,blackberries) | shrub crops (blueberries,nursery ornamentals,filberts) | vine crops (grapes) | conifers (e.g. pine,spruce,fir,cypress) | hardwoods (e.g. oak,hickory,elm,aspen) | intermixed hardwood and conifers | tropical (e.g. mangrove,palms) | rainforest (evergreen forest receiving &gt;406 cm annual rainfall) | swamp (permanent or semi-permanent water body dominated by woody plants) | crop trees (nuts,fruit,christmas trees,nursery trees)</Description>
+        <Choice/>
+        <Choice>cities</Choice>
+        <Choice>farmstead</Choice>
+        <Choice>industrial areas</Choice>
+        <Choice>roads/railroads</Choice>
+        <Choice>rock</Choice>
+        <Choice>sand</Choice>
+        <Choice>gravel</Choice>
+        <Choice>mudflats</Choice>
+        <Choice>salt flats</Choice>
+        <Choice>badlands</Choice>
+        <Choice>permanent snow or ice</Choice>
+        <Choice>saline seeps</Choice>
+        <Choice>mines/quarries</Choice>
+        <Choice>oil waste areas</Choice>
+        <Choice>small grains</Choice>
+        <Choice>row crops</Choice>
+        <Choice>vegetable crops</Choice>
+        <Choice>horticultural plants (e.g. tulips)</Choice>
+        <Choice>marshlands (grass,sedges,rushes)</Choice>
+        <Choice>tundra (mosses,lichens)</Choice>
+        <Choice>rangeland</Choice>
+        <Choice>pastureland (grasslands used for livestock grazing)</Choice>
+        <Choice>hayland</Choice>
+        <Choice>meadows (grasses,alfalfa,fescue,bromegrass,timothy)</Choice>
+        <Choice>shrub land (e.g. mesquite,sage-brush,creosote bush,shrub oak,eucalyptus)</Choice>
+        <Choice>successional shrub land (tree saplings,hazels,sumacs,chokecherry,shrub dogwoods,blackberries)</Choice>
+        <Choice>shrub crops (blueberries,nursery ornamentals,filberts)</Choice>
+        <Choice>vine crops (grapes)</Choice>
+        <Choice>conifers (e.g. pine,spruce,fir,cypress)</Choice>
+        <Choice>hardwoods (e.g. oak,hickory,elm,aspen)</Choice>
+        <Choice>intermixed hardwood and conifers</Choice>
+        <Choice>tropical (e.g. mangrove,palms)</Choice>
+        <Choice>rainforest (evergreen forest receiving &gt;406 cm annual rainfall)</Choice>
+        <Choice>swamp (permanent or semi-permanent water body dominated by woody plants)</Choice>
+        <Choice>crop trees (nuts,fruit,christmas trees,nursery trees)</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>current vegetation</Name>
+      <HarmonizedName>cur_vegetation</HarmonizedName>
+      <Description>vegetation classification from one or more standard classification systems, or agricultural crop</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>current vegetation method</Name>
+      <HarmonizedName>cur_vegetation_meth</HarmonizedName>
+      <Description>reference or method used in vegetation classification</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>drainage classification</Name>
+      <HarmonizedName>drainage_class</HarmonizedName>
+      <Description>drainage classification from a standard system such as the USDA system</Description>
+      <Format type="select">
+        <Description>very poorly | poorly | somewhat poorly | moderately well | well | excessively drained</Description>
+        <Choice/>
+        <Choice>very poorly</Choice>
+        <Choice>poorly</Choice>
+        <Choice>somewhat poorly</Choice>
+        <Choice>moderately well</Choice>
+        <Choice>well</Choice>
+        <Choice>excessively drained</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>extreme event</Name>
+      <HarmonizedName>extreme_event</HarmonizedName>
+      <Description>unusual physical events that may have affected microbial populations</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>FAO classification</Name>
+      <HarmonizedName>fao_class</HarmonizedName>
+      <Description>soil classification from the FAO World Reference Database for Soil Resources</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>fire</Name>
+      <HarmonizedName>fire</HarmonizedName>
+      <Description>historical and/or physical evidence of fire</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>flooding</Name>
+      <HarmonizedName>flooding</HarmonizedName>
+      <Description>historical and/or physical evidence of flooding</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>heavy metals</Name>
+      <HarmonizedName>heavy_metals</HarmonizedName>
+      <Description>heavy metals present and concentrationsany drug used by subject and the frequency of usage; can include multiple heavy metals and concentrations</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>heavy metals method</Name>
+      <HarmonizedName>heavy_metals_meth</HarmonizedName>
+      <Description>reference or method used in determining heavy metals</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>horizon method</Name>
+      <HarmonizedName>horizon_meth</HarmonizedName>
+      <Description>reference or method used in determining the horizon</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>links to additional analysis</Name>
+      <HarmonizedName>link_addit_analys</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>link to classification information</Name>
+      <HarmonizedName>link_class_info</HarmonizedName>
+      <Description>link to digitized soil maps or other soil classification information</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>link to climate information</Name>
+      <HarmonizedName>link_climate_info</HarmonizedName>
+      <Description>link to climate resource</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>local classification</Name>
+      <HarmonizedName>local_class</HarmonizedName>
+      <Description>soil classification based on local soil classification system</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>local classification method</Name>
+      <HarmonizedName>local_class_meth</HarmonizedName>
+      <Description>reference or method used in determining the local soil classification</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>microbial biomass</Name>
+      <HarmonizedName>microbial_biomass</HarmonizedName>
+      <Description>the part of the organic matter in the soil that constitutes living microorganisms smaller than 5-10 µm. IF you keep this, you would need to have correction factors used for conversion to the final units, which should be mg C (or N)/kg soil).</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>microbial biomass method</Name>
+      <HarmonizedName>microbial_biomass_meth</HarmonizedName>
+      <Description>reference or method used in determining microbial biomass</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>miscellaneous parameter</Name>
+      <HarmonizedName>misc_param</HarmonizedName>
+      <Description>any other measurement performed or parameter collected, that is not listed here</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>negative control type</Name>
+      <HarmonizedName>neg_cont_type</HarmonizedName>
+      <Description>The substance or equipment used as a negative control in an investigation, e.g., distilled water, phosphate buffer, empty collection device, empty collection tube, DNA-free PCR mix, sterile swab, sterile syringe</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>Omics Observatory ID</Name>
+      <HarmonizedName>omics_observ_id</HarmonizedName>
+      <Description>A unique identifier of the omics-enabled observatory (or comparable time series) your data derives from. This identifier should be provided by the OMICON ontology; if you require a new identifier for your time series, contact the ontology's developers. Information is available here: https://github.com/GLOMICON/omicon. This field is only applicable to records which derive from an omics time-series or observatory.</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>pH</Name>
+      <HarmonizedName>ph</HarmonizedName>
+      <Description>pH measurement</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>pH method</Name>
+      <HarmonizedName>ph_meth</HarmonizedName>
+      <Description>reference or method used in determining pH</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>pooling of DNA extracts</Name>
+      <HarmonizedName>pool_dna_extracts</HarmonizedName>
+      <Description>were multiple DNA extractions mixed? how many?</Description>
+      <Format>
+        <Description>{boolean};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>positive control type</Name>
+      <HarmonizedName>pos_cont_type</HarmonizedName>
+      <Description>The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive
+</Description>
+      <Format>
+        <Description>{term} or {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>previous land use</Name>
+      <HarmonizedName>previous_land_use</HarmonizedName>
+      <Description>previous land use and dates</Description>
+      <Format>
+        <Description>{text};{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>previous land use method</Name>
+      <HarmonizedName>previous_land_use_meth</HarmonizedName>
+      <Description>reference or method used in determining previous land use and dates</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>profile position</Name>
+      <HarmonizedName>profile_position</HarmonizedName>
+      <Description>cross-sectional position in the hillslope where sample was collected.sample area position in relation to surrounding areas</Description>
+      <Format type="select">
+        <Description>summit | shoulder | backslope | footslope | toeslope</Description>
+        <Choice/>
+        <Choice>summit</Choice>
+        <Choice>shoulder</Choice>
+        <Choice>backslope</Choice>
+        <Choice>footslope</Choice>
+        <Choice>toeslope</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>reference for biomaterial</Name>
+      <HarmonizedName>ref_biomaterial</HarmonizedName>
+      <Description>Primary publication or genome report</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>relationship to oxygen</Name>
+      <HarmonizedName>rel_to_oxygen</HarmonizedName>
+      <Description>Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments, eg, aerobe, anaerobe, facultative, microaerophilic, microanaerobe, obligate aerobe, obligate anaerobe, missing, not applicable, not collected, not provided, restricted access</Description>
+      <Format type="select">
+        <Description>aerobe | anaerobe | facultative | microaerophilic | microanaerobe | obligate aerobe | obligate anaerobe | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>aerobe</Choice>
+        <Choice>anaerobe</Choice>
+        <Choice>facultative</Choice>
+        <Choice>microaerophilic</Choice>
+        <Choice>microanaerobe</Choice>
+        <Choice>obligate aerobe</Choice>
+        <Choice>obligate anaerobe</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>salinity method</Name>
+      <HarmonizedName>salinity_meth</HarmonizedName>
+      <Description>reference or method used in determining salinity</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample collection device or method</Name>
+      <HarmonizedName>samp_collect_device</HarmonizedName>
+      <Description>Method or device employed for collecting sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample material processing</Name>
+      <HarmonizedName>samp_mat_process</HarmonizedName>
+      <Description>Processing applied to the sample during or after isolation</Description>
+      <Format>
+        <Description>{text|term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample size</Name>
+      <HarmonizedName>samp_size</HarmonizedName>
+      <Description>Amount or size of sample (volume, mass or area) that was collected</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample volume or weight for DNA extraction</Name>
+      <HarmonizedName>samp_vol_we_dna_ext</HarmonizedName>
+      <Description>volume (mL) or weight (g) of sample processed for DNA extraction</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>mean seasonal precipitation</Name>
+      <HarmonizedName>season_precpt</HarmonizedName>
+      <Description>The average of all seasonal precipitation values known, or an estimated equivalent value derived by such methods as regional indexes or Isohyetal maps</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>mean seasonal temperature</Name>
+      <HarmonizedName>season_temp</HarmonizedName>
+      <Description>Mean seasonal temperature</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>sieving</Name>
+      <HarmonizedName>sieving</HarmonizedName>
+      <Description>collection design of pooled samples and/or sieve size and amount of sample sieved</Description>
+      <Format>
+        <Description>{{text}|{float} {unit}};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>size fraction selected</Name>
+      <HarmonizedName>size_frac</HarmonizedName>
+      <Description>Filtering pore size used in sample preparation, e.g., 0-0.22 micrometer</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>slope aspect</Name>
+      <HarmonizedName>slope_aspect</HarmonizedName>
+      <Description>the direction a slope faces. While looking down a slope use a compass to record the direction you are facing (direction or degrees); e.g., NW or 315°. This measure provides an indication of sun and wind exposure that will influence soil temperature and evapotranspiration.</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>slope gradient</Name>
+      <HarmonizedName>slope_gradient</HarmonizedName>
+      <Description>commonly called “slope.” The angle between ground surface and a horizontal line (in percent). This is the direction that overland water would flow. This measure is usually taken with a hand level meter or clinometer.</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>soil horizon</Name>
+      <HarmonizedName>soil_horizon</HarmonizedName>
+      <Description>specific layer in the land area which measures parallel to the soil surface and possesses physical characteristics which differ from the layers above and beneath</Description>
+      <Format type="select">
+        <Description>O horizon | A horizon | E horizon | B horizon | C horizon | R layer | Permafrost</Description>
+        <Choice/>
+        <Choice>O horizon</Choice>
+        <Choice>A horizon</Choice>
+        <Choice>E horizon</Choice>
+        <Choice>B horizon</Choice>
+        <Choice>C horizon</Choice>
+        <Choice>R layer</Choice>
+        <Choice>Permafrost</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>soil texture measurement</Name>
+      <HarmonizedName>soil_text_measure</HarmonizedName>
+      <Description>the relative proportion of different grain sizes of mineral particles in a soil, as described using a standard system; express as % sand (50 um to 2 mm), silt (2 um to 50 um), and clay (&lt;2 um) with textural name (e.g., silty clay loam) optional.</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>soil texture method</Name>
+      <HarmonizedName>soil_texture_meth</HarmonizedName>
+      <Description>reference or method used in determining soil texture</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>soil type</Name>
+      <HarmonizedName>soil_type</HarmonizedName>
+      <Description>soil series name or other lower-level classification</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>soil type method</Name>
+      <HarmonizedName>soil_type_meth</HarmonizedName>
+      <Description>reference or method used in determining soil series name or other lower-level classification</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>source material identifiers</Name>
+      <HarmonizedName>source_material_id</HarmonizedName>
+      <Description>unique identifier assigned to a material sample used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>storage conditions</Name>
+      <HarmonizedName>store_cond</HarmonizedName>
+      <Description>explain how and for how long the soil sample was stored before DNA extraction.</Description>
+      <Format>
+        <Description>{text};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>tillage</Name>
+      <HarmonizedName>tillage</HarmonizedName>
+      <Description>note method(s) used for tilling</Description>
+      <Format type="select">
+        <Description>drill | cutting disc | ridge till | strip tillage | zonal tillage | chisel | tined | mouldboard | disc plough</Description>
+        <Choice/>
+        <Choice>drill</Choice>
+        <Choice>cutting disc</Choice>
+        <Choice>ridge till</Choice>
+        <Choice>strip tillage</Choice>
+        <Choice>zonal tillage</Choice>
+        <Choice>chisel</Choice>
+        <Choice>tined</Choice>
+        <Choice>mouldboard</Choice>
+        <Choice>disc plough</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>total N method</Name>
+      <HarmonizedName>tot_n_meth</HarmonizedName>
+      <Description>reference or method used in determining the total N</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>total nitrogen</Name>
+      <HarmonizedName>tot_nitro</HarmonizedName>
+      <Description>total nitrogen content of the sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>total nitrogen content method</Name>
+      <HarmonizedName>tot_nitro_cont_meth</HarmonizedName>
+      <Description>Reference or method used in determining the total nitrogen</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>total organic carbon method</Name>
+      <HarmonizedName>tot_org_c_meth</HarmonizedName>
+      <Description>reference or method used in determining total organic C</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>total organic carbon</Name>
+      <HarmonizedName>tot_org_carb</HarmonizedName>
+      <Description>Definition for soil: total organic C content of the soil units of g C/kg soil. Definition otherwise: total organic carbon content</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>water content</Name>
+      <HarmonizedName>water_content</HarmonizedName>
+      <Description>water content measurement</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Soil">
+      <Name>water content of soil method</Name>
+      <HarmonizedName>water_content_soil_meth</HarmonizedName>
+      <Description>reference or method used in determining the water content of soil</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

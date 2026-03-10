@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package group="MIGS.vi">
+    <Name>MIGS.vi.food-farm_env.6.0</Name>
+    <DisplayName>MIGS: virus, food-farm environment; version 6.0</DisplayName>
+    <ShortName>MIGS Viral</ShortName>
+    <EnvPackage>food-farm_env</EnvPackage>
+    <EnvPackageDisplay>food-farm environment</EnvPackageDisplay>
+    <NotAppropriateFor>wgs_single;wgs_batch;wgs_diploid</NotAppropriateFor>
+    <Description>Use for virus genomic sequences. Organism must have lineage Viruses.</Description>
+    <Example/>
+    <TemplateHeader># This is a submission template for batch deposit of 'MIGS: virus, food-farm environment; version 6.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>strain</Name>
+      <HarmonizedName>strain</HarmonizedName>
+      <Description>microbial or eukaryotic strain name</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>isolate</Name>
+      <HarmonizedName>isolate</HarmonizedName>
+      <Description>identification or description of the specific individual from which this sample was obtained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-farm environment">
+      <Name>biotic regimen</Name>
+      <HarmonizedName>biotic_regm</HarmonizedName>
+      <Description>Information about treatment(s) involving use of biotic factors, such as bacteria, viruses or fungi</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-farm environment">
+      <Name>chemical administration</Name>
+      <HarmonizedName>chem_administration</HarmonizedName>
+      <Description>list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v1.72), please see http://bioportal.bioontology.org/visualize/44603</Description>
+      <Format>
+        <Description>{term}; {timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-farm environment">
+      <Name>depth</Name>
+      <HarmonizedName>depth</HarmonizedName>
+      <Description>Depth is defined as the vertical distance below surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples.</Description>
+      <Format>
+        <Description>{float} m</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>broad-scale environmental context</Name>
+      <HarmonizedName>env_broad_scale</HarmonizedName>
+      <Description>Add terms that identify the major environment type(s) where your sample was collected. Recommend subclasses of biome [ENVO:00000428]. Multiple terms can be separated by one or more pipes e.g.:  mangrove biome [ENVO:01000181]|estuarine biome [ENVO:01000020]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>local-scale environmental context</Name>
+      <HarmonizedName>env_local_scale</HarmonizedName>
+      <Description>Add terms that identify environmental entities having causal influences upon the entity at time of sampling, multiple terms can be separated by pipes, e.g.:  shoreline [ENVO:00000486]|intertidal zone [ENVO:00000316]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>environmental medium</Name>
+      <HarmonizedName>env_medium</HarmonizedName>
+      <Description>Add terms that identify the material displaced by the entity at time of sampling. Recommend subclasses of environmental material [ENVO:00010483]. Multiple terms can be separated by pipes e.g.: estuarine water [ENVO:01000301]|estuarine mud [ENVO:00002160]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-farm environment">
+      <Name>food product type</Name>
+      <HarmonizedName>food_product_type</HarmonizedName>
+      <Description>A food product type is a class of food products that is differentiated by its food composition (e.g., single- or multi-ingredient), processing and/or consumption characteristics. This does not include brand name products but it may include generic food dish categories. This field encourages terms under food product type (http://purl.obolibrary.org/obo/FOODON:03400361). For terms related to food product for an animal, consult food product for animal (http://purl.obolibrary.org/obo/FOODON_03309997). If the proper descriptor is not listed please use text to describe the food type. Multiple terms can be separated by one or more pipes, e.g., multi-component food product [FOODON:00002501]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-farm environment">
+      <Name>Interagency Food Safety Analytics Collaboration (IFSAC) category</Name>
+      <HarmonizedName>ifsac_category</HarmonizedName>
+      <Description>The IFSAC food categorization scheme has five distinct levels to which foods can be assigned, depending upon the type of food. First, foods are assigned to one of four food groups (aquatic animals, land animals, plants, and other). Food groups include increasingly specific food categories; dairy, eggs, meat and poultry, and game are in the land animal food group, and the category meat and poultry is further subdivided into more specific categories of meat (beef, pork, other meat) and poultry (chicken, turkey, other poultry). Finally, foods are differentiated by differences in food processing (such as pasteurized fluid dairy products, unpasteurized fluid dairy products, pasteurized solid and semi-solid dairy products, and unpasteurized solid and semi-solid dairy products. An IFSAC food category chart is available from https://www.cdc.gov/foodsafety/ifsac/projects/food-categorization-scheme.html PMID: 28926300, e.g., Plants:Produce:Vegetables:Herbs:Dried Herbs</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Nucleic Acid Sequence Source">
+      <Name>isolation and growth condition</Name>
+      <HarmonizedName>isol_growth_condt</HarmonizedName>
+      <Description>PMID or url for isolation and growth condition specifications</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Nucleic Acid Sequence Source">
+      <Name>propagation</Name>
+      <HarmonizedName>propagation</HarmonizedName>
+      <Description>phage: lytic/lysogenic/temperate/obligately lytic; plasmid: incompatibility group; eukaryote: asexual/sexual</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-farm environment">
+      <Name>sample material type (host or environmental context)</Name>
+      <HarmonizedName>samp_mat_type</HarmonizedName>
+      <Description>The type of material from which the sample was obtained. For the Hydrocarbon package, samples include types like core, rock trimmings, drill cuttings, piping section, coupon, pigging debris, solid deposit, produced fluid, produced water, injected water, swabs, etc. For the Food Package, samples are usually categorized as food, body products or tissues, or environmental material. This field accepts terms listed under environmental specimen (http://purl.obolibrary.org/obo/GENEPIO_0001246)</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>environment adjacent to site</Name>
+      <HarmonizedName>adjacent_environment</HarmonizedName>
+      <Description>Description of the environmental system or features that are adjacent to the sampling site. This field accepts terms under ecosystem (http://purl.obolibrary.org/obo/ENVO_01001110) and human construction (http://purl.obolibrary.org/obo/ENVO_00000070). Multiple terms can be separated by pipes</Description>
+      <Format>
+        <Description>{termLabel}{[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>local air flow impediments</Name>
+      <HarmonizedName>air_flow_impede</HarmonizedName>
+      <Description>Presence of objects in the area that would influence or impede air flow through the air filter, e.g., obstructed, unobstructed</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>air particulate matter concentration</Name>
+      <HarmonizedName>air_pm_concen</HarmonizedName>
+      <Description>concentration of substances that remain suspended in the air, and comprise mixtures of organic and inorganic substances (PM10 and PM2.5); can report multiple PM's by entering numeric values preceded by name of PM</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>ancestral data</Name>
+      <HarmonizedName>ances_data</HarmonizedName>
+      <Description>Information about either pedigree or other ancestral information description, e.g., parental variety in case of mutant or selection, A/3*B (meaning [(A x B) x B] x B)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>animal water delivery method</Name>
+      <HarmonizedName>anim_water_method</HarmonizedName>
+      <Description>Description of the equipment or method used to distribute water to livestock. This field accepts terms listed under water delivery equipment (http://opendata.inra.fr/EOL/EOL_0001653). Multiple terms can be separated by pipes</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food animal source diet</Name>
+      <HarmonizedName>animal_diet</HarmonizedName>
+      <Description>If the isolate is from a food animal, the type of diet eaten by the food animal. Please list the main food staple and the setting, if appropriate. For a list of acceptable animal feed terms or categories, please see http://www.feedipedia.org. Multiple terms may apply and can be separated by pipes. Food product for animal covers foods intended for consumption by domesticated animals. Consult http://purl.obolibrary.org/obo/FOODON_03309997. If the proper descriptor is not listed please use text to describe the food type. Multiple terms can be separated by one or more pipes. If the proper descriptor is not listed please use text to describe the food product type</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>animal feeding equipment</Name>
+      <HarmonizedName>animal_feed_equip</HarmonizedName>
+      <Description>Description of the feeding equipment used for livestock. This field accepts terms listed under feed delivery (http://opendata.inra.fr/EOL/EOL_0001757). Multiple terms can be separated by one or more pipes</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>animal intrusion near sample source</Name>
+      <HarmonizedName>animal_intrusion</HarmonizedName>
+      <Description>Identification of animals intruding on the sample or sample site including invertebrates (such as pests or pollinators) and vertebrates (such as wildlife or domesticated animals). This field encourages terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also encourages identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy. Multiple terms can be separated by pipes, e.g., large flies</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>observed biotic relationship</Name>
+      <HarmonizedName>biotic_relationship</HarmonizedName>
+      <Description>Free-living or from host (define relationship)</Description>
+      <Format type="select">
+        <Description>free living | parasite | commensal | symbiont</Description>
+        <Choice/>
+        <Choice>free living</Choice>
+        <Choice>parasite</Choice>
+        <Choice>commensal</Choice>
+        <Choice>symbiont</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>collection method </Name>
+      <HarmonizedName>collection_method</HarmonizedName>
+      <Description>Process used to collect the sample, e.g., bronchoalveolar lavage (BAL)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>conductivity</Name>
+      <HarmonizedName>conduc</HarmonizedName>
+      <Description>electrical conductivity of water</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>crop rotation</Name>
+      <HarmonizedName>crop_rotation</HarmonizedName>
+      <Description>whether or not crop is rotated, and if yes, rotation schedule</Description>
+      <Format>
+        <Description>{boolean};Rn/{timestamp}/{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>crop yield</Name>
+      <HarmonizedName>crop_yield</HarmonizedName>
+      <Description>Amount of crop produced per unit or area of land</Description>
+      <Format>
+        <Description>{float}{unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>culture isolation date</Name>
+      <HarmonizedName>cult_isol_date</HarmonizedName>
+      <Description>A culture isolation date is a date-time entity marking the end of a process in which a sample yields a positive result for the target microbial analyte(s) in the form of an isolated colony or colonies, e.g., 5/24/2020</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>culture result</Name>
+      <HarmonizedName>cult_result</HarmonizedName>
+      <Description>Any result of a bacterial culture experiment reported as a binary assessment, e.g., absent, active, inactive, negative, no, present, positive, yes</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>culture result organism</Name>
+      <HarmonizedName>cult_result_org</HarmonizedName>
+      <Description>Taxonomic information about the cultured organism(s)</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}|{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>culture target microbial analyte</Name>
+      <HarmonizedName>cult_target</HarmonizedName>
+      <Description>The target microbial analyte in terms of investigation scope. This field accepts terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also accepts identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}|{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>extreme weather date</Name>
+      <HarmonizedName>date_extr_weath</HarmonizedName>
+      <Description>Date of unusual weather events that may have affected microbial populations. Multiple terms can be separated by pipes, listed in reverse chronological order</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>encoded traits</Name>
+      <HarmonizedName>encoded_traits</HarmonizedName>
+      <Description>Traits like antibiotic resistance/xenobiotic degration phenotypes/converting phage genes</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>enrichment protocol</Name>
+      <HarmonizedName>enrichment_protocol</HarmonizedName>
+      <Description>The microbiological workflow or protocol followed to test for the presence or enumeration of the target microbial analyte(s). Please provide a PubMed or DOI reference for published protocols</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>estimated size</Name>
+      <HarmonizedName>estimated_size</HarmonizedName>
+      <Description>Estimated size of genome</Description>
+      <Format>
+        <Description>{integer} bp</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>extreme weather event</Name>
+      <HarmonizedName>extr_weather_event</HarmonizedName>
+      <Description>Unusual weather events that may have affected microbial populations. Multiple terms can be separated by pipes, listed in reverse chronological order, e.g., hail</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>farm equipment used</Name>
+      <HarmonizedName>farm_equip</HarmonizedName>
+      <Description>List of relevant equipment used for planting, fertilization, harvesting, irrigation, land levelling, residue management, weeding or transplanting during the growing season.  This field encourages terms listed under agricultural implement (http://purl.obolibrary.org/obo/AGRO_00000416). Multiple terms can be separated by pipes, e.g., combine harvester [AGRO:00000473]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>farm equipment sanitization</Name>
+      <HarmonizedName>farm_equip_san</HarmonizedName>
+      <Description>Method used to sanitize growing and harvesting equipment including type and concentration of sanitizing solution and frequency of sanitization</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>farm equipment sanitization frequency</Name>
+      <HarmonizedName>farm_equip_san_freq</HarmonizedName>
+      <Description>The number of times farm equipment is cleaned. Frequency of cleaning might be on a daily basis, weekly, monthly, quarterly or annually</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>equipment shared with other farms</Name>
+      <HarmonizedName>farm_equip_shared</HarmonizedName>
+      <Description>List of planting, growing or harvesting equipment shared with other farms</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>farm watering water source</Name>
+      <HarmonizedName>farm_water_source</HarmonizedName>
+      <Description>Source of water used on the farm for irrigation of crops or watering of livestock, e.g., water well</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>fertilizer administration</Name>
+      <HarmonizedName>fertilizer_admin</HarmonizedName>
+      <Description>Type of fertilizer or amendment added to the soil or water for the purpose of improving substrate health and quality for plant growth. This field encourages terms listed under agronomic fertilizer (http://purl.obolibrary.org/obo/AGRO_00002062). Multiple terms may apply and can be separated by pipes, listing in reverse chronological order, e.g., fish emulsion [AGRO:00000082]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>fertilizer administration date</Name>
+      <HarmonizedName>fertilizer_date</HarmonizedName>
+      <Description>Date of administration of soil amendment or fertilizer. Multiple terms may apply and can be separated by pipes, listing in reverse chronological order</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food cleaning process </Name>
+      <HarmonizedName>food_clean_proc</HarmonizedName>
+      <Description>The process of cleaning food to separate other environmental materials from the food source. Multiple terms can be separated by pipes, e.g., rinsed with water|scrubbed with brush</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food contact surface</Name>
+      <HarmonizedName>food_contact_surf</HarmonizedName>
+      <Description>The specific container or coating materials in direct contact with the food. Multiple values can be assigned.  This field encourages terms listed under food contact surface (http://purl.obolibrary.org/obo/FOODON_03500010), e.g., aluminum surface [FOODON:03500042]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food container or wrapping</Name>
+      <HarmonizedName>food_contain_wrap</HarmonizedName>
+      <Description>Type of container or wrapping defined by the main container material, the container form, and the material of the liner lids or ends. Also type of container or wrapping by form; prefer description by material first, then by form. This field encourages terms listed under food container or wrapping (http://purl.obolibrary.org/obo/FOODON_03490100), e.g., bottle or jar [FOODON:03490203]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>Food harvesting process</Name>
+      <HarmonizedName>food_harvest_proc</HarmonizedName>
+      <Description>A harvesting process is a process which takes in some food material from an individual or community of plant or animal organisms in a given context and time, and outputs a precursor or consumable food product. This may include a part of an organism or the whole, and may involve killing the organism</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food packing medium</Name>
+      <HarmonizedName>food_pack_medium</HarmonizedName>
+      <Description>The medium in which the food is packed for preservation and handling or the medium surrounding homemade foods, e.g., peaches cooked in sugar syrup. The packing medium may provide a controlled environment for the food. It may also serve to improve palatability and consumer appeal. This includes edible packing media (e.g. fruit juice), gas other than air (e.g. carbon dioxide), vacuum packed, or packed with aerosol propellant. This field encourages terms under food packing medium (http://purl.obolibrary.org/obo/FOODON_03480020). Multiple terms may apply and can be separated by pipes, e.g., vacuum-packed [FOODON:03480027]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food preservation process</Name>
+      <HarmonizedName>food_preserv_proc</HarmonizedName>
+      <Description>The methods contributing to the prevention or retardation of microbial, enzymatic or oxidative spoilage and thus to the extension of shelf life. This field encourages terms listed under food preservation process (http://purl.obolibrary.org/obo/FOODON_03470107), e.g., food fermentation [FOODON:00001304]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food production characteristics</Name>
+      <HarmonizedName>food_prod_char</HarmonizedName>
+      <Description>Descriptors of the food production system such as wild caught, free-range, organic, free-range, industrial, dairy, beef</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food quality date</Name>
+      <HarmonizedName>food_quality_date</HarmonizedName>
+      <Description>The date recommended for the use of the product while at peak quality, this date is not a reflection of safety unless used on infant formula this date is not a reflection of safety and is typically labeled on a food product as ""best if used by,"" best by,"" ""use by,"" or ""freeze by"", e.g., 5/24/2020</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food source</Name>
+      <HarmonizedName>food_source</HarmonizedName>
+      <Description>Individual organism or category of organisms from which the food product or its major ingredient is derived, e.g., giant tiger prawn [FOODON:03412612]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food shipping transportation method</Name>
+      <HarmonizedName>food_trav_mode</HarmonizedName>
+      <Description>A descriptor for the method of movement of food commodity along the food distribution system. This field accepts terms listed under travel mode (http://purl.obolibrary.org/obo/GENEPIO_0001064). If the proper descrptor is not listed please use text to describe the mode of travel. Multiple terms can be separated by one or more pipes</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food shipping transportation vehicle</Name>
+      <HarmonizedName>food_trav_vehic</HarmonizedName>
+      <Description>A descriptor for the mobile machine which is used to transport food commodities along the food distribution system. This field accepts terms listed under vehicle (http://purl.obolibrary.org/obo/ENVO_01000604). If the proper descrptor is not listed please use text to describe the mode of travel. Multiple terms can be separated by one or more pipes</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food treatment process</Name>
+      <HarmonizedName>food_treat_proc</HarmonizedName>
+      <Description>Used to specifically characterize a food product based on the treatment or processes applied to the product or any indexed ingredient. The processes include adding, substituting or removing components or modifying the food or component, e.g., through fermentation. Multiple values can be assigned. This fields accepts terms listed under food treatment process (http://purl.obolibrary.org/obo/FOODON_03460111)</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>genetic modification</Name>
+      <HarmonizedName>genetic_mod</HarmonizedName>
+      <Description>Genetic modifications of the genome of an organism, which may occur naturally by spontaneous mutation, or be introduced by some experimental means, e.g. specification of a transgene or the gene knocked-out or details of transient transfection</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>growth habit</Name>
+      <HarmonizedName>growth_habit</HarmonizedName>
+      <Description>Characteristic shape, appearance or growth form of a plant species, e.g., erect, semi-erect, spreading, prostrate</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>growth medium</Name>
+      <HarmonizedName>growth_medium</HarmonizedName>
+      <Description>A liquid or gel containing nutrients, salts, and other factors formulated to support the growth of microorganisms, cells, or plants (National Cancer Institute Thesaurus). The name of the medium used to grow the microorganism</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>host</Name>
+      <HarmonizedName>host</HarmonizedName>
+      <Description>The natural (as opposed to laboratory) host to the organism from which the sample was obtained. Use the full taxonomic name, eg, "Homo sapiens".</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>host age</Name>
+      <HarmonizedName>host_age</HarmonizedName>
+      <Description>Age of host at the time of sampling</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>host disease</Name>
+      <HarmonizedName>host_disease</HarmonizedName>
+      <Description>Name of relevant disease, e.g. Salmonella gastroenteritis. Controlled vocabulary, http://bioportal.bioontology.org/ontologies/1009 or http://www.ncbi.nlm.nih.gov/mesh</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>host dry mass</Name>
+      <HarmonizedName>host_dry_mass</HarmonizedName>
+      <Description>measurement of dry mass</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>host genotype</Name>
+      <HarmonizedName>host_genotype</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>food animal group size</Name>
+      <HarmonizedName>host_group_size</HarmonizedName>
+      <Description>The number of food animals of the same species that are maintained together as a unit, i.e. a herd or flock, e.g., 80</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>host height</Name>
+      <HarmonizedName>host_height</HarmonizedName>
+      <Description>the height of subject</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>animal housing system </Name>
+      <HarmonizedName>host_housing</HarmonizedName>
+      <Description>Description of the housing system of the livestock. This field encourages terms listed under terrestrial management housing system (http://opendata.inra.fr/EOL/EOL_0001605), e.g., pen [EOL:0001902]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>host length</Name>
+      <HarmonizedName>host_length</HarmonizedName>
+      <Description>the length of subject</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>host phenotype</Name>
+      <HarmonizedName>host_phenotype</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>host subspecific genetic lineage</Name>
+      <HarmonizedName>host_subspecf_genlin</HarmonizedName>
+      <Description>Information about the genetic distinctness of the host organism below the subspecies level e.g., serovar, serotype, biotype, ecotype, variety, cultivar, or any relevant genetic typing schemes like Group I plasmid. Subspecies should not be recorded in this term, but in the NCBI taxonomy. Supply both the lineage name and the lineage rank separated by a colon, e.g., biovar:abc123</Description>
+      <Format>
+        <Description>{rank name}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>host taxonomy ID</Name>
+      <HarmonizedName>host_taxid</HarmonizedName>
+      <Description>NCBI taxonomy ID of the host, e.g. 9606</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>host total mass</Name>
+      <HarmonizedName>host_tot_mass</HarmonizedName>
+      <Description>total mass of the host at collection, the unit depends on host</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>humidity</Name>
+      <HarmonizedName>humidity</HarmonizedName>
+      <Description>amount of water vapour in the air, at the time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>intended consumer</Name>
+      <HarmonizedName>intended_consumer</HarmonizedName>
+      <Description>Food consumer type, human or animal, for which the food product is produced and marketed, e.g., human</Description>
+      <Format type="select">
+        <Description>human as food consumer | animal as food consumer | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>human as food consumer</Choice>
+        <Choice>animal as food consumer</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>lot number</Name>
+      <HarmonizedName>lot_number</HarmonizedName>
+      <Description>A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch. The submitter should provide lot number of the item followed by the item name for which the lot number was provided</Description>
+      <Format>
+        <Description>{integer}, {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>mechanical damage</Name>
+      <HarmonizedName>mechanical_damage</HarmonizedName>
+      <Description>information about any mechanical damage exerted on the plant; can include multiple damages and sites</Description>
+      <Format>
+        <Description>{text};{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>miscellaneous parameter</Name>
+      <HarmonizedName>misc_param</HarmonizedName>
+      <Description>any other measurement performed or parameter collected, that is not listed here</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>negative control type</Name>
+      <HarmonizedName>neg_cont_type</HarmonizedName>
+      <Description>The substance or equipment used as a negative control in an investigation, e.g., distilled water, phosphate buffer, empty collection device, empty collection tube, DNA-free PCR mix, sterile swab, sterile syringe</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>number of replicons</Name>
+      <HarmonizedName>num_replicons</HarmonizedName>
+      <Description>Number of replicons in nuclear genome</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>Omics Observatory ID</Name>
+      <HarmonizedName>omics_observ_id</HarmonizedName>
+      <Description>A unique identifier of the omics-enabled observatory (or comparable time series) your data derives from. This identifier should be provided by the OMICON ontology; if you require a new identifier for your time series, contact the ontology's developers. Information is available here: https://github.com/GLOMICON/omicon. This field is only applicable to records which derive from an omics time-series or observatory.</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>organism count</Name>
+      <HarmonizedName>organism_count</HarmonizedName>
+      <Description>total count of any organism per gram or volume of sample,should include name of organism followed by count; can include multiple organism counts</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>part of plant or animal</Name>
+      <HarmonizedName>part_plant_animal</HarmonizedName>
+      <Description>The anatomical part of the organism being involved in food production or consumption; e.g., a carrot is the root of the plant (root vegetable). This field accepts terms listed under part of plant or animal (http://purl.obolibrary.org/obo/FOODON_03420116)</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>pathogenicity</Name>
+      <HarmonizedName>pathogenicity</HarmonizedName>
+      <Description>To what is the entity pathogenic</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>perturbation</Name>
+      <HarmonizedName>perturbation</HarmonizedName>
+      <Description>type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types</Description>
+      <Format>
+        <Description>{text};{interval}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>pH</Name>
+      <HarmonizedName>ph</HarmonizedName>
+      <Description>pH measurement</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>pH method</Name>
+      <HarmonizedName>ph_meth</HarmonizedName>
+      <Description>reference or method used in determining pH</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>plant growth medium </Name>
+      <HarmonizedName>plant_growth_med</HarmonizedName>
+      <Description>Type of the media used for growing sampled plants, e.g., soil [ENVO:00001998]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>degree of plant part maturity</Name>
+      <HarmonizedName>plant_part_maturity</HarmonizedName>
+      <Description>A description of the stage of development of a plant or plant part based on maturity or ripeness. This field accepts terms listed under degree of plant maturity (http://purl.obolibrary.org/obo/FOODON_03530050)</Description>
+      <Format>
+        <Description>{term label}{term ID}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>plant reproductive part</Name>
+      <HarmonizedName>plant_reprod_crop</HarmonizedName>
+      <Description>Plant reproductive part used in the field during planting to start the crop, e.g., plant cutting, pregerminated seed, ratoon, seed, seedling, whole mature plant</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>plant water delivery method</Name>
+      <HarmonizedName>plant_water_method</HarmonizedName>
+      <Description>Description of the equipment or method used to distribute water to crops. This field encourages terms listed under irrigation process (http://purl.obolibrary.org/obo/AGRO_00000006). Multiple terms can be separated by pipes, e.g., drip irrigation process [AGRO:00000056]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>positive control type</Name>
+      <HarmonizedName>pos_cont_type</HarmonizedName>
+      <Description>The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive
+</Description>
+      <Format>
+        <Description>{term} or {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>previous land use</Name>
+      <HarmonizedName>previous_land_use</HarmonizedName>
+      <Description>previous land use and dates</Description>
+      <Format>
+        <Description>{text};{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>production labeling claims</Name>
+      <HarmonizedName>prod_label_claims</HarmonizedName>
+      <Description>Labeling claims containing descriptors such as wild caught, free-range, organic, free-range, industrial, hormone-free, antibiotic free, cage free</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>purpose of sampling</Name>
+      <HarmonizedName>purpose_of_sampling</HarmonizedName>
+      <Description>the reason that the sample was collected, e.g., active surveillance in response to an outbreak, active surveillance not initiated by an outbreak, clinical trial, cluster investigation, environmental assessment, farm sample, field trial, for cause, industry internal investigation, market sample, passive surveillance, population based studies, research, research and development</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>reference for biomaterial</Name>
+      <HarmonizedName>ref_biomaterial</HarmonizedName>
+      <Description>Primary publication or genome report</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>relative location of sample</Name>
+      <HarmonizedName>rel_location</HarmonizedName>
+      <Description>Location of sample to other parts of the farm, e.g. under crop plant, near irrigation ditch, from the dirt road, from air above crops, nearby river, e.g., furrow</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>repository</Name>
+      <HarmonizedName>repository</HarmonizedName>
+      <Description>the name of the institution where the sample or DNA extract is held or "sample not available" if the sample was used in its entirety for analysis or otherwise not retained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>rooting conditions</Name>
+      <HarmonizedName>root_cond</HarmonizedName>
+      <Description>Relevant rooting conditions such as field plot size, sowing density, container dimensions, number of plants per container</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>rooting medium carbon</Name>
+      <HarmonizedName>root_med_carbon</HarmonizedName>
+      <Description>Source of organic carbon in the culture rooting medium, e.g., sucrose</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>rooting medium macronutrients</Name>
+      <HarmonizedName>root_med_macronutr</HarmonizedName>
+      <Description>Measurement of the culture rooting medium macronutrients (N,P, K, Ca, Mg, S), e.g., KH2PO4 (170mg/L)</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>rooting medium micronutrients</Name>
+      <HarmonizedName>root_med_micronutr</HarmonizedName>
+      <Description>Measurement of the culture rooting medium micronutrients (Fe, Mn, Zn, B, Cu, Mo), e.g., H3BO3 (6.2mg/L)</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>rooting medium pH</Name>
+      <HarmonizedName>root_med_ph</HarmonizedName>
+      <Description>pH measurement of the culture rooting medium, e.g., 5.5</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>salinity</Name>
+      <HarmonizedName>salinity</HarmonizedName>
+      <Description>salinity measurement</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>salinity method</Name>
+      <HarmonizedName>salinity_meth</HarmonizedName>
+      <Description>reference or method used in determining salinity</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample collection device or method</Name>
+      <HarmonizedName>samp_collect_device</HarmonizedName>
+      <Description>Method or device employed for collecting sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample material processing</Name>
+      <HarmonizedName>samp_mat_process</HarmonizedName>
+      <Description>Processing applied to the sample during or after isolation</Description>
+      <Format>
+        <Description>{text|term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>sample pooling</Name>
+      <HarmonizedName>samp_pooling</HarmonizedName>
+      <Description>Physical combination of several instances of like material, e.g., RNA extracted from samples or dishes of cell cultures into one big aliquot of cells. Please provide a short description of the samples that were pooled</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample size</Name>
+      <HarmonizedName>samp_size</HarmonizedName>
+      <Description>Amount or size of sample (volume, mass or area) that was collected</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>sample source material category</Name>
+      <HarmonizedName>samp_source_mat_cat</HarmonizedName>
+      <Description>This is the scientific role or category that the subject organism or material has with respect to an investigation. This field accepts terms listed under specimen source material category (http://purl.obolibrary.org/obo/GENEPIO_0001237 or http://purl.obolibrary.org/obo/OBI_0100051)</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>sample storage duration</Name>
+      <HarmonizedName>samp_store_dur</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>sample storage temperature</Name>
+      <HarmonizedName>samp_store_temp</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample volume or weight for DNA extraction</Name>
+      <HarmonizedName>samp_vol_we_dna_ext</HarmonizedName>
+      <Description>volume (mL) or weight (g) of sample processed for DNA extraction</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>season</Name>
+      <HarmonizedName>season</HarmonizedName>
+      <Description>The season when sampling occurred. Any of the four periods into which the year is divided by the equinoxes and solstices. This field accepts terms listed under season (http://purl.obolibrary.org/obo/NCIT_C94729)</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>mean seasonal humidity</Name>
+      <HarmonizedName>season_humidity</HarmonizedName>
+      <Description>Average humidity of the region throughout the growing season</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>mean seasonal precipitation</Name>
+      <HarmonizedName>season_precpt</HarmonizedName>
+      <Description>The average of all seasonal precipitation values known, or an estimated equivalent value derived by such methods as regional indexes or Isohyetal maps</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>mean seasonal temperature</Name>
+      <HarmonizedName>season_temp</HarmonizedName>
+      <Description>Mean seasonal temperature</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>serovar or serotype</Name>
+      <HarmonizedName>serovar_or_serotype</HarmonizedName>
+      <Description>A characterization of a cell or microorganism based on the antigenic properties of the molecules on its surface. Indicate the name of a serovar or serotype of interest. This field accepts terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also accepts identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}|{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>size-fraction lower threshold</Name>
+      <HarmonizedName>size_frac_low</HarmonizedName>
+      <Description>Refers to the mesh/pore size used to pre-filter/pre-sort the sample. Materials larger than the size threshold are excluded from the sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>size-fraction upper threshold</Name>
+      <HarmonizedName>size_frac_up</HarmonizedName>
+      <Description>Refers to the mesh/pore size used to retain the sample. Materials smaller than the size threshold are excluded from the sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>soil conductivity</Name>
+      <HarmonizedName>soil_conductivity</HarmonizedName>
+      <Description>Conductivity of soil at time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>soil cover</Name>
+      <HarmonizedName>soil_cover</HarmonizedName>
+      <Description>Description of the material covering the sampled soil. This field accepts terms under ENVO:00010483, environmental material</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>soil pH</Name>
+      <HarmonizedName>soil_ph</HarmonizedName>
+      <Description>The pH of soil at time of sampling</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>soil sediment porosity</Name>
+      <HarmonizedName>soil_porosity</HarmonizedName>
+      <Description>Porosity of soil or deposited sediment is volume of voids divided by the total volume of sample</Description>
+      <Format>
+        <Description>{percentage}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>soil temperature</Name>
+      <HarmonizedName>soil_temp</HarmonizedName>
+      <Description>Temperature of soil at the time of sampling</Description>
+      <Format>
+        <Description>{float}{unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>soil texture classification</Name>
+      <HarmonizedName>soil_texture_class</HarmonizedName>
+      <Description>One of the 12 soil texture classes use to describe soil texture based on the relative proportion of different grain sizes of mineral particles [sand (50 um to 2 mm), silt (2 um to 50 um), and clay (&lt;2 um)] in a soil, e.g., clay, clay loam, loam, loamy sand, sand, sandy clay, sandy clay loam, sandy loam, silt, silty clay, silty clay loam, silt loam</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>soil texture method</Name>
+      <HarmonizedName>soil_texture_meth</HarmonizedName>
+      <Description>reference or method used in determining soil texture</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>soil type</Name>
+      <HarmonizedName>soil_type</HarmonizedName>
+      <Description>soil series name or other lower-level classification</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>soil type method</Name>
+      <HarmonizedName>soil_type_meth</HarmonizedName>
+      <Description>reference or method used in determining soil series name or other lower-level classification</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>solar irradiance</Name>
+      <HarmonizedName>solar_irradiance</HarmonizedName>
+      <Description>the amount of solar energy that arrives at a specific area of a surface during a specific time interval</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>source material identifiers</Name>
+      <HarmonizedName>source_material_id</HarmonizedName>
+      <Description>unique identifier assigned to a material sample used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>spike-in with antibiotics</Name>
+      <HarmonizedName>spikein_antibiotic</HarmonizedName>
+      <Description>Antimicrobials used in research study to assess effects of exposure on microbiome of a specific site. Please list antimicrobial, common name and/or class and concentration used for spike-in</Description>
+      <Format>
+        <Description>{text} {integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>spike-in organism count</Name>
+      <HarmonizedName>spikein_count</HarmonizedName>
+      <Description>Total cell count of any organism (or group of organisms) per gram, volume or area of sample, should include name of organism followed by count. The method that was used for the enumeration (e.g., qPCR, atp, mpn, etc.) should also be provided, e.g., total prokaryotes; 3.5e7 cells per ml; qPCR</Description>
+      <Format>
+        <Description>{text};{float} {unit};[ATP|MPN|qPCR|other]</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>spike-in growth medium</Name>
+      <HarmonizedName>spikein_growth_med</HarmonizedName>
+      <Description>A liquid or gel containing nutrients, salts, and other factors formulated to support the growth of microorganisms, cells, or plants (National Cancer Institute Thesaurus). A growth medium is a culture medium which has the disposition to encourage growth of particular bacteria to the exclusion of others in the same growth environment. In this case, list the culture medium used to propagate the spike-in bacteria during preparation of spike-in inoculum. This field accepts terms listed under microbiological culture medium (http://purl.obolibrary.org/obo/MICRO_0000067). If the proper descriptor is not listed please use text to describe the spike in growth media</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>spike-in with heavy metals</Name>
+      <HarmonizedName>spikein_metal</HarmonizedName>
+      <Description>Heavy metals used in research study to assess effects of exposure on microbiome of a specific site. Please list heavy metals and concentration used for spike-in</Description>
+      <Format>
+        <Description>{text} {integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>spike in organism</Name>
+      <HarmonizedName>spikein_org</HarmonizedName>
+      <Description>Taxonomic information about the spike-in organism(s). This field accepts terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also accepts identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy. Multiple terms can be separated by pipes</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}|{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>spike-in bacterial serovar or serotype</Name>
+      <HarmonizedName>spikein_serovar</HarmonizedName>
+      <Description>Taxonomic information about the spike-in organism(s) at the serovar or serotype level. This field accepts terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also accepts identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy. Multiple terms can be separated by pipes</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}|{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>spike-in microbial strain</Name>
+      <HarmonizedName>spikein_strain</HarmonizedName>
+      <Description>Taxonomic information about the spike-in organism(s) at the strain level. This field accepts terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also accepts identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy. Multiple terms can be separated by pipes</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}|{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>subspecific genetic lineage</Name>
+      <HarmonizedName>subspecf_gen_lin</HarmonizedName>
+      <Description>Information about the genetic distinctness of the lineage (eg., biovar, serovar)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>temperature</Name>
+      <HarmonizedName>temp</HarmonizedName>
+      <Description>temperature of the sample at time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>tillage</Name>
+      <HarmonizedName>tillage</HarmonizedName>
+      <Description>note method(s) used for tilling</Description>
+      <Format type="select">
+        <Description>drill | cutting disc | ridge till | strip tillage | zonal tillage | chisel | tined | mouldboard | disc plough</Description>
+        <Choice/>
+        <Choice>drill</Choice>
+        <Choice>cutting disc</Choice>
+        <Choice>ridge till</Choice>
+        <Choice>strip tillage</Choice>
+        <Choice>zonal tillage</Choice>
+        <Choice>chisel</Choice>
+        <Choice>tined</Choice>
+        <Choice>mouldboard</Choice>
+        <Choice>disc plough</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>timepoint</Name>
+      <HarmonizedName>timepoint</HarmonizedName>
+      <Description>Time point at which a sample or observation is made or taken from a biomaterial as measured from some reference point. Indicate the timepoint written in ISO 8601 format</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>total nitrogen</Name>
+      <HarmonizedName>tot_nitro</HarmonizedName>
+      <Description>total nitrogen content of the sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>total nitrogen content method</Name>
+      <HarmonizedName>tot_nitro_cont_meth</HarmonizedName>
+      <Description>Reference or method used in determining the total nitrogen</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>total organic carbon method</Name>
+      <HarmonizedName>tot_org_c_meth</HarmonizedName>
+      <Description>reference or method used in determining total organic C</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>total organic carbon</Name>
+      <HarmonizedName>tot_org_carb</HarmonizedName>
+      <Description>Definition for soil: total organic C content of the soil units of g C/kg soil. Definition otherwise: total organic carbon content</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>turbidity</Name>
+      <HarmonizedName>turbidity</HarmonizedName>
+      <Description>turbidity measurement</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>ventilation rate</Name>
+      <HarmonizedName>ventilation_rate</HarmonizedName>
+      <Description>ventilation rate of the system in the sampled premises</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>ventilation type</Name>
+      <HarmonizedName>ventilation_type</HarmonizedName>
+      <Description>ventilation system used in the sampled premises</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>water delivery frequency</Name>
+      <HarmonizedName>water_frequency</HarmonizedName>
+      <Description>Number of water delivery events within a given period of time</Description>
+      <Format>
+        <Description>{float}{unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>water pH</Name>
+      <HarmonizedName>water_ph</HarmonizedName>
+      <Description>The pH measurement of the sample, or liquid portion of sample, or aqueous phase of the fluid</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>environmental feature adjacent water source</Name>
+      <HarmonizedName>water_source_adjac</HarmonizedName>
+      <Description>Description of the environmental features that are adjacent to the farm water source. This field accepts terms under ecosystem (http://purl.obolibrary.org/obo/ENVO_01001110) and human construction (http://purl.obolibrary.org/obo/ENVO_00000070). Multiple terms can be separated by pipes</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>water source shared</Name>
+      <HarmonizedName>water_source_shared</HarmonizedName>
+      <Description>Other users sharing access to the same water source, e.g., multiple users, agricutural, multiple users, no sharing</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>wind direction</Name>
+      <HarmonizedName>wind_direction</HarmonizedName>
+      <Description>wind direction is the direction from which a wind originates</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-farm environment">
+      <Name>wind speed</Name>
+      <HarmonizedName>wind_speed</HarmonizedName>
+      <Description>speed of wind measured at the time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

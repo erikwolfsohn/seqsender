@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package group="MIGS.ba">
+    <Name>MIGS.ba.human-associated.6.0</Name>
+    <DisplayName>MIGS: cultured bacteria/archaea, human-associated; version 6.0</DisplayName>
+    <ShortName>MIGS Cultured Bacterial/Archaeal</ShortName>
+    <EnvPackage>human-associated</EnvPackage>
+    <EnvPackageDisplay>human-associated</EnvPackageDisplay>
+    <NotAppropriateFor>wgs_diploid</NotAppropriateFor>
+    <Description>Use for cultured bacterial or archaeal genomic sequences. Organism must have lineage Bacteria or Archaea.</Description>
+    <Example>SAMN02839585</Example>
+    <TemplateHeader># This is a submission template for batch deposit of 'MIGS: cultured bacteria/archaea, human-associated; version 6.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# See SAMN02839585 for an example record of this type of BioSample (https://www.ncbi.nlm.nih.gov/biosample/SAMN02839585).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="mandatory" group_name="Organism">
+      <Name>strain</Name>
+      <HarmonizedName>strain</HarmonizedName>
+      <Description>microbial or eukaryotic strain name</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>broad-scale environmental context</Name>
+      <HarmonizedName>env_broad_scale</HarmonizedName>
+      <Description>Add terms that identify the major environment type(s) where your sample was collected. Recommend subclasses of biome [ENVO:00000428]. Multiple terms can be separated by one or more pipes e.g.:  mangrove biome [ENVO:01000181]|estuarine biome [ENVO:01000020]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>local-scale environmental context</Name>
+      <HarmonizedName>env_local_scale</HarmonizedName>
+      <Description>Add terms that identify environmental entities having causal influences upon the entity at time of sampling, multiple terms can be separated by pipes, e.g.:  shoreline [ENVO:00000486]|intertidal zone [ENVO:00000316]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>environmental medium</Name>
+      <HarmonizedName>env_medium</HarmonizedName>
+      <Description>Add terms that identify the material displaced by the entity at time of sampling. Recommend subclasses of environmental material [ENVO:00010483]. Multiple terms can be separated by pipes e.g.: estuarine water [ENVO:01000301]|estuarine mud [ENVO:00002160]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Nucleic Acid Sequence Source">
+      <Name>host</Name>
+      <HarmonizedName>host</HarmonizedName>
+      <Description>The natural (as opposed to laboratory) host to the organism from which the sample was obtained. Use the full taxonomic name, eg, "Homo sapiens".</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Nucleic Acid Sequence Source">
+      <Name>isolation and growth condition</Name>
+      <HarmonizedName>isol_growth_condt</HarmonizedName>
+      <Description>PMID or url for isolation and growth condition specifications</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Nucleic Acid Sequence Source">
+      <Name>number of replicons</Name>
+      <HarmonizedName>num_replicons</HarmonizedName>
+      <Description>Number of replicons in nuclear genome</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Nucleic Acid Sequence Source">
+      <Name>reference for biomaterial</Name>
+      <HarmonizedName>ref_biomaterial</HarmonizedName>
+      <Description>Primary publication or genome report</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>amniotic fluid color</Name>
+      <HarmonizedName>amniotic_fluid_color</HarmonizedName>
+      <Description>specification of the color of the amniotic fluid sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>observed biotic relationship</Name>
+      <HarmonizedName>biotic_relationship</HarmonizedName>
+      <Description>Free-living or from host (define relationship)</Description>
+      <Format type="select">
+        <Description>free living | parasite | commensal | symbiont</Description>
+        <Choice/>
+        <Choice>free living</Choice>
+        <Choice>parasite</Choice>
+        <Choice>commensal</Choice>
+        <Choice>symbiont</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>blood disorder</Name>
+      <HarmonizedName>blood_blood_disord</HarmonizedName>
+      <Description>history of blood disorders; can include multiple disorders</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>chemical administration</Name>
+      <HarmonizedName>chem_administration</HarmonizedName>
+      <Description>list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v1.72), please see http://bioportal.bioontology.org/visualize/44603</Description>
+      <Format>
+        <Description>{term}; {timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>collection method </Name>
+      <HarmonizedName>collection_method</HarmonizedName>
+      <Description>Process used to collect the sample, e.g., bronchoalveolar lavage (BAL)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>major diet change in last six months</Name>
+      <HarmonizedName>diet_last_six_month</HarmonizedName>
+      <Description>specification of major diet changes in the last six months, if yes the change should be specified</Description>
+      <Format>
+        <Description>{boolean};{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>drug usage</Name>
+      <HarmonizedName>drug_usage</HarmonizedName>
+      <Description>any drug used by subject and the frequency of usage; can include multiple drugs used</Description>
+      <Format>
+        <Description>{text};{integer}/[year|month|week|day|hour]</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>encoded traits</Name>
+      <HarmonizedName>encoded_traits</HarmonizedName>
+      <Description>Traits like antibiotic resistance/xenobiotic degration phenotypes/converting phage genes</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>estimated size</Name>
+      <HarmonizedName>estimated_size</HarmonizedName>
+      <Description>Estimated size of genome</Description>
+      <Format>
+        <Description>{integer} bp</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>ethnicity</Name>
+      <HarmonizedName>ethnicity</HarmonizedName>
+      <Description>ethnicity of the subject</Description>
+      <Format>
+        <Description>{integer|text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>extrachromosomal elements</Name>
+      <HarmonizedName>extrachrom_elements</HarmonizedName>
+      <Description>Plasmids that have significance phenotypic consequence</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>fetal health status</Name>
+      <HarmonizedName>foetal_health_stat</HarmonizedName>
+      <Description>specification of foetal health status, should also include abortion</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>gestation state</Name>
+      <HarmonizedName>gestation_state</HarmonizedName>
+      <Description>specification of the gestation state</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host age</Name>
+      <HarmonizedName>host_age</HarmonizedName>
+      <Description>Age of host at the time of sampling</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host body mass index</Name>
+      <HarmonizedName>host_body_mass_index</HarmonizedName>
+      <Description>body mass index of the host, calculated as weight/(height)squared</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host body product</Name>
+      <HarmonizedName>host_body_product</HarmonizedName>
+      <Description>substance produced by the host, e.g. stool, mucus, where the sample was obtained from</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host body temperature</Name>
+      <HarmonizedName>host_body_temp</HarmonizedName>
+      <Description>core body temperature of the host when sample was collected</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host diet</Name>
+      <HarmonizedName>host_diet</HarmonizedName>
+      <Description>type of diet depending on the sample for animals omnivore, herbivore etc., for humans high-fat, meditteranean etc.; can include multiple diet types</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host disease</Name>
+      <HarmonizedName>host_disease</HarmonizedName>
+      <Description>Name of relevant disease, e.g. Salmonella gastroenteritis. Controlled vocabulary, http://bioportal.bioontology.org/ontologies/1009 or http://www.ncbi.nlm.nih.gov/mesh</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host family relationship</Name>
+      <HarmonizedName>host_family_relationship</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host genotype</Name>
+      <HarmonizedName>host_genotype</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host height</Name>
+      <HarmonizedName>host_height</HarmonizedName>
+      <Description>the height of subject</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host HIV status</Name>
+      <HarmonizedName>host_hiv_stat</HarmonizedName>
+      <Description>HIV status of subject, if yes HAART initiation status should also be indicated as [YES or NO]</Description>
+      <Format>
+        <Description>{boolean};{boolean}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host last meal</Name>
+      <HarmonizedName>host_last_meal</HarmonizedName>
+      <Description>content of last meal and time since feeding; can include multiple values</Description>
+      <Format>
+        <Description>{text};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host occupation</Name>
+      <HarmonizedName>host_occupation</HarmonizedName>
+      <Description>most frequent job performed by subject</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host phenotype</Name>
+      <HarmonizedName>host_phenotype</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host pulse</Name>
+      <HarmonizedName>host_pulse</HarmonizedName>
+      <Description>resting pulse of the host, measured as beats per minute</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host sex</Name>
+      <HarmonizedName>host_sex</HarmonizedName>
+      <Description>Gender or physical sex of the host</Description>
+      <Format type="select">
+        <Description>male | female | pooled male and female | neuter | hermaphrodite | intersex | not determined | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>male</Choice>
+        <Choice>female</Choice>
+        <Choice>pooled male and female</Choice>
+        <Choice>neuter</Choice>
+        <Choice>hermaphrodite</Choice>
+        <Choice>intersex</Choice>
+        <Choice>not determined</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host subject id</Name>
+      <HarmonizedName>host_subject_id</HarmonizedName>
+      <Description>a unique identifier by which each subject can be referred to, de-identified, e.g. #131</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>observed host symbionts</Name>
+      <HarmonizedName>host_symbiont</HarmonizedName>
+      <Description>The taxonomic name of the organism(s) found living in mutualistic, commensalistic, or parasitic symbiosis with the specific host</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>host taxonomy ID</Name>
+      <HarmonizedName>host_taxid</HarmonizedName>
+      <Description>NCBI taxonomy ID of the host, e.g. 9606</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host tissue sampled</Name>
+      <HarmonizedName>host_tissue_sampled</HarmonizedName>
+      <Description>name of body site where the sample was obtained from, such as a specific organ or tissue, e.g., tongue, lung. For foundational model of anatomy ontology (fma) (v 4.11.0) or Uber-anatomy ontology (UBERON) (v releases/2014-06-15) terms, please see http://purl.bioontology.org/ontology/FMA or http://purl.bioontology.org/ontology/UBERON</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>host total mass</Name>
+      <HarmonizedName>host_tot_mass</HarmonizedName>
+      <Description>total mass of the host at collection, the unit depends on host</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>medication code</Name>
+      <HarmonizedName>ihmc_medication_code</HarmonizedName>
+      <Description>can include multiple medication codes</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>kidney disorder</Name>
+      <HarmonizedName>kidney_disord</HarmonizedName>
+      <Description>history of kidney disorders; can include multiple disorders</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>maternal health status</Name>
+      <HarmonizedName>maternal_health_stat</HarmonizedName>
+      <Description>specification of the maternal health status</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>medical history performed</Name>
+      <HarmonizedName>medic_hist_perform</HarmonizedName>
+      <Description>whether full medical history was collected</Description>
+      <Format>
+        <Description>{boolean}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>miscellaneous parameter</Name>
+      <HarmonizedName>misc_param</HarmonizedName>
+      <Description>any other measurement performed or parameter collected, that is not listed here</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>negative control type</Name>
+      <HarmonizedName>neg_cont_type</HarmonizedName>
+      <Description>The substance or equipment used as a negative control in an investigation, e.g., distilled water, phosphate buffer, empty collection device, empty collection tube, DNA-free PCR mix, sterile swab, sterile syringe</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>nose throat disorder</Name>
+      <HarmonizedName>nose_throat_disord</HarmonizedName>
+      <Description>history of nose-throat disorders; can include multiple disorders</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>Omics Observatory ID</Name>
+      <HarmonizedName>omics_observ_id</HarmonizedName>
+      <Description>A unique identifier of the omics-enabled observatory (or comparable time series) your data derives from. This identifier should be provided by the OMICON ontology; if you require a new identifier for your time series, contact the ontology's developers. Information is available here: https://github.com/GLOMICON/omicon. This field is only applicable to records which derive from an omics time-series or observatory.</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>organism count</Name>
+      <HarmonizedName>organism_count</HarmonizedName>
+      <Description>total count of any organism per gram or volume of sample,should include name of organism followed by count; can include multiple organism counts</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>oxygenation status of sample</Name>
+      <HarmonizedName>oxy_stat_samp</HarmonizedName>
+      <Description>oxygenation status of sample</Description>
+      <Format type="select">
+        <Description>aerobic | anaerobic</Description>
+        <Choice/>
+        <Choice>aerobic</Choice>
+        <Choice>anaerobic</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>pathogenicity</Name>
+      <HarmonizedName>pathogenicity</HarmonizedName>
+      <Description>To what is the entity pathogenic</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>perturbation</Name>
+      <HarmonizedName>perturbation</HarmonizedName>
+      <Description>type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types</Description>
+      <Format>
+        <Description>{text};{interval}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>presence of pets or farm animals</Name>
+      <HarmonizedName>pet_farm_animal</HarmonizedName>
+      <Description>specification of presence of pets or farm animals in the environment of subject, if yes the animals should be specified; can include multiple animals present</Description>
+      <Format>
+        <Description>{boolean};{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>positive control type</Name>
+      <HarmonizedName>pos_cont_type</HarmonizedName>
+      <Description>The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive
+</Description>
+      <Format>
+        <Description>{term} or {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>pulmonary disorder</Name>
+      <HarmonizedName>pulmonary_disord</HarmonizedName>
+      <Description>history of pulmonary disorders; can include multiple disorders</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>relationship to oxygen</Name>
+      <HarmonizedName>rel_to_oxygen</HarmonizedName>
+      <Description>Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments, eg, aerobe, anaerobe, facultative, microaerophilic, microanaerobe, obligate aerobe, obligate anaerobe, missing, not applicable, not collected, not provided, restricted access</Description>
+      <Format type="select">
+        <Description>aerobe | anaerobe | facultative | microaerophilic | microanaerobe | obligate aerobe | obligate anaerobe | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>aerobe</Choice>
+        <Choice>anaerobe</Choice>
+        <Choice>facultative</Choice>
+        <Choice>microaerophilic</Choice>
+        <Choice>microanaerobe</Choice>
+        <Choice>obligate aerobe</Choice>
+        <Choice>obligate anaerobe</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample collection device or method</Name>
+      <HarmonizedName>samp_collect_device</HarmonizedName>
+      <Description>Method or device employed for collecting sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample material processing</Name>
+      <HarmonizedName>samp_mat_process</HarmonizedName>
+      <Description>Processing applied to the sample during or after isolation</Description>
+      <Format>
+        <Description>{text|term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>sample salinity</Name>
+      <HarmonizedName>samp_salinity</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample size</Name>
+      <HarmonizedName>samp_size</HarmonizedName>
+      <Description>Amount or size of sample (volume, mass or area) that was collected</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>sample storage duration</Name>
+      <HarmonizedName>samp_store_dur</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>sample storage location</Name>
+      <HarmonizedName>samp_store_loc</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>sample storage temperature</Name>
+      <HarmonizedName>samp_store_temp</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample volume or weight for DNA extraction</Name>
+      <HarmonizedName>samp_vol_we_dna_ext</HarmonizedName>
+      <Description>volume (mL) or weight (g) of sample processed for DNA extraction</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>smoker</Name>
+      <HarmonizedName>smoker</HarmonizedName>
+      <Description>specification of smoking status</Description>
+      <Format>
+        <Description>{boolean}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>source material identifiers</Name>
+      <HarmonizedName>source_material_id</HarmonizedName>
+      <Description>unique identifier assigned to a material sample used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>study completion status</Name>
+      <HarmonizedName>study_complt_stat</HarmonizedName>
+      <Description>specification of study completion status, if no the reason should be specified</Description>
+      <Format>
+        <Description>{boolean};[adverse event|non-compliance|lost to follow up|other-specify]</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>subspecific genetic lineage</Name>
+      <HarmonizedName>subspecf_gen_lin</HarmonizedName>
+      <Description>Information about the genetic distinctness of the lineage (eg., biovar, serovar)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>temperature</Name>
+      <HarmonizedName>temp</HarmonizedName>
+      <Description>temperature of the sample at time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>travel outside the country in last six months</Name>
+      <HarmonizedName>travel_out_six_month</HarmonizedName>
+      <Description>specification of the countries travelled in the last six months; can include multiple travels</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>trophic level</Name>
+      <HarmonizedName>trophic_level</HarmonizedName>
+      <Description>Feeding position in food chain (eg., chemolithotroph)</Description>
+      <Format type="select">
+        <Description>autotroph | carboxydotroph | chemoautotroph | chemoheterotroph | chemolithoautotroph | chemolithotroph | chemoorganoheterotroph | chemoorganotroph | chemosynthetic | chemotroph | copiotroph | diazotroph | facultative | heterotroph | lithoautotroph | lithoheterotroph | lithotroph | methanotroph | methylotroph | mixotroph | obligate | chemoautolithotroph | oligotroph | organoheterotroph | organotroph | photoautotroph | photoheterotroph | photolithoautotroph | photolithotroph | photosynthetic | phototroph</Description>
+        <Choice/>
+        <Choice>autotroph</Choice>
+        <Choice>carboxydotroph</Choice>
+        <Choice>chemoautotroph</Choice>
+        <Choice>chemoheterotroph</Choice>
+        <Choice>chemolithoautotroph</Choice>
+        <Choice>chemolithotroph</Choice>
+        <Choice>chemoorganoheterotroph</Choice>
+        <Choice>chemoorganotroph</Choice>
+        <Choice>chemosynthetic</Choice>
+        <Choice>chemotroph</Choice>
+        <Choice>copiotroph</Choice>
+        <Choice>diazotroph</Choice>
+        <Choice>facultative</Choice>
+        <Choice>heterotroph</Choice>
+        <Choice>lithoautotroph</Choice>
+        <Choice>lithoheterotroph</Choice>
+        <Choice>lithotroph</Choice>
+        <Choice>methanotroph</Choice>
+        <Choice>methylotroph</Choice>
+        <Choice>mixotroph</Choice>
+        <Choice>obligate</Choice>
+        <Choice>chemoautolithotroph</Choice>
+        <Choice>oligotroph</Choice>
+        <Choice>organoheterotroph</Choice>
+        <Choice>organotroph</Choice>
+        <Choice>photoautotroph</Choice>
+        <Choice>photoheterotroph</Choice>
+        <Choice>photolithoautotroph</Choice>
+        <Choice>photolithotroph</Choice>
+        <Choice>photosynthetic</Choice>
+        <Choice>phototroph</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>twin sibling existence</Name>
+      <HarmonizedName>twin_sibling</HarmonizedName>
+      <Description>specification of twin sibling presence</Description>
+      <Format>
+        <Description>{boolean}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>urine collection method</Name>
+      <HarmonizedName>urine_collect_meth</HarmonizedName>
+      <Description>specification of urine collection method</Description>
+      <Format type="select">
+        <Description>clean catch | catheter</Description>
+        <Choice/>
+        <Choice>clean catch</Choice>
+        <Choice>catheter</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>urogenital tract disorder</Name>
+      <HarmonizedName>urogenit_tract_disor</HarmonizedName>
+      <Description>history of urogenitaltract disorders; can include multiple disorders</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Human-associated">
+      <Name>weight loss in last three months</Name>
+      <HarmonizedName>weight_loss_3_month</HarmonizedName>
+      <Description>specification of weight loss in the last three months, if yes should be further specified to include amount of weight loss</Description>
+      <Format>
+        <Description>{boolean};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

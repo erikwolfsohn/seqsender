@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package group="MIMAG">
+    <Name>MIMAG.miscellaneous.6.0</Name>
+    <DisplayName>MIMAG: metagenome-assembled genome, miscellaneous; version 6.0</DisplayName>
+    <ShortName>MIMAG Metagenome-assembled Genome</ShortName>
+    <EnvPackage>miscellaneous</EnvPackage>
+    <EnvPackageDisplay>miscellaneous or artificial</EnvPackageDisplay>
+    <NotAppropriateFor>wgs_diploid</NotAppropriateFor>
+    <Description>Use for metagenome-assembled genome sequences produced using computational binning tools that group sequences into individual organism genome assemblies starting from metagenomic data sets. Organism cannot contain the term 'metagenome'. Use the MIUVIG package for virus genomes. Before creating BioSamples for prokaryotic and eukaryotic MAGs, please read and follow the MAG submission instructions at https://www.ncbi.nlm.nih.gov/genbank/wgsfaq/#metagen.</Description>
+    <Example/>
+    <TemplateHeader># This is a submission template for batch deposit of 'MIMAG: metagenome-assembled genome, miscellaneous; version 6.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="mandatory" group_name="Organism">
+      <Name>isolate</Name>
+      <HarmonizedName>isolate</HarmonizedName>
+      <Description>identification or description of the specific individual from which this sample was obtained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>broad-scale environmental context</Name>
+      <HarmonizedName>env_broad_scale</HarmonizedName>
+      <Description>Add terms that identify the major environment type(s) where your sample was collected. Recommend subclasses of biome [ENVO:00000428]. Multiple terms can be separated by one or more pipes e.g.:  mangrove biome [ENVO:01000181]|estuarine biome [ENVO:01000020]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>local-scale environmental context</Name>
+      <HarmonizedName>env_local_scale</HarmonizedName>
+      <Description>Add terms that identify environmental entities having causal influences upon the entity at time of sampling, multiple terms can be separated by pipes, e.g.:  shoreline [ENVO:00000486]|intertidal zone [ENVO:00000316]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>environmental medium</Name>
+      <HarmonizedName>env_medium</HarmonizedName>
+      <Description>Add terms that identify the material displaced by the entity at time of sampling. Recommend subclasses of environmental material [ENVO:00010483]. Multiple terms can be separated by pipes e.g.: estuarine water [ENVO:01000301]|estuarine mud [ENVO:00002160]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>alkalinity</Name>
+      <HarmonizedName>alkalinity</HarmonizedName>
+      <Description>alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>altitude</Name>
+      <HarmonizedName>altitude</HarmonizedName>
+      <Description>The altitude of the sample is the vertical distance between Earth's surface above Sea Level and the sampled position in the air.</Description>
+      <Format>
+        <Description>{float} m</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>ammonium</Name>
+      <HarmonizedName>ammonium</HarmonizedName>
+      <Description>concentration of ammonium</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>biomass</Name>
+      <HarmonizedName>biomass</HarmonizedName>
+      <Description>amount of biomass; should include the name for the part of biomass measured, e.g. microbial, total. can include multiple measurements</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>bromide</Name>
+      <HarmonizedName>bromide</HarmonizedName>
+      <Description>concentration of bromide</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>calcium</Name>
+      <HarmonizedName>calcium</HarmonizedName>
+      <Description>concentration of calcium</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>chemical administration</Name>
+      <HarmonizedName>chem_administration</HarmonizedName>
+      <Description>list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v1.72), please see http://bioportal.bioontology.org/visualize/44603</Description>
+      <Format>
+        <Description>{term}; {timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>chloride</Name>
+      <HarmonizedName>chloride</HarmonizedName>
+      <Description>concentration of chloride</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>chlorophyll</Name>
+      <HarmonizedName>chlorophyll</HarmonizedName>
+      <Description>concentration of chlorophyll</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>collection method </Name>
+      <HarmonizedName>collection_method</HarmonizedName>
+      <Description>Process used to collect the sample, e.g., bronchoalveolar lavage (BAL)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>density</Name>
+      <HarmonizedName>density</HarmonizedName>
+      <Description>density of sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>depth</Name>
+      <HarmonizedName>depth</HarmonizedName>
+      <Description>Depth is defined as the vertical distance below surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples.</Description>
+      <Format>
+        <Description>{float} m</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>derived from</Name>
+      <HarmonizedName>derived_from</HarmonizedName>
+      <Description>Indicates when one BioSample was derived from another BioSample. Value should include BioSample accession number(s) (SAMNxxxxxxxx).</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>diether lipids</Name>
+      <HarmonizedName>diether_lipids</HarmonizedName>
+      <Description>concentration of diether lipids; can include multiple types of diether lipids</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>dissolved carbon dioxide</Name>
+      <HarmonizedName>diss_carb_dioxide</HarmonizedName>
+      <Description>concentration of dissolved carbon dioxide</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>dissolved hydrogen</Name>
+      <HarmonizedName>diss_hydrogen</HarmonizedName>
+      <Description>concentration of dissolved hydrogen</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>dissolved inorganic carbon</Name>
+      <HarmonizedName>diss_inorg_carb</HarmonizedName>
+      <Description>dissolved inorganic carbon concentration</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>dissolved organic nitrogen</Name>
+      <HarmonizedName>diss_org_nitro</HarmonizedName>
+      <Description>dissolved organic nitrogen concentration measured as; total dissolved nitrogen - NH4 - NO3 - NO2</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>dissolved oxygen</Name>
+      <HarmonizedName>diss_oxygen</HarmonizedName>
+      <Description>concentration of dissolved oxygen</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>elevation</Name>
+      <HarmonizedName>elev</HarmonizedName>
+      <Description>The elevation of the sampling site as measured by the vertical distance from mean sea level.</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>experimental factor</Name>
+      <HarmonizedName>experimental_factor</HarmonizedName>
+      <Description>Variable aspect of experimental design</Description>
+      <Format>
+        <Description>{term|text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>metagenome source</Name>
+      <HarmonizedName>metagenome_source</HarmonizedName>
+      <Description>describes the original source of a metagenome assembled genome (MAG). Examples: soil metagenome, gut metagenome</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>miscellaneous parameter</Name>
+      <HarmonizedName>misc_param</HarmonizedName>
+      <Description>any other measurement performed or parameter collected, that is not listed here</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>negative control type</Name>
+      <HarmonizedName>neg_cont_type</HarmonizedName>
+      <Description>The substance or equipment used as a negative control in an investigation, e.g., distilled water, phosphate buffer, empty collection device, empty collection tube, DNA-free PCR mix, sterile swab, sterile syringe</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>nitrate</Name>
+      <HarmonizedName>nitrate</HarmonizedName>
+      <Description>concentration of nitrate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>nitrite</Name>
+      <HarmonizedName>nitrite</HarmonizedName>
+      <Description>concentration of nitrite</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>nitrogen</Name>
+      <HarmonizedName>nitro</HarmonizedName>
+      <Description>concentration of nitrogen (total)</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>Omics Observatory ID</Name>
+      <HarmonizedName>omics_observ_id</HarmonizedName>
+      <Description>A unique identifier of the omics-enabled observatory (or comparable time series) your data derives from. This identifier should be provided by the OMICON ontology; if you require a new identifier for your time series, contact the ontology's developers. Information is available here: https://github.com/GLOMICON/omicon. This field is only applicable to records which derive from an omics time-series or observatory.</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>organic carbon</Name>
+      <HarmonizedName>org_carb</HarmonizedName>
+      <Description>concentration of organic carbon</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>organic matter</Name>
+      <HarmonizedName>org_matter</HarmonizedName>
+      <Description>concentration of organic matter</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>organic nitrogen</Name>
+      <HarmonizedName>org_nitro</HarmonizedName>
+      <Description>concentration of organic nitrogen</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>organism count</Name>
+      <HarmonizedName>organism_count</HarmonizedName>
+      <Description>total count of any organism per gram or volume of sample,should include name of organism followed by count; can include multiple organism counts</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>oxygenation status of sample</Name>
+      <HarmonizedName>oxy_stat_samp</HarmonizedName>
+      <Description>oxygenation status of sample</Description>
+      <Format type="select">
+        <Description>aerobic | anaerobic</Description>
+        <Choice/>
+        <Choice>aerobic</Choice>
+        <Choice>anaerobic</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>perturbation</Name>
+      <HarmonizedName>perturbation</HarmonizedName>
+      <Description>type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types</Description>
+      <Format>
+        <Description>{text};{interval}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>pH</Name>
+      <HarmonizedName>ph</HarmonizedName>
+      <Description>pH measurement</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>phosphate</Name>
+      <HarmonizedName>phosphate</HarmonizedName>
+      <Description>concentration of phosphate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>phospholipid fatty acid</Name>
+      <HarmonizedName>phosplipid_fatt_acid</HarmonizedName>
+      <Description>concentration of phospholipid fatty acids; can include multiple values</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>positive control type</Name>
+      <HarmonizedName>pos_cont_type</HarmonizedName>
+      <Description>The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive
+</Description>
+      <Format>
+        <Description>{term} or {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>potassium</Name>
+      <HarmonizedName>potassium</HarmonizedName>
+      <Description>concentration of potassium</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>pressure</Name>
+      <HarmonizedName>pressure</HarmonizedName>
+      <Description>pressure to which the sample is subject, in atmospheres</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>reference for biomaterial</Name>
+      <HarmonizedName>ref_biomaterial</HarmonizedName>
+      <Description>Primary publication or genome report</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>relationship to oxygen</Name>
+      <HarmonizedName>rel_to_oxygen</HarmonizedName>
+      <Description>Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments, eg, aerobe, anaerobe, facultative, microaerophilic, microanaerobe, obligate aerobe, obligate anaerobe, missing, not applicable, not collected, not provided, restricted access</Description>
+      <Format type="select">
+        <Description>aerobe | anaerobe | facultative | microaerophilic | microanaerobe | obligate aerobe | obligate anaerobe | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>aerobe</Choice>
+        <Choice>anaerobe</Choice>
+        <Choice>facultative</Choice>
+        <Choice>microaerophilic</Choice>
+        <Choice>microanaerobe</Choice>
+        <Choice>obligate aerobe</Choice>
+        <Choice>obligate anaerobe</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>salinity</Name>
+      <HarmonizedName>salinity</HarmonizedName>
+      <Description>salinity measurement</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample collection device or method</Name>
+      <HarmonizedName>samp_collect_device</HarmonizedName>
+      <Description>Method or device employed for collecting sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample material processing</Name>
+      <HarmonizedName>samp_mat_process</HarmonizedName>
+      <Description>Processing applied to the sample during or after isolation</Description>
+      <Format>
+        <Description>{text|term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample size</Name>
+      <HarmonizedName>samp_size</HarmonizedName>
+      <Description>Amount or size of sample (volume, mass or area) that was collected</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>sample storage duration</Name>
+      <HarmonizedName>samp_store_dur</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>sample storage location</Name>
+      <HarmonizedName>samp_store_loc</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>sample storage temperature</Name>
+      <HarmonizedName>samp_store_temp</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample volume or weight for DNA extraction</Name>
+      <HarmonizedName>samp_vol_we_dna_ext</HarmonizedName>
+      <Description>volume (mL) or weight (g) of sample processed for DNA extraction</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>silicate</Name>
+      <HarmonizedName>silicate</HarmonizedName>
+      <Description>concentration of silicate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>size fraction selected</Name>
+      <HarmonizedName>size_frac</HarmonizedName>
+      <Description>Filtering pore size used in sample preparation, e.g., 0-0.22 micrometer</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>sodium</Name>
+      <HarmonizedName>sodium</HarmonizedName>
+      <Description>sodium concentration</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>source material identifiers</Name>
+      <HarmonizedName>source_material_id</HarmonizedName>
+      <Description>unique identifier assigned to a material sample used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>sulfate</Name>
+      <HarmonizedName>sulfate</HarmonizedName>
+      <Description>concentration of sulfate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>sulfide</Name>
+      <HarmonizedName>sulfide</HarmonizedName>
+      <Description>concentration of sulfide</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>temperature</Name>
+      <HarmonizedName>temp</HarmonizedName>
+      <Description>temperature of the sample at time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Miscellaneous or artificial">
+      <Name>water current</Name>
+      <HarmonizedName>water_current</HarmonizedName>
+      <Description>measurement of magnitude and direction of flow within a fluid</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

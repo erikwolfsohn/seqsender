@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package group="Pathogen" antibiogram="true" antibiogram_class="Antibiogram.1.0" antibiogram_template="https://www.ncbi.nlm.nih.gov/biosample/docs/templates/Antibiogram.1.0.xlsx">
+    <Name>Pathogen.cl.1.0</Name>
+    <DisplayName>Pathogen: clinical or host-associated; version 1.0</DisplayName>
+    <ShortName>Pathogen: clinical or host-associated</ShortName>
+    <EnvPackage/>
+    <EnvPackageDisplay/>
+    <NotAppropriateFor/>
+    <Description>Clinical or host-associated pathogen</Description>
+    <Example>SAMN02928182</Example>
+    <Antibiogram antibiogram_class="Antibiogram.1.0" antibiogram_template="https://www.ncbi.nlm.nih.gov/biosample/docs/templates/Antibiogram.1.0.xlsx" antibiogram_doc="https://www.ncbi.nlm.nih.gov/biosample/docs/antibiogram/">pathogen MIC</Antibiogram>
+    <Antibiogram antibiogram_class="Antibiogram.mycobacterial.1.0" antibiogram_template="https://www.ncbi.nlm.nih.gov/biosample/docs/templates/Antibiogram.mycobacterial.1.0.xlsx" antibiogram_doc="https://www.ncbi.nlm.nih.gov/biosample/docs/antibiogram-myco/">mycobacterial non-MIC</Antibiogram>
+    <TemplateHeader># This is a submission template for batch deposit of 'Pathogen: clinical or host-associated; version 1.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# See SAMN02928182 for an example record of this type of BioSample (https://www.ncbi.nlm.nih.gov/biosample/SAMN02928182).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>strain</Name>
+      <HarmonizedName>strain</HarmonizedName>
+      <Description>microbial or eukaryotic strain name</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>isolate</Name>
+      <HarmonizedName>isolate</HarmonizedName>
+      <Description>identification or description of the specific individual from which this sample was obtained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>collected by</Name>
+      <HarmonizedName>collected_by</HarmonizedName>
+      <Description>Name of persons or institute who collected the sample</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>host</Name>
+      <HarmonizedName>host</HarmonizedName>
+      <Description>The natural (as opposed to laboratory) host to the organism from which the sample was obtained. Use the full taxonomic name, eg, "Homo sapiens".</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>host disease</Name>
+      <HarmonizedName>host_disease</HarmonizedName>
+      <Description>Name of relevant disease, e.g. Salmonella gastroenteritis. Controlled vocabulary, http://bioportal.bioontology.org/ontologies/1009 or http://www.ncbi.nlm.nih.gov/mesh</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>culture collection</Name>
+      <HarmonizedName>culture_collection</HarmonizedName>
+      <Description>Name of source institute and unique culture identifier. See the description for the proper format and list of allowed institutes, http://www.insdc.org/controlled-vocabulary-culturecollection-qualifier</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>genotype</Name>
+      <HarmonizedName>genotype</HarmonizedName>
+      <Description>observed genotype</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host age</Name>
+      <HarmonizedName>host_age</HarmonizedName>
+      <Description>Age of host at the time of sampling</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host description</Name>
+      <HarmonizedName>host_description</HarmonizedName>
+      <Description>Additional information not included in other defined vocabulary fields</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host disease outcome</Name>
+      <HarmonizedName>host_disease_outcome</HarmonizedName>
+      <Description>Final outcome of disease, e.g., death, chronic disease, recovery</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host disease stage</Name>
+      <HarmonizedName>host_disease_stage</HarmonizedName>
+      <Description>Stage of disease at the time of sampling</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host health state</Name>
+      <HarmonizedName>host_health_state</HarmonizedName>
+      <Description>Information regarding health state of the individual sampled at the time of sampling</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host sex</Name>
+      <HarmonizedName>host_sex</HarmonizedName>
+      <Description>Gender or physical sex of the host</Description>
+      <Format type="select">
+        <Description>male | female | pooled male and female | neuter | hermaphrodite | intersex | not determined | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>male</Choice>
+        <Choice>female</Choice>
+        <Choice>pooled male and female</Choice>
+        <Choice>neuter</Choice>
+        <Choice>hermaphrodite</Choice>
+        <Choice>intersex</Choice>
+        <Choice>not determined</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host subject id</Name>
+      <HarmonizedName>host_subject_id</HarmonizedName>
+      <Description>a unique identifier by which each subject can be referred to, de-identified, e.g. #131</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host tissue sampled</Name>
+      <HarmonizedName>host_tissue_sampled</HarmonizedName>
+      <Description>name of body site where the sample was obtained from, such as a specific organ or tissue, e.g., tongue, lung. For foundational model of anatomy ontology (fma) (v 4.11.0) or Uber-anatomy ontology (UBERON) (v releases/2014-06-15) terms, please see http://purl.bioontology.org/ontology/FMA or http://purl.bioontology.org/ontology/UBERON</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>passage history</Name>
+      <HarmonizedName>passage_history</HarmonizedName>
+      <Description>Number of passages and passage method</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>pathotype</Name>
+      <HarmonizedName>pathotype</HarmonizedName>
+      <Description>Some bacterial specific pathotypes (example Eschericia coli - STEC, UPEC)</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>serotype</Name>
+      <HarmonizedName>serotype</HarmonizedName>
+      <Description>Taxonomy below subspecies; a variety (in bacteria, fungi or virus) usually based on its antigenic properties. Same as serovar and serogroup. e.g. serotype="H1N1" in Influenza A virus CY098518.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>serovar</Name>
+      <HarmonizedName>serovar</HarmonizedName>
+      <Description>Taxonomy below subspecies; a variety (in bacteria, fungi or virus) usually based on its antigenic properties. Same as serovar and serotype. Sometimes used as species identifier in bacteria with shaky taxonomy, e.g. Leptospira, serovar saopaolo S76607 (65357 in Entrez).</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>specimen voucher</Name>
+      <HarmonizedName>specimen_voucher</HarmonizedName>
+      <Description>Identifier for the physical specimen. Use format: "[&lt;institution-code&gt;:[&lt;collection-code&gt;:]]&lt;specimen_id&gt;", eg, "UAM:Mamm:52179". Intended as a reference to the physical specimen that remains after it was analyzed. If the specimen was destroyed in the process of analysis, electronic images (e-vouchers) are an adequate substitute for a physical voucher specimen. Ideally the specimens will be deposited in a curated museum, herbarium, or frozen tissue collection, but often they will remain in a personal or laboratory collection for some time before they are deposited in a curated collection. There are three forms of specimen_voucher qualifiers. If the text of the qualifier includes one or more colons it is a 'structured voucher'. Structured vouchers include institution-codes (and optional collection-codes) taken from a controlled vocabulary maintained by the INSDC that denotes the museum or herbarium collection where the specimen resides, please visit: http://www.insdc.org/controlled-vocabulary-specimenvoucher-qualifier.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>subgroup</Name>
+      <HarmonizedName>subgroup</HarmonizedName>
+      <Description>Taxonomy below subspecies; sometimes used in viruses to denote subgroups taken from a single isolate.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>subtype</Name>
+      <HarmonizedName>subtype</HarmonizedName>
+      <Description>Used as classifier in viruses (e.g. HIV type 1, Group M, Subtype A).</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

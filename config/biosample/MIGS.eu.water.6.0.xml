@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package group="MIGS.eu">
+    <Name>MIGS.eu.water.6.0</Name>
+    <DisplayName>MIGS: eukaryote, water; version 6.0</DisplayName>
+    <ShortName>MIGS Eukaryotic</ShortName>
+    <EnvPackage>water</EnvPackage>
+    <EnvPackageDisplay>water</EnvPackageDisplay>
+    <NotAppropriateFor/>
+    <Description>Use for eukaryotic genomic sequences. Organism must have lineage Eukaryota.</Description>
+    <Example>SAMN02729510</Example>
+    <TemplateHeader># This is a submission template for batch deposit of 'MIGS: eukaryote, water; version 6.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# See SAMN02729510 for an example record of this type of BioSample (https://www.ncbi.nlm.nih.gov/biosample/SAMN02729510).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>strain</Name>
+      <HarmonizedName>strain</HarmonizedName>
+      <Description>microbial or eukaryotic strain name</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>isolate</Name>
+      <HarmonizedName>isolate</HarmonizedName>
+      <Description>identification or description of the specific individual from which this sample was obtained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>cultivar</Name>
+      <HarmonizedName>cultivar</HarmonizedName>
+      <Description>cultivar name - cultivated variety of plant</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>ecotype</Name>
+      <HarmonizedName>ecotype</HarmonizedName>
+      <Description>a population within a given species displaying genetically based, phenotypic traits that reflect adaptation to a local habitat, e.g., Columbia</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Water">
+      <Name>depth</Name>
+      <HarmonizedName>depth</HarmonizedName>
+      <Description>Depth is defined as the vertical distance below surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples.</Description>
+      <Format>
+        <Description>{float} m</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>broad-scale environmental context</Name>
+      <HarmonizedName>env_broad_scale</HarmonizedName>
+      <Description>Add terms that identify the major environment type(s) where your sample was collected. Recommend subclasses of biome [ENVO:00000428]. Multiple terms can be separated by one or more pipes e.g.:  mangrove biome [ENVO:01000181]|estuarine biome [ENVO:01000020]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>local-scale environmental context</Name>
+      <HarmonizedName>env_local_scale</HarmonizedName>
+      <Description>Add terms that identify environmental entities having causal influences upon the entity at time of sampling, multiple terms can be separated by pipes, e.g.:  shoreline [ENVO:00000486]|intertidal zone [ENVO:00000316]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>environmental medium</Name>
+      <HarmonizedName>env_medium</HarmonizedName>
+      <Description>Add terms that identify the material displaced by the entity at time of sampling. Recommend subclasses of environmental material [ENVO:00010483]. Multiple terms can be separated by pipes e.g.: estuarine water [ENVO:01000301]|estuarine mud [ENVO:00002160]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Nucleic Acid Sequence Source">
+      <Name>isolation and growth condition</Name>
+      <HarmonizedName>isol_growth_condt</HarmonizedName>
+      <Description>PMID or url for isolation and growth condition specifications</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>alkalinity</Name>
+      <HarmonizedName>alkalinity</HarmonizedName>
+      <Description>alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>alkalinity method</Name>
+      <HarmonizedName>alkalinity_method</HarmonizedName>
+      <Description>Method used for alkalinity measurement</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>alkyl diethers</Name>
+      <HarmonizedName>alkyl_diethers</HarmonizedName>
+      <Description>concentration of alkyl diethers</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>altitude</Name>
+      <HarmonizedName>altitude</HarmonizedName>
+      <Description>The altitude of the sample is the vertical distance between Earth's surface above Sea Level and the sampled position in the air.</Description>
+      <Format>
+        <Description>{float} m</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>aminopeptidase activity</Name>
+      <HarmonizedName>aminopept_act</HarmonizedName>
+      <Description>measurement of aminopeptidase activity</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>ammonium</Name>
+      <HarmonizedName>ammonium</HarmonizedName>
+      <Description>concentration of ammonium</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>atmospheric data</Name>
+      <HarmonizedName>atmospheric_data</HarmonizedName>
+      <Description>measurement of atmospheric data; can include multiple data</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>bacterial production</Name>
+      <HarmonizedName>bac_prod</HarmonizedName>
+      <Description>bacterial production in the water column measured by isotope uptake</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>bacterial respiration</Name>
+      <HarmonizedName>bac_resp</HarmonizedName>
+      <Description>measurement of bacterial respiration in the water column</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>bacterial carbon production</Name>
+      <HarmonizedName>bacteria_carb_prod</HarmonizedName>
+      <Description>measurement of bacterial carbon production</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>biomass</Name>
+      <HarmonizedName>biomass</HarmonizedName>
+      <Description>amount of biomass; should include the name for the part of biomass measured, e.g. microbial, total. can include multiple measurements</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>observed biotic relationship</Name>
+      <HarmonizedName>biotic_relationship</HarmonizedName>
+      <Description>Free-living or from host (define relationship)</Description>
+      <Format type="select">
+        <Description>free living | parasite | commensal | symbiont</Description>
+        <Choice/>
+        <Choice>free living</Choice>
+        <Choice>parasite</Choice>
+        <Choice>commensal</Choice>
+        <Choice>symbiont</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>bishomohopanol</Name>
+      <HarmonizedName>bishomohopanol</HarmonizedName>
+      <Description>concentration of bishomohopanol</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>bromide</Name>
+      <HarmonizedName>bromide</HarmonizedName>
+      <Description>concentration of bromide</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>calcium</Name>
+      <HarmonizedName>calcium</HarmonizedName>
+      <Description>concentration of calcium</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>carbon/nitrogen ratio</Name>
+      <HarmonizedName>carb_nitro_ratio</HarmonizedName>
+      <Description>ratio of amount or concentrations of carbon to nitrogen</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>chemical administration</Name>
+      <HarmonizedName>chem_administration</HarmonizedName>
+      <Description>list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v1.72), please see http://bioportal.bioontology.org/visualize/44603</Description>
+      <Format>
+        <Description>{term}; {timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>chloride</Name>
+      <HarmonizedName>chloride</HarmonizedName>
+      <Description>concentration of chloride</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>chlorophyll</Name>
+      <HarmonizedName>chlorophyll</HarmonizedName>
+      <Description>concentration of chlorophyll</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>collection method </Name>
+      <HarmonizedName>collection_method</HarmonizedName>
+      <Description>Process used to collect the sample, e.g., bronchoalveolar lavage (BAL)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>conductivity</Name>
+      <HarmonizedName>conduc</HarmonizedName>
+      <Description>electrical conductivity of water</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>density</Name>
+      <HarmonizedName>density</HarmonizedName>
+      <Description>density of sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>diether lipids</Name>
+      <HarmonizedName>diether_lipids</HarmonizedName>
+      <Description>concentration of diether lipids; can include multiple types of diether lipids</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>dissolved carbon dioxide</Name>
+      <HarmonizedName>diss_carb_dioxide</HarmonizedName>
+      <Description>concentration of dissolved carbon dioxide</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>dissolved hydrogen</Name>
+      <HarmonizedName>diss_hydrogen</HarmonizedName>
+      <Description>concentration of dissolved hydrogen</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>dissolved inorganic carbon</Name>
+      <HarmonizedName>diss_inorg_carb</HarmonizedName>
+      <Description>dissolved inorganic carbon concentration</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>dissolved inorganic nitrogen</Name>
+      <HarmonizedName>diss_inorg_nitro</HarmonizedName>
+      <Description>concentration of dissolved inorganic nitrogen</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>dissolved inorganic phosphorus</Name>
+      <HarmonizedName>diss_inorg_phosp</HarmonizedName>
+      <Description>concentration of dissolved inorganic phosphorus</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>dissolved organic carbon</Name>
+      <HarmonizedName>diss_org_carb</HarmonizedName>
+      <Description>concentration of dissolved organic carbon</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>dissolved organic nitrogen</Name>
+      <HarmonizedName>diss_org_nitro</HarmonizedName>
+      <Description>dissolved organic nitrogen concentration measured as; total dissolved nitrogen - NH4 - NO3 - NO2</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>dissolved oxygen</Name>
+      <HarmonizedName>diss_oxygen</HarmonizedName>
+      <Description>concentration of dissolved oxygen</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>downward PAR</Name>
+      <HarmonizedName>down_par</HarmonizedName>
+      <Description>visible waveband radiance and irradiance measurements in the water column</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>elevation</Name>
+      <HarmonizedName>elev</HarmonizedName>
+      <Description>The elevation of the sampling site as measured by the vertical distance from mean sea level.</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>estimated size</Name>
+      <HarmonizedName>estimated_size</HarmonizedName>
+      <Description>Estimated size of genome</Description>
+      <Format>
+        <Description>{integer} bp</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>extrachromosomal elements</Name>
+      <HarmonizedName>extrachrom_elements</HarmonizedName>
+      <Description>Plasmids that have significance phenotypic consequence</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>fluorescence</Name>
+      <HarmonizedName>fluor</HarmonizedName>
+      <Description>raw or converted fluorescence of water</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>glucosidase activity</Name>
+      <HarmonizedName>glucosidase_act</HarmonizedName>
+      <Description>measurement of glucosidase activity</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>host</Name>
+      <HarmonizedName>host</HarmonizedName>
+      <Description>The natural (as opposed to laboratory) host to the organism from which the sample was obtained. Use the full taxonomic name, eg, "Homo sapiens".</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>host disease</Name>
+      <HarmonizedName>host_disease</HarmonizedName>
+      <Description>Name of relevant disease, e.g. Salmonella gastroenteritis. Controlled vocabulary, http://bioportal.bioontology.org/ontologies/1009 or http://www.ncbi.nlm.nih.gov/mesh</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>host taxonomy ID</Name>
+      <HarmonizedName>host_taxid</HarmonizedName>
+      <Description>NCBI taxonomy ID of the host, e.g. 9606</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>light intensity</Name>
+      <HarmonizedName>light_intensity</HarmonizedName>
+      <Description>measurement of light intensity</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>magnesium</Name>
+      <HarmonizedName>magnesium</HarmonizedName>
+      <Description>concentration of magnesium</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>mean friction velocity</Name>
+      <HarmonizedName>mean_frict_vel</HarmonizedName>
+      <Description>measurement of mean friction velocity</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>mean peak friction velocity</Name>
+      <HarmonizedName>mean_peak_frict_vel</HarmonizedName>
+      <Description>measurement of mean peak friction velocity</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>miscellaneous parameter</Name>
+      <HarmonizedName>misc_param</HarmonizedName>
+      <Description>any other measurement performed or parameter collected, that is not listed here</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>n alkanes</Name>
+      <HarmonizedName>n_alkanes</HarmonizedName>
+      <Description>concentration of n-alkanes; can include multiple n-alkanes</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>negative control type</Name>
+      <HarmonizedName>neg_cont_type</HarmonizedName>
+      <Description>The substance or equipment used as a negative control in an investigation, e.g., distilled water, phosphate buffer, empty collection device, empty collection tube, DNA-free PCR mix, sterile swab, sterile syringe</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>nitrate</Name>
+      <HarmonizedName>nitrate</HarmonizedName>
+      <Description>concentration of nitrate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>nitrite</Name>
+      <HarmonizedName>nitrite</HarmonizedName>
+      <Description>concentration of nitrite</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>nitrogen</Name>
+      <HarmonizedName>nitro</HarmonizedName>
+      <Description>concentration of nitrogen (total)</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>number of replicons</Name>
+      <HarmonizedName>num_replicons</HarmonizedName>
+      <Description>Number of replicons in nuclear genome</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>Omics Observatory ID</Name>
+      <HarmonizedName>omics_observ_id</HarmonizedName>
+      <Description>A unique identifier of the omics-enabled observatory (or comparable time series) your data derives from. This identifier should be provided by the OMICON ontology; if you require a new identifier for your time series, contact the ontology's developers. Information is available here: https://github.com/GLOMICON/omicon. This field is only applicable to records which derive from an omics time-series or observatory.</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>organic carbon</Name>
+      <HarmonizedName>org_carb</HarmonizedName>
+      <Description>concentration of organic carbon</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>organic matter</Name>
+      <HarmonizedName>org_matter</HarmonizedName>
+      <Description>concentration of organic matter</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>organic nitrogen</Name>
+      <HarmonizedName>org_nitro</HarmonizedName>
+      <Description>concentration of organic nitrogen</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>organism count</Name>
+      <HarmonizedName>organism_count</HarmonizedName>
+      <Description>total count of any organism per gram or volume of sample,should include name of organism followed by count; can include multiple organism counts</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>oxygenation status of sample</Name>
+      <HarmonizedName>oxy_stat_samp</HarmonizedName>
+      <Description>oxygenation status of sample</Description>
+      <Format type="select">
+        <Description>aerobic | anaerobic</Description>
+        <Choice/>
+        <Choice>aerobic</Choice>
+        <Choice>anaerobic</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>particulate organic carbon</Name>
+      <HarmonizedName>part_org_carb</HarmonizedName>
+      <Description>concentration of particulate organic carbon</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>particulate organic nitrogen</Name>
+      <HarmonizedName>part_org_nitro</HarmonizedName>
+      <Description>concentration of particulate organic nitrogen</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>pathogenicity</Name>
+      <HarmonizedName>pathogenicity</HarmonizedName>
+      <Description>To what is the entity pathogenic</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>perturbation</Name>
+      <HarmonizedName>perturbation</HarmonizedName>
+      <Description>type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types</Description>
+      <Format>
+        <Description>{text};{interval}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>petroleum hydrocarbon</Name>
+      <HarmonizedName>petroleum_hydrocarb</HarmonizedName>
+      <Description>concentration of petroleum hydrocarbon</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>pH</Name>
+      <HarmonizedName>ph</HarmonizedName>
+      <Description>pH measurement</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>phaeopigments</Name>
+      <HarmonizedName>phaeopigments</HarmonizedName>
+      <Description>concentration of phaeopigments; can include multiple phaeopigments</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>phosphate</Name>
+      <HarmonizedName>phosphate</HarmonizedName>
+      <Description>concentration of phosphate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>phospholipid fatty acid</Name>
+      <HarmonizedName>phosplipid_fatt_acid</HarmonizedName>
+      <Description>concentration of phospholipid fatty acids; can include multiple values</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>photon flux</Name>
+      <HarmonizedName>photon_flux</HarmonizedName>
+      <Description>measurement of photon flux</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>ploidy</Name>
+      <HarmonizedName>ploidy</HarmonizedName>
+      <Description>Ploidy level of genome (eg., haploid, diploid)</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>positive control type</Name>
+      <HarmonizedName>pos_cont_type</HarmonizedName>
+      <Description>The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive
+</Description>
+      <Format>
+        <Description>{term} or {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>potassium</Name>
+      <HarmonizedName>potassium</HarmonizedName>
+      <Description>concentration of potassium</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>pressure</Name>
+      <HarmonizedName>pressure</HarmonizedName>
+      <Description>pressure to which the sample is subject, in atmospheres</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>primary production</Name>
+      <HarmonizedName>primary_prod</HarmonizedName>
+      <Description>measurement of primary production</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>propagation</Name>
+      <HarmonizedName>propagation</HarmonizedName>
+      <Description>phage: lytic/lysogenic/temperate/obligately lytic; plasmid: incompatibility group; eukaryote: asexual/sexual</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>redox potential</Name>
+      <HarmonizedName>redox_potential</HarmonizedName>
+      <Description>redox potential, measured relative to a hydrogen cell, indicating oxidation or reduction potential</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>reference for biomaterial</Name>
+      <HarmonizedName>ref_biomaterial</HarmonizedName>
+      <Description>Primary publication or genome report</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>salinity</Name>
+      <HarmonizedName>salinity</HarmonizedName>
+      <Description>salinity measurement</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample collection device or method</Name>
+      <HarmonizedName>samp_collect_device</HarmonizedName>
+      <Description>Method or device employed for collecting sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample material processing</Name>
+      <HarmonizedName>samp_mat_process</HarmonizedName>
+      <Description>Processing applied to the sample during or after isolation</Description>
+      <Format>
+        <Description>{text|term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample size</Name>
+      <HarmonizedName>samp_size</HarmonizedName>
+      <Description>Amount or size of sample (volume, mass or area) that was collected</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>sample storage duration</Name>
+      <HarmonizedName>samp_store_dur</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>sample storage location</Name>
+      <HarmonizedName>samp_store_loc</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>sample storage temperature</Name>
+      <HarmonizedName>samp_store_temp</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample volume or weight for DNA extraction</Name>
+      <HarmonizedName>samp_vol_we_dna_ext</HarmonizedName>
+      <Description>volume (mL) or weight (g) of sample processed for DNA extraction</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>silicate</Name>
+      <HarmonizedName>silicate</HarmonizedName>
+      <Description>concentration of silicate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>size-fraction lower threshold</Name>
+      <HarmonizedName>size_frac_low</HarmonizedName>
+      <Description>Refers to the mesh/pore size used to pre-filter/pre-sort the sample. Materials larger than the size threshold are excluded from the sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>size-fraction upper threshold</Name>
+      <HarmonizedName>size_frac_up</HarmonizedName>
+      <Description>Refers to the mesh/pore size used to retain the sample. Materials smaller than the size threshold are excluded from the sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>sodium</Name>
+      <HarmonizedName>sodium</HarmonizedName>
+      <Description>sodium concentration</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>soluble reactive phosphorus</Name>
+      <HarmonizedName>soluble_react_phosp</HarmonizedName>
+      <Description>concentration of soluble reactive phosphorus</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>source material identifiers</Name>
+      <HarmonizedName>source_material_id</HarmonizedName>
+      <Description>unique identifier assigned to a material sample used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>subspecific genetic lineage</Name>
+      <HarmonizedName>subspecf_gen_lin</HarmonizedName>
+      <Description>Information about the genetic distinctness of the lineage (eg., biovar, serovar)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>sulfate</Name>
+      <HarmonizedName>sulfate</HarmonizedName>
+      <Description>concentration of sulfate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>sulfide</Name>
+      <HarmonizedName>sulfide</HarmonizedName>
+      <Description>concentration of sulfide</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>suspended particulate matter</Name>
+      <HarmonizedName>suspend_part_matter</HarmonizedName>
+      <Description>concentration of suspended particulate matter</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>temperature</Name>
+      <HarmonizedName>temp</HarmonizedName>
+      <Description>temperature of the sample at time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>tidal stage</Name>
+      <HarmonizedName>tidal_stage</HarmonizedName>
+      <Description>stage of tide</Description>
+      <Format type="select">
+        <Description>low | high</Description>
+        <Choice/>
+        <Choice>low</Choice>
+        <Choice>high</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>total depth of water column</Name>
+      <HarmonizedName>tot_depth_water_col</HarmonizedName>
+      <Description>measurement of total depth of water column</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>total dissolved nitrogen</Name>
+      <HarmonizedName>tot_diss_nitro</HarmonizedName>
+      <Description>total dissolved nitrogen concentration, reported as nitrogen, measured by: total dissolved nitrogen = NH4 + NO3NO2 + dissolved organic nitrogen</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>total inorganic nitrogen</Name>
+      <HarmonizedName>tot_inorg_nitro</HarmonizedName>
+      <Description>total inorganic nitrogen content</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>total nitrogen</Name>
+      <HarmonizedName>tot_nitro</HarmonizedName>
+      <Description>total nitrogen content of the sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>total particulate carbon</Name>
+      <HarmonizedName>tot_part_carb</HarmonizedName>
+      <Description>total particulate carbon content</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>total phosphorus</Name>
+      <HarmonizedName>tot_phosp</HarmonizedName>
+      <Description>total phosphorus concentration, calculated by: total phosphorus = total dissolved phosphorus + particulate phosphorus. Can also be measured without filtering, reported as phosphorus</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>trophic level</Name>
+      <HarmonizedName>trophic_level</HarmonizedName>
+      <Description>Feeding position in food chain (eg., chemolithotroph)</Description>
+      <Format type="select">
+        <Description>autotroph | carboxydotroph | chemoautotroph | chemoheterotroph | chemolithoautotroph | chemolithotroph | chemoorganoheterotroph | chemoorganotroph | chemosynthetic | chemotroph | copiotroph | diazotroph | facultative | heterotroph | lithoautotroph | lithoheterotroph | lithotroph | methanotroph | methylotroph | mixotroph | obligate | chemoautolithotroph | oligotroph | organoheterotroph | organotroph | photoautotroph | photoheterotroph | photolithoautotroph | photolithotroph | photosynthetic | phototroph</Description>
+        <Choice/>
+        <Choice>autotroph</Choice>
+        <Choice>carboxydotroph</Choice>
+        <Choice>chemoautotroph</Choice>
+        <Choice>chemoheterotroph</Choice>
+        <Choice>chemolithoautotroph</Choice>
+        <Choice>chemolithotroph</Choice>
+        <Choice>chemoorganoheterotroph</Choice>
+        <Choice>chemoorganotroph</Choice>
+        <Choice>chemosynthetic</Choice>
+        <Choice>chemotroph</Choice>
+        <Choice>copiotroph</Choice>
+        <Choice>diazotroph</Choice>
+        <Choice>facultative</Choice>
+        <Choice>heterotroph</Choice>
+        <Choice>lithoautotroph</Choice>
+        <Choice>lithoheterotroph</Choice>
+        <Choice>lithotroph</Choice>
+        <Choice>methanotroph</Choice>
+        <Choice>methylotroph</Choice>
+        <Choice>mixotroph</Choice>
+        <Choice>obligate</Choice>
+        <Choice>chemoautolithotroph</Choice>
+        <Choice>oligotroph</Choice>
+        <Choice>organoheterotroph</Choice>
+        <Choice>organotroph</Choice>
+        <Choice>photoautotroph</Choice>
+        <Choice>photoheterotroph</Choice>
+        <Choice>photolithoautotroph</Choice>
+        <Choice>photolithotroph</Choice>
+        <Choice>photosynthetic</Choice>
+        <Choice>phototroph</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>turbidity</Name>
+      <HarmonizedName>turbidity</HarmonizedName>
+      <Description>turbidity measurement</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Water">
+      <Name>water current</Name>
+      <HarmonizedName>water_current</HarmonizedName>
+      <Description>measurement of magnitude and direction of flow within a fluid</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package group="MIMARKS.specimen">
+    <Name>MIMARKS.specimen.food-prod_facility.6.0</Name>
+    <DisplayName>MIMARKS: specimen, food-food production facility; version 6.0</DisplayName>
+    <ShortName>MIMARKS Specimen</ShortName>
+    <EnvPackage>food-prod_facility</EnvPackage>
+    <EnvPackageDisplay>food-food production facility</EnvPackageDisplay>
+    <NotAppropriateFor>wgs_single;wgs_batch;wgs_diploid</NotAppropriateFor>
+    <Description>Use for any type of marker gene sequences, eg, 16S, 18S, 23S, 28S rRNA or COI obtained from cultured or voucher-identifiable specimens. Organism cannot contain the term 'metagenome'.</Description>
+    <Example/>
+    <TemplateHeader># This is a submission template for batch deposit of 'MIMARKS: specimen, food-food production facility; version 6.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>strain</Name>
+      <HarmonizedName>strain</HarmonizedName>
+      <Description>microbial or eukaryotic strain name</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>isolate</Name>
+      <HarmonizedName>isolate</HarmonizedName>
+      <Description>identification or description of the specific individual from which this sample was obtained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>cultivar</Name>
+      <HarmonizedName>cultivar</HarmonizedName>
+      <Description>cultivar name - cultivated variety of plant</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>ecotype</Name>
+      <HarmonizedName>ecotype</HarmonizedName>
+      <Description>a population within a given species displaying genetically based, phenotypic traits that reflect adaptation to a local habitat, e.g., Columbia</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-food production facility">
+      <Name>collection site geographic feature</Name>
+      <HarmonizedName>coll_site_geo_feat</HarmonizedName>
+      <Description>Text or terms that describe the geographic feature where the food sample was obtained by the researcher. This field encourages selected terms listed under the following ontologies: anthropogenic geographic feature (http://purl.obolibrary.org/obo/ENVO_00000002), for example agricultural fairground [ENVO:01000986]; garden [ENVO:00000011} or any of its subclasses; market [ENVO:01000987]; water well [ENVO:01000002]; or human construction (http://purl.obolibrary.org/obo/ENVO_00000070), e.g., grocery store [GENEPIO:0001020]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>broad-scale environmental context</Name>
+      <HarmonizedName>env_broad_scale</HarmonizedName>
+      <Description>Add terms that identify the major environment type(s) where your sample was collected. Recommend subclasses of biome [ENVO:00000428]. Multiple terms can be separated by one or more pipes e.g.:  mangrove biome [ENVO:01000181]|estuarine biome [ENVO:01000020]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>local-scale environmental context</Name>
+      <HarmonizedName>env_local_scale</HarmonizedName>
+      <Description>Add terms that identify environmental entities having causal influences upon the entity at time of sampling, multiple terms can be separated by pipes, e.g.:  shoreline [ENVO:00000486]|intertidal zone [ENVO:00000316]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>environmental medium</Name>
+      <HarmonizedName>env_medium</HarmonizedName>
+      <Description>Add terms that identify the material displaced by the entity at time of sampling. Recommend subclasses of environmental material [ENVO:00010483]. Multiple terms can be separated by pipes e.g.: estuarine water [ENVO:01000301]|estuarine mud [ENVO:00002160]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-food production facility">
+      <Name>food contact surface</Name>
+      <HarmonizedName>food_contact_surf</HarmonizedName>
+      <Description>The specific container or coating materials in direct contact with the food. Multiple values can be assigned.  This field encourages terms listed under food contact surface (http://purl.obolibrary.org/obo/FOODON_03500010), e.g., aluminum surface [FOODON:03500042]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-food production facility">
+      <Name>food product by quality</Name>
+      <HarmonizedName>food_product_qual</HarmonizedName>
+      <Description>Descriptors for describing food visually or via other senses, which is useful for tasks like food inspection where little prior knowledge of how the food came to be is available. Some terms like "food (frozen)" are both a quality descriptor and the output of a process. This field accepts terms listed under food product by quality (http://purl.obolibrary.org/obo/FOODON_00002454)</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-food production facility">
+      <Name>food product type</Name>
+      <HarmonizedName>food_product_type</HarmonizedName>
+      <Description>A food product type is a class of food products that is differentiated by its food composition (e.g., single- or multi-ingredient), processing and/or consumption characteristics. This does not include brand name products but it may include generic food dish categories. This field encourages terms under food product type (http://purl.obolibrary.org/obo/FOODON:03400361). For terms related to food product for an animal, consult food product for animal (http://purl.obolibrary.org/obo/FOODON_03309997). If the proper descriptor is not listed please use text to describe the food type. Multiple terms can be separated by one or more pipes, e.g., multi-component food product [FOODON:00002501]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-food production facility">
+      <Name>Interagency Food Safety Analytics Collaboration (IFSAC) category</Name>
+      <HarmonizedName>ifsac_category</HarmonizedName>
+      <Description>The IFSAC food categorization scheme has five distinct levels to which foods can be assigned, depending upon the type of food. First, foods are assigned to one of four food groups (aquatic animals, land animals, plants, and other). Food groups include increasingly specific food categories; dairy, eggs, meat and poultry, and game are in the land animal food group, and the category meat and poultry is further subdivided into more specific categories of meat (beef, pork, other meat) and poultry (chicken, turkey, other poultry). Finally, foods are differentiated by differences in food processing (such as pasteurized fluid dairy products, unpasteurized fluid dairy products, pasteurized solid and semi-solid dairy products, and unpasteurized solid and semi-solid dairy products. An IFSAC food category chart is available from https://www.cdc.gov/foodsafety/ifsac/projects/food-categorization-scheme.html PMID: 28926300, e.g., Plants:Produce:Vegetables:Herbs:Dried Herbs</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Nucleic Acid Sequence Source">
+      <Name>isolation and growth condition</Name>
+      <HarmonizedName>isol_growth_condt</HarmonizedName>
+      <Description>PMID or url for isolation and growth condition specifications</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-food production facility">
+      <Name>sample material type (host or environmental context)</Name>
+      <HarmonizedName>samp_mat_type</HarmonizedName>
+      <Description>The type of material from which the sample was obtained. For the Hydrocarbon package, samples include types like core, rock trimmings, drill cuttings, piping section, coupon, pigging debris, solid deposit, produced fluid, produced water, injected water, swabs, etc. For the Food Package, samples are usually categorized as food, body products or tissues, or environmental material. This field accepts terms listed under environmental specimen (http://purl.obolibrary.org/obo/GENEPIO_0001246)</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-food production facility">
+      <Name>sample source material category</Name>
+      <HarmonizedName>samp_source_mat_cat</HarmonizedName>
+      <Description>This is the scientific role or category that the subject organism or material has with respect to an investigation. This field accepts terms listed under specimen source material category (http://purl.obolibrary.org/obo/GENEPIO_0001237 or http://purl.obolibrary.org/obo/OBI_0100051)</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-food production facility">
+      <Name>sample storage device</Name>
+      <HarmonizedName>samp_stor_device</HarmonizedName>
+      <Description>The container used to store the sample. This field accepts terms listed under container (http://purl.obolibrary.org/obo/NCIT_C43186). If the proper descriptor is not listed please use text to describe the storage device</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Food-food production facility">
+      <Name>sample storage media</Name>
+      <HarmonizedName>samp_stor_media</HarmonizedName>
+      <Description>The liquid that is added to the sample collection device prior to sampling. If the sample is pre-hydrated, indicate the liquid media the sample is pre-hydrated with for storage purposes. This field accepts terms listed under microbiological culture medium (http://purl.obolibrary.org/obo/MICRO_0000067). If the proper descriptor is not listed please use text to describe the sample storage media</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>air temperature</Name>
+      <HarmonizedName>air_temp</HarmonizedName>
+      <Description>temperature of the air at the time of sampling</Description>
+      <Format>
+        <Description>{float} {unit} [deg C]</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>area sampled size</Name>
+      <HarmonizedName>area_samp_size</HarmonizedName>
+      <Description>The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected</Description>
+      <Format>
+        <Description>{integer} {unit} x {integer} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>average daily occupancy</Name>
+      <HarmonizedName>avg_occup</HarmonizedName>
+      <Description>Daily average occupancy of room. Indicate the number of person(s) daily occupying the sampling room</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>bacterial density</Name>
+      <HarmonizedName>bacterial_density</HarmonizedName>
+      <Description>Number of bacteria in sample, as defined by bacteria density (http://purl.obolibrary.org/obo/GENEPIO_0000043)</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>biocide used</Name>
+      <HarmonizedName>biocide_used</HarmonizedName>
+      <Description>Substance intended for preventing, neutralizing, destroying, repelling, or mitigating the effects of any pest or microorganism; that inhibits the growth, reproduction, and activity of organisms, including fungal cells; decreases the number of fungi or pests present; deters microbial growth and degradation of other ingredients in the formulation. Indicate the biocide used on the location where the sample was taken. Multiple terms can be separated by pipes, e.g., Quaternary ammonium compound|SterBac</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>observed biotic relationship</Name>
+      <HarmonizedName>biotic_relationship</HarmonizedName>
+      <Description>Free-living or from host (define relationship)</Description>
+      <Format type="select">
+        <Description>free living | parasite | commensal | symbiont</Description>
+        <Choice/>
+        <Choice>free living</Choice>
+        <Choice>parasite</Choice>
+        <Choice>commensal</Choice>
+        <Choice>symbiont</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>collection method </Name>
+      <HarmonizedName>collection_method</HarmonizedName>
+      <Description>Process used to collect the sample, e.g., bronchoalveolar lavage (BAL)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>culture isolation date</Name>
+      <HarmonizedName>cult_isol_date</HarmonizedName>
+      <Description>A culture isolation date is a date-time entity marking the end of a process in which a sample yields a positive result for the target microbial analyte(s) in the form of an isolated colony or colonies, e.g., 5/24/2020</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>culture result</Name>
+      <HarmonizedName>cult_result</HarmonizedName>
+      <Description>Any result of a bacterial culture experiment reported as a binary assessment, e.g., absent, active, inactive, negative, no, present, positive, yes</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>culture result organism</Name>
+      <HarmonizedName>cult_result_org</HarmonizedName>
+      <Description>Taxonomic information about the cultured organism(s)</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}|{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>culture target microbial analyte</Name>
+      <HarmonizedName>cult_target</HarmonizedName>
+      <Description>The target microbial analyte in terms of investigation scope. This field accepts terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also accepts identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}|{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>dietary claim or use</Name>
+      <HarmonizedName>dietary_claim_use</HarmonizedName>
+      <Description>These descriptors are used either for foods intended for special dietary use as defined in 21 CFR 105 or for foods that have special characteristics indicated in the name or labeling. This field accepts terms listed under dietary claim or use (http://purl.obolibrary.org/obo/FOODON_03510023). Multiple terms can be separated by one or more pipes, but please consider limiting this list to the most prominent dietary claim or use</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>enrichment protocol</Name>
+      <HarmonizedName>enrichment_protocol</HarmonizedName>
+      <Description>The microbiological workflow or protocol followed to test for the presence or enumeration of the target microbial analyte(s). Please provide a PubMed or DOI reference for published protocols</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food production environmental monitoring zone</Name>
+      <HarmonizedName>env_monitoring_zone</HarmonizedName>
+      <Description>An environmental monitoring zone is a formal designation as part of an environmental monitoring program, in which areas of a food production facility are categorized, commonly as zones 1-4, based on likelihood or risk of foodborne pathogen contamination. This field accepts entries of zones 1-4, e.g., Zone 1</Description>
+      <Format type="select">
+        <Description>Zone 1 | Zone 2 | Zone 3 | Zone 4 | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>Zone 1</Choice>
+        <Choice>Zone 2</Choice>
+        <Choice>Zone 3</Choice>
+        <Choice>Zone 4</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>experimental factor</Name>
+      <HarmonizedName>experimental_factor</HarmonizedName>
+      <Description>Variable aspect of experimental design</Description>
+      <Format>
+        <Description>{term|text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>extrachromosomal elements</Name>
+      <HarmonizedName>extrachrom_elements</HarmonizedName>
+      <Description>Plasmids that have significance phenotypic consequence</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>facility type</Name>
+      <HarmonizedName>facility_type</HarmonizedName>
+      <Description>Establishment details about the type of facility where the sample was taken. This is independent of the specific product(s) within the facility, e.g., manufacturing-processing</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food additive</Name>
+      <HarmonizedName>food_additive</HarmonizedName>
+      <Description>A substance or substances added to food to maintain or improve safety and freshness, to improve or maintain nutritional value, or improve taste, texture and appearance.  This field encourages terms listed under food additive (http://purl.obolibrary.org/obo/FOODON_03412972). Multiple terms can be separated by one or more pipes, but please consider limiting this list to the top 5 ingredients listed in order as on the food label.  See also, https://www.fda.gov/food/food-ingredients-packaging/overview-food-ingredients-additives-colors, e.g., xanthan gum [FOODON:03413321]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food allergen labeling</Name>
+      <HarmonizedName>food_allergen_label</HarmonizedName>
+      <Description>A label indication that the product contains a recognized allergen. This field accepts terms listed under dietary claim or use (http://purl.obolibrary.org/obo/FOODON_03510213)</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food container or wrapping</Name>
+      <HarmonizedName>food_contain_wrap</HarmonizedName>
+      <Description>Type of container or wrapping defined by the main container material, the container form, and the material of the liner lids or ends. Also type of container or wrapping by form; prefer description by material first, then by form. This field encourages terms listed under food container or wrapping (http://purl.obolibrary.org/obo/FOODON_03490100), e.g., bottle or jar [FOODON:03490203]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food cooking process</Name>
+      <HarmonizedName>food_cooking_proc</HarmonizedName>
+      <Description>The transformation of raw food by the application of heat. This field encourages terms listed under food cooking (http://purl.obolibrary.org/obo/FOODON_03450002), e.g., food blanching [FOODON:03470175]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food distribution point geographic location</Name>
+      <HarmonizedName>food_dis_point</HarmonizedName>
+      <Description>A reference to a place on the Earth, by its name or by its geographical location that refers to a distribution point along the food chain. This field accepts terms listed under geographic location (http://purl.obolibrary.org/obo/GAZ_00000448). Reference: Adam Diamond, James Barham. Moving Food Along the Value Chain: Innovations in Regional Food Distribution. U.S. Dept. of Agriculture, Agricultural Marketing Service. Washington, DC. March 2012. http://dx.doi.org/10.9752/MS045.03-2012</Description>
+      <Format>
+        <Description>{term}: {term}, {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food distribution point geographic location (city)</Name>
+      <HarmonizedName>food_dis_point_city</HarmonizedName>
+      <Description>A reference to a place on the Earth, by its name or by its geographical location that refers to a distribution point along the food chain. This field accepts terms listed under geographic location (http://purl.obolibrary.org/obo/GAZ_00000448). Reference: Adam Diamond, James Barham. Moving Food Along the Value Chain: Innovations in Regional Food Distribution. U.S. Dept. of Agriculture, Agricultural Marketing Service. Washington, DC. March 2012. http://dx.doi.org/10.9752/MS045.03-2012</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food ingredient</Name>
+      <HarmonizedName>food_ingredient</HarmonizedName>
+      <Description>In this field, please list individual ingredients for multi-component food [FOODON:00002501] and simple foods that is not captured in food_type. Please use terms that are present in FoodOn. Multiple terms can be separated by one or more pipes, but please consider limiting this list to the top 5 ingredients listed in order as on the food label. See also, https://www.fda.gov/food/food-ingredients-packaging/overview-food-ingredients-additives-colors</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food product name legal status</Name>
+      <HarmonizedName>food_name_status</HarmonizedName>
+      <Description>A datum indicating that use of a food product name is regulated in some legal jurisdiction. This field accepts terms listed under food product name legal status (http://purl.obolibrary.org/obo/FOODON_03530087)</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food product origin geographic location</Name>
+      <HarmonizedName>food_origin</HarmonizedName>
+      <Description>A reference to a place on the Earth, by its name or by its geographical location that describes the origin of the food commodity, either in terms of its cultivation or production. This field encourages terms listed under geographic location (http://purl.obolibrary.org/obo/GAZ_00000448), e.g., Thailand</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food package capacity</Name>
+      <HarmonizedName>food_pack_capacity</HarmonizedName>
+      <Description>The maximum number of product units within a package</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food packing integrity</Name>
+      <HarmonizedName>food_pack_integrity</HarmonizedName>
+      <Description>A term label and term id to describe the state of the packing material and text to explain the exact condition.  This field encourages terms listed under food packing medium integrity (http://purl.obolibrary.org/obo/FOODON_03530218), e.g., food packing medium compromised [FOODON:00002517]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food packing medium</Name>
+      <HarmonizedName>food_pack_medium</HarmonizedName>
+      <Description>The medium in which the food is packed for preservation and handling or the medium surrounding homemade foods, e.g., peaches cooked in sugar syrup. The packing medium may provide a controlled environment for the food. It may also serve to improve palatability and consumer appeal. This includes edible packing media (e.g. fruit juice), gas other than air (e.g. carbon dioxide), vacuum packed, or packed with aerosol propellant. This field encourages terms under food packing medium (http://purl.obolibrary.org/obo/FOODON_03480020). Multiple terms may apply and can be separated by pipes, e.g., vacuum-packed [FOODON:03480027]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food preservation process</Name>
+      <HarmonizedName>food_preserv_proc</HarmonizedName>
+      <Description>The methods contributing to the prevention or retardation of microbial, enzymatic or oxidative spoilage and thus to the extension of shelf life. This field encourages terms listed under food preservation process (http://purl.obolibrary.org/obo/FOODON_03470107), e.g., food fermentation [FOODON:00001304]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>material of contact prior to food packaging</Name>
+      <HarmonizedName>food_prior_contact</HarmonizedName>
+      <Description>The material the food contacted (e.g., was processed in) prior to packaging. This field accepts terms listed under material of contact prior to food packaging (http://purl.obolibrary.org/obo/FOODON_03530077). If the proper descriptor is not listed please use text to describe the material of contact prior to food packaging</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food production characteristics</Name>
+      <HarmonizedName>food_prod_char</HarmonizedName>
+      <Description>Descriptors of the food production system such as wild caught, free-range, organic, free-range, industrial, dairy, beef</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food product synonym</Name>
+      <HarmonizedName>food_prod_synonym</HarmonizedName>
+      <Description>Other names by which the food product is known by (e.g., regional or non-English names), e.g., pinot gris</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food quality date</Name>
+      <HarmonizedName>food_quality_date</HarmonizedName>
+      <Description>The date recommended for the use of the product while at peak quality, this date is not a reflection of safety unless used on infant formula this date is not a reflection of safety and is typically labeled on a food product as ""best if used by,"" best by,"" ""use by,"" or ""freeze by"", e.g., 5/24/2020</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food source</Name>
+      <HarmonizedName>food_source</HarmonizedName>
+      <Description>Individual organism or category of organisms from which the food product or its major ingredient is derived, e.g., giant tiger prawn [FOODON:03412612]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food traceability list category</Name>
+      <HarmonizedName>food_trace_list</HarmonizedName>
+      <Description>The FDA is proposing to establish additional traceability recordkeeping requirements (beyond what is already required in existing regulations) for persons who manufacture, process, pack, or hold foods the Agency has designated for inclusion on the Food Traceability List. The Food Traceability List (FTL) identifies the foods for which the additional traceability records described in the proposed rule would be required. The term ""Food Traceability List"" (FTL) refers not only to the foods specifically listed (https://www.fda.gov/media/142303/download), but also to any foods that contain listed foods as ingredients, e.g., tropical tree fruits</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food shipping transportation method</Name>
+      <HarmonizedName>food_trav_mode</HarmonizedName>
+      <Description>A descriptor for the method of movement of food commodity along the food distribution system. This field accepts terms listed under travel mode (http://purl.obolibrary.org/obo/GENEPIO_0001064). If the proper descrptor is not listed please use text to describe the mode of travel. Multiple terms can be separated by one or more pipes</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food shipping transportation vehicle</Name>
+      <HarmonizedName>food_trav_vehic</HarmonizedName>
+      <Description>A descriptor for the mobile machine which is used to transport food commodities along the food distribution system. This field accepts terms listed under vehicle (http://purl.obolibrary.org/obo/ENVO_01000604). If the proper descrptor is not listed please use text to describe the mode of travel. Multiple terms can be separated by one or more pipes</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>food treatment process</Name>
+      <HarmonizedName>food_treat_proc</HarmonizedName>
+      <Description>Used to specifically characterize a food product based on the treatment or processes applied to the product or any indexed ingredient. The processes include adding, substituting or removing components or modifying the food or component, e.g., through fermentation. Multiple values can be assigned. This fields accepts terms listed under food treatment process (http://purl.obolibrary.org/obo/FOODON_03460111)</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>frequency of cleaning</Name>
+      <HarmonizedName>freq_clean</HarmonizedName>
+      <Description>The number of times the sample location is cleaned, e.g., daily, weekly, monthly, quarterly, annually</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>genetic modification</Name>
+      <HarmonizedName>genetic_mod</HarmonizedName>
+      <Description>Genetic modifications of the genome of an organism, which may occur naturally by spontaneous mutation, or be introduced by some experimental means, e.g. specification of a transgene or the gene knocked-out or details of transient transfection</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>Hazard Analysis Critical Control Points (HACCP) guide food safety term</Name>
+      <HarmonizedName>haccp_term</HarmonizedName>
+      <Description>Hazard Analysis Critical Control Points (HACCP) food safety terms; This field accepts terms listed under HACCP guide food safety term (http://purl.obolibrary.org/obo/FOODON_03530221)</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>hygienic food production area</Name>
+      <HarmonizedName>hygienic_area</HarmonizedName>
+      <Description>The subdivision of areas within a food production facility according to hygienic requirements. This field accepts terms listed under hygienic food production area (http://purl.obolibrary.org/obo/ENVO). Please add a term that most accurately indicates the hygienic area your sample was taken from according to the definitions provided</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>indoor surface</Name>
+      <HarmonizedName>indoor_surf</HarmonizedName>
+      <Description>type of indoor surface</Description>
+      <Format type="select">
+        <Description>counter top | window | wall | cabinet | ceiling | door | shelving | vent cover | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>counter top</Choice>
+        <Choice>window</Choice>
+        <Choice>wall</Choice>
+        <Choice>cabinet</Choice>
+        <Choice>ceiling</Choice>
+        <Choice>door</Choice>
+        <Choice>shelving</Choice>
+        <Choice>vent cover</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>intended consumer</Name>
+      <HarmonizedName>intended_consumer</HarmonizedName>
+      <Description>Food consumer type, human or animal, for which the food product is produced and marketed, e.g., human</Description>
+      <Format type="select">
+        <Description>human as food consumer | animal as food consumer | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>human as food consumer</Choice>
+        <Choice>animal as food consumer</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>lot number</Name>
+      <HarmonizedName>lot_number</HarmonizedName>
+      <Description>A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch. The submitter should provide lot number of the item followed by the item name for which the lot number was provided</Description>
+      <Format>
+        <Description>{integer}, {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>microbiological culture medium</Name>
+      <HarmonizedName>microb_cult_med</HarmonizedName>
+      <Description>A culture medium used to select for, grow, and maintain prokaryotic microorganisms. Can be in either liquid (broth) or solidified (e.g. with agar) forms. This field accepts terms listed under microbiological culture medium (http://purl.obolibrary.org/obo/MICRO_0000067). If the proper descriptor is not listed please use text to describe the culture medium</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>miscellaneous parameter</Name>
+      <HarmonizedName>misc_param</HarmonizedName>
+      <Description>any other measurement performed or parameter collected, that is not listed here</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>negative control type</Name>
+      <HarmonizedName>neg_cont_type</HarmonizedName>
+      <Description>The substance or equipment used as a negative control in an investigation, e.g., distilled water, phosphate buffer, empty collection device, empty collection tube, DNA-free PCR mix, sterile swab, sterile syringe</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>number of samples collected</Name>
+      <HarmonizedName>num_samp_collect</HarmonizedName>
+      <Description>The number of samples collected during the current sampling event</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>Omics Observatory ID</Name>
+      <HarmonizedName>omics_observ_id</HarmonizedName>
+      <Description>A unique identifier of the omics-enabled observatory (or comparable time series) your data derives from. This identifier should be provided by the OMICON ontology; if you require a new identifier for your time series, contact the ontology's developers. Information is available here: https://github.com/GLOMICON/omicon. This field is only applicable to records which derive from an omics time-series or observatory.</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>organism count</Name>
+      <HarmonizedName>organism_count</HarmonizedName>
+      <Description>total count of any organism per gram or volume of sample,should include name of organism followed by count; can include multiple organism counts</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>part of plant or animal</Name>
+      <HarmonizedName>part_plant_animal</HarmonizedName>
+      <Description>The anatomical part of the organism being involved in food production or consumption; e.g., a carrot is the root of the plant (root vegetable). This field accepts terms listed under part of plant or animal (http://purl.obolibrary.org/obo/FOODON_03420116)</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>pooling of DNA extracts</Name>
+      <HarmonizedName>pool_dna_extracts</HarmonizedName>
+      <Description>were multiple DNA extractions mixed? how many?</Description>
+      <Format>
+        <Description>{boolean};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>positive control type</Name>
+      <HarmonizedName>pos_cont_type</HarmonizedName>
+      <Description>The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive
+</Description>
+      <Format>
+        <Description>{term} or {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>production labeling claims</Name>
+      <HarmonizedName>prod_label_claims</HarmonizedName>
+      <Description>Labeling claims containing descriptors such as wild caught, free-range, organic, free-range, industrial, hormone-free, antibiotic free, cage free</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>purpose of sampling</Name>
+      <HarmonizedName>purpose_of_sampling</HarmonizedName>
+      <Description>the reason that the sample was collected, e.g., active surveillance in response to an outbreak, active surveillance not initiated by an outbreak, clinical trial, cluster investigation, environmental assessment, farm sample, field trial, for cause, industry internal investigation, market sample, passive surveillance, population based studies, research, research and development</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>relationship to oxygen</Name>
+      <HarmonizedName>rel_to_oxygen</HarmonizedName>
+      <Description>Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments, eg, aerobe, anaerobe, facultative, microaerophilic, microanaerobe, obligate aerobe, obligate anaerobe, missing, not applicable, not collected, not provided, restricted access</Description>
+      <Format type="select">
+        <Description>aerobe | anaerobe | facultative | microaerophilic | microanaerobe | obligate aerobe | obligate anaerobe | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>aerobe</Choice>
+        <Choice>anaerobe</Choice>
+        <Choice>facultative</Choice>
+        <Choice>microaerophilic</Choice>
+        <Choice>microanaerobe</Choice>
+        <Choice>obligate aerobe</Choice>
+        <Choice>obligate anaerobe</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>repository</Name>
+      <HarmonizedName>repository</HarmonizedName>
+      <Description>the name of the institution where the sample or DNA extract is held or "sample not available" if the sample was used in its entirety for analysis or otherwise not retained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>room dimensions</Name>
+      <HarmonizedName>room_dim</HarmonizedName>
+      <Description>The length, width and height of sampling room</Description>
+      <Format>
+        <Description>{integer} {unit} x {integer} {unit} x {integer} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample collection device or method</Name>
+      <HarmonizedName>samp_collect_device</HarmonizedName>
+      <Description>Method or device employed for collecting sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sample collection method</Name>
+      <HarmonizedName>samp_collect_method</HarmonizedName>
+      <Description>The method employed for collecting the sample</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sampling floor</Name>
+      <HarmonizedName>samp_floor</HarmonizedName>
+      <Description>The floor of the building, where the sampling room is located, e.g., 1st floor, 2nd floor, basement, lobby</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sample location condition</Name>
+      <HarmonizedName>samp_loc_condition</HarmonizedName>
+      <Description>The condition of the sample location at the time of sampling, e.g., damaged, new, rupture, visible signs of mold-mildew, visible weariness repair</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample material processing</Name>
+      <HarmonizedName>samp_mat_process</HarmonizedName>
+      <Description>Processing applied to the sample during or after isolation</Description>
+      <Format>
+        <Description>{text|term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sample pooling</Name>
+      <HarmonizedName>samp_pooling</HarmonizedName>
+      <Description>Physical combination of several instances of like material, e.g., RNA extracted from samples or dishes of cell cultures into one big aliquot of cells. Please provide a short description of the samples that were pooled</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>biological sample replicate</Name>
+      <HarmonizedName>samp_rep_biol</HarmonizedName>
+      <Description>Measurements of biologically distinct samples that show biological variation</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>technical sample replicate</Name>
+      <HarmonizedName>samp_rep_tech</HarmonizedName>
+      <Description>Repeated measurements of the same sample that show independent measures of the noise associated with the equipment and the protocols</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sampling room ID or name</Name>
+      <HarmonizedName>samp_room_id</HarmonizedName>
+      <Description>Sampling room number. This ID should be consistent with the designations on the building floor plans</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample size</Name>
+      <HarmonizedName>samp_size</HarmonizedName>
+      <Description>Amount or size of sample (volume, mass or area) that was collected</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sample storage duration</Name>
+      <HarmonizedName>samp_store_dur</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sample storage location</Name>
+      <HarmonizedName>samp_store_loc</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sample storage temperature</Name>
+      <HarmonizedName>samp_store_temp</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sample surface moisture</Name>
+      <HarmonizedName>samp_surf_moisture</HarmonizedName>
+      <Description>Degree of water held on a sampled surface, e.g., intermittent moisture, not present, submerged</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sample transport container</Name>
+      <HarmonizedName>samp_transport_cont</HarmonizedName>
+      <Description>Container in which the sample was stored during transport. Indicate the location name, e.g., bottle, cooler, glass vial, plastic vial, vendor supplied container</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sample transport duration</Name>
+      <HarmonizedName>samp_transport_dur</HarmonizedName>
+      <Description>The duration of time from when the sample was collected until processed. Indicate the duration for which the sample was stored written in ISO 8601 format</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sample transport temperature</Name>
+      <HarmonizedName>samp_transport_temp</HarmonizedName>
+      <Description>Temperature at which sample was transported, e.g., -20 or 4 degree Celsius</Description>
+      <Format>
+        <Description>{float} {unit} {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample volume or weight for DNA extraction</Name>
+      <HarmonizedName>samp_vol_we_dna_ext</HarmonizedName>
+      <Description>volume (mL) or weight (g) of sample processed for DNA extraction</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>source material identifiers</Name>
+      <HarmonizedName>source_material_id</HarmonizedName>
+      <Description>unique identifier assigned to a material sample used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>sampling room sterilization method</Name>
+      <HarmonizedName>ster_meth_samp_room</HarmonizedName>
+      <Description>The method used to sterilize the sampling room. This field accepts terms listed under electromagnetic radiation (http://purl.obolibrary.org/obo/ENVO_01001026). If the proper descriptor is not listed, please use text to describe the sampling room sterilization method. Multiple terms can be separated by pipes</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>study design</Name>
+      <HarmonizedName>study_design</HarmonizedName>
+      <Description>Epidemiological or omics reseach design context that this biosample was used in.</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>study incubation duration</Name>
+      <HarmonizedName>study_inc_dur</HarmonizedName>
+      <Description>Sample incubation duration if unpublished or unvalidated method is used. Indicate the timepoint written in ISO 8601 format</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>study incubation temperature</Name>
+      <HarmonizedName>study_inc_temp</HarmonizedName>
+      <Description>Sample incubation temperature if unpublished or unvalidated method is used</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>time-course duration</Name>
+      <HarmonizedName>study_timecourse</HarmonizedName>
+      <Description>For time-course research studies involving samples of the food commodity, indicate the total duration of the time-course study</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>study treatment</Name>
+      <HarmonizedName>study_tmnt</HarmonizedName>
+      <Description>A process in which the act is intended to modify or alter some other material entity. From the study design, each treatment is comprised of one level of one or multiple factors. This field accepts terms listed under treatment (http://purl.obolibrary.org/obo/MCO_0000866). If the proper descriptor is not listed please use text to describe the study treatment. Multiple terms can be separated by one or more pipes</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>subspecific genetic lineage</Name>
+      <HarmonizedName>subspecf_gen_lin</HarmonizedName>
+      <Description>Information about the genetic distinctness of the lineage (eg., biovar, serovar)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>surface material</Name>
+      <HarmonizedName>surf_material</HarmonizedName>
+      <Description>surface materials at the point of sampling</Description>
+      <Format type="select">
+        <Description>concrete | wood | stone | tile | plastic | glass | vinyl | metal | carpet | stainless steel | paint | cinder blocks | hay bales | stucco | adobe | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>concrete</Choice>
+        <Choice>wood</Choice>
+        <Choice>stone</Choice>
+        <Choice>tile</Choice>
+        <Choice>plastic</Choice>
+        <Choice>glass</Choice>
+        <Choice>vinyl</Choice>
+        <Choice>metal</Choice>
+        <Choice>carpet</Choice>
+        <Choice>stainless steel</Choice>
+        <Choice>paint</Choice>
+        <Choice>cinder blocks</Choice>
+        <Choice>hay bales</Choice>
+        <Choice>stucco</Choice>
+        <Choice>adobe</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Food-food production facility">
+      <Name>timepoint</Name>
+      <HarmonizedName>timepoint</HarmonizedName>
+      <Description>Time point at which a sample or observation is made or taken from a biomaterial as measured from some reference point. Indicate the timepoint written in ISO 8601 format</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>trophic level</Name>
+      <HarmonizedName>trophic_level</HarmonizedName>
+      <Description>Feeding position in food chain (eg., chemolithotroph)</Description>
+      <Format type="select">
+        <Description>autotroph | carboxydotroph | chemoautotroph | chemoheterotroph | chemolithoautotroph | chemolithotroph | chemoorganoheterotroph | chemoorganotroph | chemosynthetic | chemotroph | copiotroph | diazotroph | facultative | heterotroph | lithoautotroph | lithoheterotroph | lithotroph | methanotroph | methylotroph | mixotroph | obligate | chemoautolithotroph | oligotroph | organoheterotroph | organotroph | photoautotroph | photoheterotroph | photolithoautotroph | photolithotroph | photosynthetic | phototroph</Description>
+        <Choice/>
+        <Choice>autotroph</Choice>
+        <Choice>carboxydotroph</Choice>
+        <Choice>chemoautotroph</Choice>
+        <Choice>chemoheterotroph</Choice>
+        <Choice>chemolithoautotroph</Choice>
+        <Choice>chemolithotroph</Choice>
+        <Choice>chemoorganoheterotroph</Choice>
+        <Choice>chemoorganotroph</Choice>
+        <Choice>chemosynthetic</Choice>
+        <Choice>chemotroph</Choice>
+        <Choice>copiotroph</Choice>
+        <Choice>diazotroph</Choice>
+        <Choice>facultative</Choice>
+        <Choice>heterotroph</Choice>
+        <Choice>lithoautotroph</Choice>
+        <Choice>lithoheterotroph</Choice>
+        <Choice>lithotroph</Choice>
+        <Choice>methanotroph</Choice>
+        <Choice>methylotroph</Choice>
+        <Choice>mixotroph</Choice>
+        <Choice>obligate</Choice>
+        <Choice>chemoautolithotroph</Choice>
+        <Choice>oligotroph</Choice>
+        <Choice>organoheterotroph</Choice>
+        <Choice>organotroph</Choice>
+        <Choice>photoautotroph</Choice>
+        <Choice>photoheterotroph</Choice>
+        <Choice>photolithoautotroph</Choice>
+        <Choice>photolithotroph</Choice>
+        <Choice>photosynthetic</Choice>
+        <Choice>phototroph</Choice>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

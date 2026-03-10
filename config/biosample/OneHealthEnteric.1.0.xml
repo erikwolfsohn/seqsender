@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package antibiogram="true" antibiogram_class="Antibiogram.1.0" antibiogram_template="https://www.ncbi.nlm.nih.gov/biosample/docs/templates/Antibiogram.1.0.xlsx">
+    <Name>OneHealthEnteric.1.0</Name>
+    <DisplayName>One Health Enteric; version 1.0</DisplayName>
+    <ShortName>One Health Enteric</ShortName>
+    <EnvPackage/>
+    <EnvPackageDisplay/>
+    <NotAppropriateFor>wgs_diploid</NotAppropriateFor>
+    <Description>Use for microbial samples that are collected for genomic surveillance of enteric pathogens by US Health agencies. Includes the One Health Enteric (https://github.com/CFSAN-Biostatistics/One_Health_Enteric_Package) sample spaces: 1. human/animal hosts; 2. food samples; 3. food facilities; 4. environmental samples (farm, water, and the environment).</Description>
+    <Example/>
+    <Antibiogram antibiogram_class="Antibiogram.1.0" antibiogram_template="https://www.ncbi.nlm.nih.gov/biosample/docs/templates/Antibiogram.1.0.xlsx" antibiogram_doc="https://www.ncbi.nlm.nih.gov/biosample/docs/antibiogram/">pathogen MIC</Antibiogram>
+    <Antibiogram antibiogram_class="Antibiogram.mycobacterial.1.0" antibiogram_template="https://www.ncbi.nlm.nih.gov/biosample/docs/templates/Antibiogram.mycobacterial.1.0.xlsx" antibiogram_doc="https://www.ncbi.nlm.nih.gov/biosample/docs/antibiogram-myco/">mycobacterial non-MIC</Antibiogram>
+    <TemplateHeader># This is a submission template for batch deposit of 'One Health Enteric; version 1.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="mandatory">
+      <Name>collected by</Name>
+      <HarmonizedName>collected_by</HarmonizedName>
+      <Description>Name of persons or institute who collected the sample</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>purpose of sampling</Name>
+      <HarmonizedName>purpose_of_sampling</HarmonizedName>
+      <Description>the reason that the sample was collected, e.g., active surveillance in response to an outbreak, active surveillance not initiated by an outbreak, clinical trial, cluster investigation, environmental assessment, farm sample, field trial, for cause, industry internal investigation, market sample, passive surveillance, population based studies, research, research and development</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>source type</Name>
+      <HarmonizedName>source_type</HarmonizedName>
+      <Description>Controlled vocabulary describing the isolation_source.  Choose the best fit term: Human, Animal, Food, Environmental, Other, e.g., Food</Description>
+      <Format type="select">
+        <Description>human | animal | food | environmental | other | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>human</Choice>
+        <Choice>animal</Choice>
+        <Choice>food</Choice>
+        <Choice>environmental</Choice>
+        <Choice>other</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>strain</Name>
+      <HarmonizedName>strain</HarmonizedName>
+      <Description>microbial or eukaryotic strain name</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>animal environment</Name>
+      <HarmonizedName>animal_env</HarmonizedName>
+      <Description>The environment from which the animal sample was taken, e.g., veterinary clinic</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>animal intrusion near sample source</Name>
+      <HarmonizedName>animal_intrusion</HarmonizedName>
+      <Description>Identification of animals intruding on the sample or sample site including invertebrates (such as pests or pollinators) and vertebrates (such as wildlife or domesticated animals). This field encourages terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also encourages identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy. Multiple terms can be separated by pipes, e.g., large flies</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>biocide used</Name>
+      <HarmonizedName>biocide_used</HarmonizedName>
+      <Description>Substance intended for preventing, neutralizing, destroying, repelling, or mitigating the effects of any pest or microorganism; that inhibits the growth, reproduction, and activity of organisms, including fungal cells; decreases the number of fungi or pests present; deters microbial growth and degradation of other ingredients in the formulation. Indicate the biocide used on the location where the sample was taken. Multiple terms can be separated by pipes, e.g., Quaternary ammonium compound|SterBac</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>building setting</Name>
+      <HarmonizedName>building_setting</HarmonizedName>
+      <Description>location (geography) where a building is set</Description>
+      <Format type="select">
+        <Description>urban | suburban | exurban | rural | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>urban</Choice>
+        <Choice>suburban</Choice>
+        <Choice>exurban</Choice>
+        <Choice>rural</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>collection site geographic feature</Name>
+      <HarmonizedName>coll_site_geo_feat</HarmonizedName>
+      <Description>Text or terms that describe the geographic feature where the food sample was obtained by the researcher. This field encourages selected terms listed under the following ontologies: anthropogenic geographic feature (http://purl.obolibrary.org/obo/ENVO_00000002), for example agricultural fairground [ENVO:01000986]; garden [ENVO:00000011} or any of its subclasses; market [ENVO:01000987]; water well [ENVO:01000002]; or human construction (http://purl.obolibrary.org/obo/ENVO_00000070), e.g., grocery store [GENEPIO:0001020]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>culture isolation date</Name>
+      <HarmonizedName>cult_isol_date</HarmonizedName>
+      <Description>A culture isolation date is a date-time entity marking the end of a process in which a sample yields a positive result for the target microbial analyte(s) in the form of an isolated colony or colonies, e.g., 5/24/2020</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>culture collection</Name>
+      <HarmonizedName>culture_collection</HarmonizedName>
+      <Description>Name of source institute and unique culture identifier. See the description for the proper format and list of allowed institutes, http://www.insdc.org/controlled-vocabulary-culturecollection-qualifier</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>broad-scale environmental context</Name>
+      <HarmonizedName>env_broad_scale</HarmonizedName>
+      <Description>Add terms that identify the major environment type(s) where your sample was collected. Recommend subclasses of biome [ENVO:00000428]. Multiple terms can be separated by one or more pipes e.g.:  mangrove biome [ENVO:01000181]|estuarine biome [ENVO:01000020]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>local-scale environmental context</Name>
+      <HarmonizedName>env_local_scale</HarmonizedName>
+      <Description>Add terms that identify environmental entities having causal influences upon the entity at time of sampling, multiple terms can be separated by pipes, e.g.:  shoreline [ENVO:00000486]|intertidal zone [ENVO:00000316]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>environmental medium</Name>
+      <HarmonizedName>env_medium</HarmonizedName>
+      <Description>Add terms that identify the material displaced by the entity at time of sampling. Recommend subclasses of environmental material [ENVO:00010483]. Multiple terms can be separated by pipes e.g.: estuarine water [ENVO:01000301]|estuarine mud [ENVO:00002160]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food production environmental monitoring zone</Name>
+      <HarmonizedName>env_monitoring_zone</HarmonizedName>
+      <Description>An environmental monitoring zone is a formal designation as part of an environmental monitoring program, in which areas of a food production facility are categorized, commonly as zones 1-4, based on likelihood or risk of foodborne pathogen contamination. This field accepts entries of zones 1-4, e.g., Zone 1</Description>
+      <Format type="select">
+        <Description>Zone 1 | Zone 2 | Zone 3 | Zone 4 | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>Zone 1</Choice>
+        <Choice>Zone 2</Choice>
+        <Choice>Zone 3</Choice>
+        <Choice>Zone 4</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>extreme weather event</Name>
+      <HarmonizedName>extr_weather_event</HarmonizedName>
+      <Description>Unusual weather events that may have affected microbial populations. Multiple terms can be separated by pipes, listed in reverse chronological order, e.g., hail</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>facility type</Name>
+      <HarmonizedName>facility_type</HarmonizedName>
+      <Description>Establishment details about the type of facility where the sample was taken. This is independent of the specific product(s) within the facility, e.g., manufacturing-processing</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>farm equipment used</Name>
+      <HarmonizedName>farm_equip</HarmonizedName>
+      <Description>List of relevant equipment used for planting, fertilization, harvesting, irrigation, land levelling, residue management, weeding or transplanting during the growing season.  This field encourages terms listed under agricultural implement (http://purl.obolibrary.org/obo/AGRO_00000416). Multiple terms can be separated by pipes, e.g., combine harvester [AGRO:00000473]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>farm watering water source</Name>
+      <HarmonizedName>farm_water_source</HarmonizedName>
+      <Description>Source of water used on the farm for irrigation of crops or watering of livestock, e.g., water well</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>fertilizer administration</Name>
+      <HarmonizedName>fertilizer_admin</HarmonizedName>
+      <Description>Type of fertilizer or amendment added to the soil or water for the purpose of improving substrate health and quality for plant growth. This field encourages terms listed under agronomic fertilizer (http://purl.obolibrary.org/obo/AGRO_00002062). Multiple terms may apply and can be separated by pipes, listing in reverse chronological order, e.g., fish emulsion [AGRO:00000082]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food additive</Name>
+      <HarmonizedName>food_additive</HarmonizedName>
+      <Description>A substance or substances added to food to maintain or improve safety and freshness, to improve or maintain nutritional value, or improve taste, texture and appearance.  This field encourages terms listed under food additive (http://purl.obolibrary.org/obo/FOODON_03412972). Multiple terms can be separated by one or more pipes, but please consider limiting this list to the top 5 ingredients listed in order as on the food label.  See also, https://www.fda.gov/food/food-ingredients-packaging/overview-food-ingredients-additives-colors, e.g., xanthan gum [FOODON:03413321]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food cleaning process </Name>
+      <HarmonizedName>food_clean_proc</HarmonizedName>
+      <Description>The process of cleaning food to separate other environmental materials from the food source. Multiple terms can be separated by pipes, e.g., rinsed with water|scrubbed with brush</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food contact surface</Name>
+      <HarmonizedName>food_contact_surf</HarmonizedName>
+      <Description>The specific container or coating materials in direct contact with the food. Multiple values can be assigned.  This field encourages terms listed under food contact surface (http://purl.obolibrary.org/obo/FOODON_03500010), e.g., aluminum surface [FOODON:03500042]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food container or wrapping</Name>
+      <HarmonizedName>food_contain_wrap</HarmonizedName>
+      <Description>Type of container or wrapping defined by the main container material, the container form, and the material of the liner lids or ends. Also type of container or wrapping by form; prefer description by material first, then by form. This field encourages terms listed under food container or wrapping (http://purl.obolibrary.org/obo/FOODON_03490100), e.g., bottle or jar [FOODON:03490203]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>FDA food industry class name</Name>
+      <HarmonizedName>food_industry_class</HarmonizedName>
+      <Description>The US FDA Class is the second of five elements that comprise a FDA product code. This element is directly related to an Industry and designates the food group, source, product, use, pharmacological action, category or animal species of the product. A Class code is more specific than an Industry; for example, the Fishery/Seafood products Industry may contain Classes such as Smoked, Breaded and such, e.g., Coffee, Decaffeinated</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>FDA food industry code name</Name>
+      <HarmonizedName>food_industry_code</HarmonizedName>
+      <Description>The US FDA Industry Code is the first of five elements that comprise an FDA product code. An Industry code determines the broadest area into which a product falls, e.g., 31 Coffee and Tea</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food product origin geographic location</Name>
+      <HarmonizedName>food_origin</HarmonizedName>
+      <Description>A reference to a place on the Earth, by its name or by its geographical location that describes the origin of the food commodity, either in terms of its cultivation or production. This field encourages terms listed under geographic location (http://purl.obolibrary.org/obo/GAZ_00000448), e.g., Thailand</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food packing integrity</Name>
+      <HarmonizedName>food_pack_integrity</HarmonizedName>
+      <Description>A term label and term id to describe the state of the packing material and text to explain the exact condition.  This field encourages terms listed under food packing medium integrity (http://purl.obolibrary.org/obo/FOODON_03530218), e.g., food packing medium compromised [FOODON:00002517]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food packing medium</Name>
+      <HarmonizedName>food_pack_medium</HarmonizedName>
+      <Description>The medium in which the food is packed for preservation and handling or the medium surrounding homemade foods, e.g., peaches cooked in sugar syrup. The packing medium may provide a controlled environment for the food. It may also serve to improve palatability and consumer appeal. This includes edible packing media (e.g. fruit juice), gas other than air (e.g. carbon dioxide), vacuum packed, or packed with aerosol propellant. This field encourages terms under food packing medium (http://purl.obolibrary.org/obo/FOODON_03480020). Multiple terms may apply and can be separated by pipes, e.g., vacuum-packed [FOODON:03480027]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food preservation process</Name>
+      <HarmonizedName>food_preserv_proc</HarmonizedName>
+      <Description>The methods contributing to the prevention or retardation of microbial, enzymatic or oxidative spoilage and thus to the extension of shelf life. This field encourages terms listed under food preservation process (http://purl.obolibrary.org/obo/FOODON_03470107), e.g., food fermentation [FOODON:00001304]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food processing method</Name>
+      <HarmonizedName>food_processing_method</HarmonizedName>
+      <Description>Methods for processing food, e.g., food (blanched) [FOODON:00002767]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food production system</Name>
+      <HarmonizedName>food_prod</HarmonizedName>
+      <Description>Descriptors of the food production system or of the agricultural environment and growing conditions related to the farm production system. This field encourages terms listed under food production (http://purl.obolibrary.org/obo/FOODON_03530206). Multiple terms may apply and can be separated by pipes, e.g., restaurant food preparation process [FOODON:03530110]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food product synonym</Name>
+      <HarmonizedName>food_prod_synonym</HarmonizedName>
+      <Description>Other names by which the food product is known by (e.g., regional or non-English names), e.g., pinot gris</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food product type</Name>
+      <HarmonizedName>food_product_type</HarmonizedName>
+      <Description>A food product type is a class of food products that is differentiated by its food composition (e.g., single- or multi-ingredient), processing and/or consumption characteristics. This does not include brand name products but it may include generic food dish categories. This field encourages terms under food product type (http://purl.obolibrary.org/obo/FOODON:03400361). For terms related to food product for an animal, consult food product for animal (http://purl.obolibrary.org/obo/FOODON_03309997). If the proper descriptor is not listed please use text to describe the food type. Multiple terms can be separated by one or more pipes, e.g., multi-component food product [FOODON:00002501]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food quality date</Name>
+      <HarmonizedName>food_quality_date</HarmonizedName>
+      <Description>The date recommended for the use of the product while at peak quality, this date is not a reflection of safety unless used on infant formula this date is not a reflection of safety and is typically labeled on a food product as ""best if used by,"" best by,"" ""use by,"" or ""freeze by"", e.g., 5/24/2020</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food source</Name>
+      <HarmonizedName>food_source</HarmonizedName>
+      <Description>Individual organism or category of organisms from which the food product or its major ingredient is derived, e.g., giant tiger prawn [FOODON:03412612]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food type processed in facility</Name>
+      <HarmonizedName>food_type_processed</HarmonizedName>
+      <Description>Food type processed in facility, e.g., dairy</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host</Name>
+      <HarmonizedName>host</HarmonizedName>
+      <Description>The natural (as opposed to laboratory) host to the organism from which the sample was obtained. Use the full taxonomic name, eg, "Homo sapiens".</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host age</Name>
+      <HarmonizedName>host_age</HarmonizedName>
+      <Description>Age of host at the time of sampling</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>antimicrobial name</Name>
+      <HarmonizedName>host_am</HarmonizedName>
+      <Description>The class(es) or name(s) (generic or brand) of the antimicrobial(s) given to the food animal within the last 30 days, e.g., tetracycline [CHEBI:27902]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host animal breed</Name>
+      <HarmonizedName>host_animal_breed</HarmonizedName>
+      <Description>The animal breed of the host organism.  Used mainly for animal hosts, e.g., duroc, angus, mixed breed</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host body product</Name>
+      <HarmonizedName>host_body_product</HarmonizedName>
+      <Description>substance produced by the host, e.g. stool, mucus, where the sample was obtained from</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host disease</Name>
+      <HarmonizedName>host_disease</HarmonizedName>
+      <Description>Name of relevant disease, e.g. Salmonella gastroenteritis. Controlled vocabulary, http://bioportal.bioontology.org/ontologies/1009 or http://www.ncbi.nlm.nih.gov/mesh</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>food animal group size</Name>
+      <HarmonizedName>host_group_size</HarmonizedName>
+      <Description>The number of food animals of the same species that are maintained together as a unit, i.e. a herd or flock, e.g., 80</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>animal housing system </Name>
+      <HarmonizedName>host_housing</HarmonizedName>
+      <Description>Description of the housing system of the livestock. This field encourages terms listed under terrestrial management housing system (http://opendata.inra.fr/EOL/EOL_0001605), e.g., pen [EOL:0001902]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host sex</Name>
+      <HarmonizedName>host_sex</HarmonizedName>
+      <Description>Gender or physical sex of the host</Description>
+      <Format type="select">
+        <Description>male | female | pooled male and female | neuter | hermaphrodite | intersex | not determined | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>male</Choice>
+        <Choice>female</Choice>
+        <Choice>pooled male and female</Choice>
+        <Choice>neuter</Choice>
+        <Choice>hermaphrodite</Choice>
+        <Choice>intersex</Choice>
+        <Choice>not determined</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host subject id</Name>
+      <HarmonizedName>host_subject_id</HarmonizedName>
+      <Description>a unique identifier by which each subject can be referred to, de-identified, e.g. #131</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host tissue sampled</Name>
+      <HarmonizedName>host_tissue_sampled</HarmonizedName>
+      <Description>name of body site where the sample was obtained from, such as a specific organ or tissue, e.g., tongue, lung. For foundational model of anatomy ontology (fma) (v 4.11.0) or Uber-anatomy ontology (UBERON) (v releases/2014-06-15) terms, please see http://purl.bioontology.org/ontology/FMA or http://purl.bioontology.org/ontology/UBERON</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host variety or cultivar</Name>
+      <HarmonizedName>host_variety</HarmonizedName>
+      <Description>The variety or cultivar of the host organism; the name given to a particular variety of organism to distinguish it from otherwise similar organisms of the same species, e.g., romaine lettuce; Athena melons; Patio Snacker cucumbers</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>Interagency Food Safety Analytics Collaboration (IFSAC) category</Name>
+      <HarmonizedName>ifsac_category</HarmonizedName>
+      <Description>The IFSAC food categorization scheme has five distinct levels to which foods can be assigned, depending upon the type of food. First, foods are assigned to one of four food groups (aquatic animals, land animals, plants, and other). Food groups include increasingly specific food categories; dairy, eggs, meat and poultry, and game are in the land animal food group, and the category meat and poultry is further subdivided into more specific categories of meat (beef, pork, other meat) and poultry (chicken, turkey, other poultry). Finally, foods are differentiated by differences in food processing (such as pasteurized fluid dairy products, unpasteurized fluid dairy products, pasteurized solid and semi-solid dairy products, and unpasteurized solid and semi-solid dairy products. An IFSAC food category chart is available from https://www.cdc.gov/foodsafety/ifsac/projects/food-categorization-scheme.html PMID: 28926300, e.g., Plants:Produce:Vegetables:Herbs:Dried Herbs</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>indoor surface</Name>
+      <HarmonizedName>indoor_surf</HarmonizedName>
+      <Description>type of indoor surface</Description>
+      <Format type="select">
+        <Description>counter top | window | wall | cabinet | ceiling | door | shelving | vent cover | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>counter top</Choice>
+        <Choice>window</Choice>
+        <Choice>wall</Choice>
+        <Choice>cabinet</Choice>
+        <Choice>ceiling</Choice>
+        <Choice>door</Choice>
+        <Choice>shelving</Choice>
+        <Choice>vent cover</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>indoor sampling surface or structure subpart</Name>
+      <HarmonizedName>indoor_surf_subpart</HarmonizedName>
+      <Description>The subpart of the object(s) that was swabbed, like a cart, drain, counter, etc., e.g., wheel</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>intended consumer</Name>
+      <HarmonizedName>intended_consumer</HarmonizedName>
+      <Description>Food consumer type, human or animal, for which the food product is produced and marketed, e.g., human</Description>
+      <Format type="select">
+        <Description>human as food consumer | animal as food consumer | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>human as food consumer</Choice>
+        <Choice>animal as food consumer</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>isolate name alias</Name>
+      <HarmonizedName>isolate_name_alias</HarmonizedName>
+      <Description>Other IDs associated with this isolate or strain. Separate with '; ' if more than one</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>labeling claims</Name>
+      <HarmonizedName>label_claims</HarmonizedName>
+      <Description>Descriptors of the food production system such as wild caught, free-range, organic, free-range, industrial, hormone-free, antibiotic free, cage free, e.g., wild caught</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>location or room in facility</Name>
+      <HarmonizedName>location_in_facility</HarmonizedName>
+      <Description>Name of the location or room in the facility where the sampling occurred, e.g., ripening room</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>material condition</Name>
+      <HarmonizedName>material_condition</HarmonizedName>
+      <Description>Condition of material sampled, e.g., rusted</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>mechanical damage</Name>
+      <HarmonizedName>mechanical_damage</HarmonizedName>
+      <Description>information about any mechanical damage exerted on the plant; can include multiple damages and sites</Description>
+      <Format>
+        <Description>{text};{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>plant growth medium </Name>
+      <HarmonizedName>plant_growth_med</HarmonizedName>
+      <Description>Type of the media used for growing sampled plants, e.g., soil [ENVO:00001998]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>plant water delivery method</Name>
+      <HarmonizedName>plant_water_method</HarmonizedName>
+      <Description>Description of the equipment or method used to distribute water to crops. This field encourages terms listed under irrigation process (http://purl.obolibrary.org/obo/AGRO_00000006). Multiple terms can be separated by pipes, e.g., drip irrigation process [AGRO:00000056]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>project name</Name>
+      <HarmonizedName>project_name</HarmonizedName>
+      <Description>A concise name that describes the overall project, for example "Analysis of sequences collected from Antarctic soil"</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>reference material</Name>
+      <HarmonizedName>reference_material</HarmonizedName>
+      <Description>Indicates that a standards body or external group asserts this sample is reference material, eg, 'NIST reference material for genome sequencing validation'.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>relative location of sample</Name>
+      <HarmonizedName>rel_location</HarmonizedName>
+      <Description>Location of sample to other parts of the farm, e.g. under crop plant, near irrigation ditch, from the dirt road, from air above crops, nearby river, e.g., furrow</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>sample collection device or method</Name>
+      <HarmonizedName>samp_collect_device</HarmonizedName>
+      <Description>Method or device employed for collecting sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>sanitizer used during postharvest cleaning</Name>
+      <HarmonizedName>sanitizer_used_postharvest</HarmonizedName>
+      <Description>Substance intended for preventing, neutralizing, destroying, repelling, or mitigating the effects of any pest or microorganism; indicate the sanitizer used during the postharvest cleaning process. Multiple terms can be separated by pipes, e.g., chlorine bleach</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>sequenced by</Name>
+      <HarmonizedName>sequenced_by</HarmonizedName>
+      <Description>The name of the agency that generated the sequence, e.g., Centers for Disease Control and Prevention</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>serotype</Name>
+      <HarmonizedName>serotype</HarmonizedName>
+      <Description>Taxonomy below subspecies; a variety (in bacteria, fungi or virus) usually based on its antigenic properties. Same as serovar and serogroup. e.g. serotype="H1N1" in Influenza A virus CY098518.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>serovar</Name>
+      <HarmonizedName>serovar</HarmonizedName>
+      <Description>Taxonomy below subspecies; a variety (in bacteria, fungi or virus) usually based on its antigenic properties. Same as serovar and serotype. Sometimes used as species identifier in bacteria with shaky taxonomy, e.g. Leptospira, serovar saopaolo S76607 (65357 in Entrez).</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>soil type</Name>
+      <HarmonizedName>soil_type</HarmonizedName>
+      <Description>soil series name or other lower-level classification</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>specific intended consumer</Name>
+      <HarmonizedName>spec_intended_cons</HarmonizedName>
+      <Description>Food consumer type, human or animal, for which the food product is produced and marketed. This field encourages terms listed under food consumer group (http://purl.obolibrary.org/obo/FOODON_03510136), e.g., infant or toddler as food consumer [FOODON:03510020]</Description>
+      <Format type="select">
+        <Description>animal as food consumer | laboratory animal as food consumer | non-food animal as food consumer | pet animal as consumer | pet fish as consumer | pet cat as consumer | pet bird as consumer | pet dog as consumer | sheep or goat as consumer | food animal as consumer | food fish as consumer | poultry as consumer | pig as consumer | game as consumer | rabbit as consumer | cattle as consumer | horse as consumer | human as food consumer | adult human as food consumer | man as food consumer | woman as food consumer | senior as food consumer | athlete as food consumer | bodybuilder as food consumer | weight-reducer as food consumer | human as food consumer, four years and above | teenager as food consumer | child as food consumer, less than four years | infant or toddler as food consumer | toddler as food consumer, 12 months and onwards | infant as food consumer | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>animal as food consumer</Choice>
+        <Choice>laboratory animal as food consumer</Choice>
+        <Choice>non-food animal as food consumer</Choice>
+        <Choice>pet animal as consumer</Choice>
+        <Choice>pet fish as consumer</Choice>
+        <Choice>pet cat as consumer</Choice>
+        <Choice>pet bird as consumer</Choice>
+        <Choice>pet dog as consumer</Choice>
+        <Choice>sheep or goat as consumer</Choice>
+        <Choice>food animal as consumer</Choice>
+        <Choice>food fish as consumer</Choice>
+        <Choice>poultry as consumer</Choice>
+        <Choice>pig as consumer</Choice>
+        <Choice>game as consumer</Choice>
+        <Choice>rabbit as consumer</Choice>
+        <Choice>cattle as consumer</Choice>
+        <Choice>horse as consumer</Choice>
+        <Choice>human as food consumer</Choice>
+        <Choice>adult human as food consumer</Choice>
+        <Choice>man as food consumer</Choice>
+        <Choice>woman as food consumer</Choice>
+        <Choice>senior as food consumer</Choice>
+        <Choice>athlete as food consumer</Choice>
+        <Choice>bodybuilder as food consumer</Choice>
+        <Choice>weight-reducer as food consumer</Choice>
+        <Choice>human as food consumer, four years and above</Choice>
+        <Choice>teenager as food consumer</Choice>
+        <Choice>child as food consumer, less than four years</Choice>
+        <Choice>infant or toddler as food consumer</Choice>
+        <Choice>toddler as food consumer, 12 months and onwards</Choice>
+        <Choice>infant as food consumer</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>surface material</Name>
+      <HarmonizedName>surf_material</HarmonizedName>
+      <Description>surface materials at the point of sampling</Description>
+      <Format type="select">
+        <Description>concrete | wood | stone | tile | plastic | glass | vinyl | metal | carpet | stainless steel | paint | cinder blocks | hay bales | stucco | adobe | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>concrete</Choice>
+        <Choice>wood</Choice>
+        <Choice>stone</Choice>
+        <Choice>tile</Choice>
+        <Choice>plastic</Choice>
+        <Choice>glass</Choice>
+        <Choice>vinyl</Choice>
+        <Choice>metal</Choice>
+        <Choice>carpet</Choice>
+        <Choice>stainless steel</Choice>
+        <Choice>paint</Choice>
+        <Choice>cinder blocks</Choice>
+        <Choice>hay bales</Choice>
+        <Choice>stucco</Choice>
+        <Choice>adobe</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>surface temperature</Name>
+      <HarmonizedName>surf_temp</HarmonizedName>
+      <Description>temperature of the surface at the time of sampling</Description>
+      <Format>
+        <Description>{float} {unit} [deg C]</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>surface orientation</Name>
+      <HarmonizedName>surface_orientation</HarmonizedName>
+      <Description>Describe which surface of the object is swabbed. (e.g underside, top, corner), e.g., underside</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>upstream intervention</Name>
+      <HarmonizedName>upstream_intervention</HarmonizedName>
+      <Description>List any known health-related interventions (prophylactic, therapeutic, and/or metaphylactic) administered to the host, i.e. vaccinations, hormonal patches, antibiotics, injections in feed, etc., e.g., prophylactic/metaphylactic antibiotics</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

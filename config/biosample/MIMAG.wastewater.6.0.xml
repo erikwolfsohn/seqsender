@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package group="MIMAG">
+    <Name>MIMAG.wastewater.6.0</Name>
+    <DisplayName>MIMAG: metagenome-assembled genome, wastewater; version 6.0</DisplayName>
+    <ShortName>MIMAG Metagenome-assembled Genome</ShortName>
+    <EnvPackage>wastewater</EnvPackage>
+    <EnvPackageDisplay>wastewater</EnvPackageDisplay>
+    <NotAppropriateFor>wgs_diploid</NotAppropriateFor>
+    <Description>Use for metagenome-assembled genome sequences produced using computational binning tools that group sequences into individual organism genome assemblies starting from metagenomic data sets. Organism cannot contain the term 'metagenome'. Use the MIUVIG package for virus genomes. Before creating BioSamples for prokaryotic and eukaryotic MAGs, please read and follow the MAG submission instructions at https://www.ncbi.nlm.nih.gov/genbank/wgsfaq/#metagen.</Description>
+    <Example/>
+    <TemplateHeader># This is a submission template for batch deposit of 'MIMAG: metagenome-assembled genome, wastewater; version 6.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="mandatory" group_name="Organism">
+      <Name>isolate</Name>
+      <HarmonizedName>isolate</HarmonizedName>
+      <Description>identification or description of the specific individual from which this sample was obtained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>broad-scale environmental context</Name>
+      <HarmonizedName>env_broad_scale</HarmonizedName>
+      <Description>Add terms that identify the major environment type(s) where your sample was collected. Recommend subclasses of biome [ENVO:00000428]. Multiple terms can be separated by one or more pipes e.g.:  mangrove biome [ENVO:01000181]|estuarine biome [ENVO:01000020]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>local-scale environmental context</Name>
+      <HarmonizedName>env_local_scale</HarmonizedName>
+      <Description>Add terms that identify environmental entities having causal influences upon the entity at time of sampling, multiple terms can be separated by pipes, e.g.:  shoreline [ENVO:00000486]|intertidal zone [ENVO:00000316]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>environmental medium</Name>
+      <HarmonizedName>env_medium</HarmonizedName>
+      <Description>Add terms that identify the material displaced by the entity at time of sampling. Recommend subclasses of environmental material [ENVO:00010483]. Multiple terms can be separated by pipes e.g.: estuarine water [ENVO:01000301]|estuarine mud [ENVO:00002160]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>alkalinity</Name>
+      <HarmonizedName>alkalinity</HarmonizedName>
+      <Description>alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>biochemical oxygen demand</Name>
+      <HarmonizedName>biochem_oxygen_dem</HarmonizedName>
+      <Description>a measure of the relative oxygen-depletion effect of a waste contaminant</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>chemical administration</Name>
+      <HarmonizedName>chem_administration</HarmonizedName>
+      <Description>list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v1.72), please see http://bioportal.bioontology.org/visualize/44603</Description>
+      <Format>
+        <Description>{term}; {timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>chemical oxygen demand</Name>
+      <HarmonizedName>chem_oxygen_dem</HarmonizedName>
+      <Description>a measure of the relative oxygen-depletion effect of a waste contaminant</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>collection method </Name>
+      <HarmonizedName>collection_method</HarmonizedName>
+      <Description>Process used to collect the sample, e.g., bronchoalveolar lavage (BAL)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>depth</Name>
+      <HarmonizedName>depth</HarmonizedName>
+      <Description>Depth is defined as the vertical distance below surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples.</Description>
+      <Format>
+        <Description>{float} m</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>derived from</Name>
+      <HarmonizedName>derived_from</HarmonizedName>
+      <Description>Indicates when one BioSample was derived from another BioSample. Value should include BioSample accession number(s) (SAMNxxxxxxxx).</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>efficiency percent</Name>
+      <HarmonizedName>efficiency_percent</HarmonizedName>
+      <Description>percentage of volatile solids removed from the anaerobic digestor</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>emulsions</Name>
+      <HarmonizedName>emulsions</HarmonizedName>
+      <Description>amount or concentration of substances such as paints, adhesives, mayonnaise, hair colorants, emulsified oils, etc.; can include multiple emulsion types</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>experimental factor</Name>
+      <HarmonizedName>experimental_factor</HarmonizedName>
+      <Description>Variable aspect of experimental design</Description>
+      <Format>
+        <Description>{term|text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>gaseous substances</Name>
+      <HarmonizedName>gaseous_substances</HarmonizedName>
+      <Description>amount or concentration of substances such as hydrogen sulfide, carbon dioxide, methane, etc.; can include multiple substances</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>industrial effluent percent</Name>
+      <HarmonizedName>indust_eff_percent</HarmonizedName>
+      <Description>percentage of industrial effluents received by wastewater treatment plant</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>inorganic particles</Name>
+      <HarmonizedName>inorg_particles</HarmonizedName>
+      <Description>concentration of particles such as sand, grit, metal particles, ceramics, etc.; can include multiple particles</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>metagenome source</Name>
+      <HarmonizedName>metagenome_source</HarmonizedName>
+      <Description>describes the original source of a metagenome assembled genome (MAG). Examples: soil metagenome, gut metagenome</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>miscellaneous parameter</Name>
+      <HarmonizedName>misc_param</HarmonizedName>
+      <Description>any other measurement performed or parameter collected, that is not listed here</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>negative control type</Name>
+      <HarmonizedName>neg_cont_type</HarmonizedName>
+      <Description>The substance or equipment used as a negative control in an investigation, e.g., distilled water, phosphate buffer, empty collection device, empty collection tube, DNA-free PCR mix, sterile swab, sterile syringe</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>nitrate</Name>
+      <HarmonizedName>nitrate</HarmonizedName>
+      <Description>concentration of nitrate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>Omics Observatory ID</Name>
+      <HarmonizedName>omics_observ_id</HarmonizedName>
+      <Description>A unique identifier of the omics-enabled observatory (or comparable time series) your data derives from. This identifier should be provided by the OMICON ontology; if you require a new identifier for your time series, contact the ontology's developers. Information is available here: https://github.com/GLOMICON/omicon. This field is only applicable to records which derive from an omics time-series or observatory.</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>organic particles</Name>
+      <HarmonizedName>org_particles</HarmonizedName>
+      <Description>concentration of particles such as faeces, hairs, food, vomit, paper fibers, plant material, humus, etc.</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>organism count</Name>
+      <HarmonizedName>organism_count</HarmonizedName>
+      <Description>total count of any organism per gram or volume of sample,should include name of organism followed by count; can include multiple organism counts</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>oxygenation status of sample</Name>
+      <HarmonizedName>oxy_stat_samp</HarmonizedName>
+      <Description>oxygenation status of sample</Description>
+      <Format type="select">
+        <Description>aerobic | anaerobic</Description>
+        <Choice/>
+        <Choice>aerobic</Choice>
+        <Choice>anaerobic</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>perturbation</Name>
+      <HarmonizedName>perturbation</HarmonizedName>
+      <Description>type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types</Description>
+      <Format>
+        <Description>{text};{interval}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>pH</Name>
+      <HarmonizedName>ph</HarmonizedName>
+      <Description>pH measurement</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>phosphate</Name>
+      <HarmonizedName>phosphate</HarmonizedName>
+      <Description>concentration of phosphate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>positive control type</Name>
+      <HarmonizedName>pos_cont_type</HarmonizedName>
+      <Description>The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive
+</Description>
+      <Format>
+        <Description>{term} or {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>pretreatment</Name>
+      <HarmonizedName>pre_treatment</HarmonizedName>
+      <Description>the process of pre-treatment removes materials that can be easily collected from the raw wastewater</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>primary treatment</Name>
+      <HarmonizedName>primary_treatment</HarmonizedName>
+      <Description>the process to produce both a generally homogeneous liquid capable of being treated biologically and a sludge that can be separately treated or processed</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>reactor type</Name>
+      <HarmonizedName>reactor_type</HarmonizedName>
+      <Description>anaerobic digesters can be designed and engineered to operate using a number of different process configurations, as batch or continuous, mesophilic, high solid or low solid, and single stage or multistage</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>reference for biomaterial</Name>
+      <HarmonizedName>ref_biomaterial</HarmonizedName>
+      <Description>Primary publication or genome report</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>relationship to oxygen</Name>
+      <HarmonizedName>rel_to_oxygen</HarmonizedName>
+      <Description>Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments, eg, aerobe, anaerobe, facultative, microaerophilic, microanaerobe, obligate aerobe, obligate anaerobe, missing, not applicable, not collected, not provided, restricted access</Description>
+      <Format type="select">
+        <Description>aerobe | anaerobe | facultative | microaerophilic | microanaerobe | obligate aerobe | obligate anaerobe | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>aerobe</Choice>
+        <Choice>anaerobe</Choice>
+        <Choice>facultative</Choice>
+        <Choice>microaerophilic</Choice>
+        <Choice>microanaerobe</Choice>
+        <Choice>obligate aerobe</Choice>
+        <Choice>obligate anaerobe</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample collection device or method</Name>
+      <HarmonizedName>samp_collect_device</HarmonizedName>
+      <Description>Method or device employed for collecting sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample material processing</Name>
+      <HarmonizedName>samp_mat_process</HarmonizedName>
+      <Description>Processing applied to the sample during or after isolation</Description>
+      <Format>
+        <Description>{text|term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>sample salinity</Name>
+      <HarmonizedName>samp_salinity</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample size</Name>
+      <HarmonizedName>samp_size</HarmonizedName>
+      <Description>Amount or size of sample (volume, mass or area) that was collected</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>sample storage duration</Name>
+      <HarmonizedName>samp_store_dur</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>sample storage location</Name>
+      <HarmonizedName>samp_store_loc</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>sample storage temperature</Name>
+      <HarmonizedName>samp_store_temp</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample volume or weight for DNA extraction</Name>
+      <HarmonizedName>samp_vol_we_dna_ext</HarmonizedName>
+      <Description>volume (mL) or weight (g) of sample processed for DNA extraction</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>secondary treatment</Name>
+      <HarmonizedName>secondary_treatment</HarmonizedName>
+      <Description>the process for substantially degrading the biological content of the sewage</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>sewage type</Name>
+      <HarmonizedName>sewage_type</HarmonizedName>
+      <Description>type of wastewater treatment plant as municipial or industrial</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>size fraction selected</Name>
+      <HarmonizedName>size_frac</HarmonizedName>
+      <Description>Filtering pore size used in sample preparation, e.g., 0-0.22 micrometer</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>sludge retention time</Name>
+      <HarmonizedName>sludge_retent_time</HarmonizedName>
+      <Description>the time activated sludge remains in reactor</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>sodium</Name>
+      <HarmonizedName>sodium</HarmonizedName>
+      <Description>sodium concentration</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>soluble inorganic material</Name>
+      <HarmonizedName>soluble_inorg_mat</HarmonizedName>
+      <Description>concentration of substances such as ammonia, road-salt, sea-salt, cyanide, hydrogen sulfide, thiocyanates, thiosulfates, etc.</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>soluble organic material</Name>
+      <HarmonizedName>soluble_org_mat</HarmonizedName>
+      <Description>concentration of substances such as urea, fruit sugars, soluble proteins, drugs, pharmaceuticals, etc.</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>source material identifiers</Name>
+      <HarmonizedName>source_material_id</HarmonizedName>
+      <Description>unique identifier assigned to a material sample used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>suspended solids</Name>
+      <HarmonizedName>suspend_solids</HarmonizedName>
+      <Description>concentration of substances including a wide variety of material, such as silt, decaying plant and animal matter, etc,; can include multiple substances</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>temperature</Name>
+      <HarmonizedName>temp</HarmonizedName>
+      <Description>temperature of the sample at time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>tertiary treatment</Name>
+      <HarmonizedName>tertiary_treatment</HarmonizedName>
+      <Description>the process providing a final treatment stage to raise the effluent quality before it is discharged to the receiving environment</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>total nitrogen</Name>
+      <HarmonizedName>tot_nitro</HarmonizedName>
+      <Description>total nitrogen content of the sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>total phosphate</Name>
+      <HarmonizedName>tot_phosphate</HarmonizedName>
+      <Description>total amount or concentration of phosphate</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Wastewater/sludge">
+      <Name>wastewater type</Name>
+      <HarmonizedName>wastewater_type</HarmonizedName>
+      <Description>the origin of wastewater such as human waste, rainfall, storm drains, etc.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

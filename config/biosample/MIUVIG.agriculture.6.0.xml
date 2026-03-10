@@ -1,0 +1,1381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package group="MIUVIG">
+    <Name>MIUVIG.agriculture.6.0</Name>
+    <DisplayName>MIUVIG: uncultivated virus genome, agriculture; version 6.0</DisplayName>
+    <ShortName>MIUVIG Uncultivated Virus Genome</ShortName>
+    <EnvPackage>agriculture</EnvPackage>
+    <EnvPackageDisplay>agriculture</EnvPackageDisplay>
+    <NotAppropriateFor>wgs_single;wgs_batch;wgs_diploid</NotAppropriateFor>
+    <Description>Use for uncultivated virus genome identified in metagenome and metatranscriptome datasets. Organism must have lineage Viruses.</Description>
+    <Example/>
+    <TemplateHeader># This is a submission template for batch deposit of 'MIUVIG: uncultivated virus genome, agriculture; version 6.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="mandatory" group_name="Organism">
+      <Name>isolate</Name>
+      <HarmonizedName>isolate</HarmonizedName>
+      <Description>identification or description of the specific individual from which this sample was obtained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Source">
+      <Name>host</Name>
+      <HarmonizedName>host</HarmonizedName>
+      <Description>The natural (as opposed to laboratory) host to the organism from which the sample was obtained. Use the full taxonomic name, eg, "Homo sapiens".</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Source">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>chemical administration</Name>
+      <HarmonizedName>chem_administration</HarmonizedName>
+      <Description>list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v1.72), please see http://bioportal.bioontology.org/visualize/44603</Description>
+      <Format>
+        <Description>{term}; {timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>broad-scale environmental context</Name>
+      <HarmonizedName>env_broad_scale</HarmonizedName>
+      <Description>Add terms that identify the major environment type(s) where your sample was collected. Recommend subclasses of biome [ENVO:00000428]. Multiple terms can be separated by one or more pipes e.g.:  mangrove biome [ENVO:01000181]|estuarine biome [ENVO:01000020]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>local-scale environmental context</Name>
+      <HarmonizedName>env_local_scale</HarmonizedName>
+      <Description>Add terms that identify environmental entities having causal influences upon the entity at time of sampling, multiple terms can be separated by pipes, e.g.:  shoreline [ENVO:00000486]|intertidal zone [ENVO:00000316]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>environmental medium</Name>
+      <HarmonizedName>env_medium</HarmonizedName>
+      <Description>Add terms that identify the material displaced by the entity at time of sampling. Recommend subclasses of environmental material [ENVO:00010483]. Multiple terms can be separated by pipes e.g.: estuarine water [ENVO:01000301]|estuarine mud [ENVO:00002160]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>food source</Name>
+      <HarmonizedName>food_source</HarmonizedName>
+      <Description>Individual organism or category of organisms from which the food product or its major ingredient is derived, e.g., giant tiger prawn [FOODON:03412612]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>host age</Name>
+      <HarmonizedName>host_age</HarmonizedName>
+      <Description>Age of host at the time of sampling</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>host common name</Name>
+      <HarmonizedName>host_common_name</HarmonizedName>
+      <Description>The natural language (non-taxonomic) name of the host organism, e.g., mouse</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>host genotype</Name>
+      <HarmonizedName>host_genotype</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>host height</Name>
+      <HarmonizedName>host_height</HarmonizedName>
+      <Description>the height of subject</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>host length</Name>
+      <HarmonizedName>host_length</HarmonizedName>
+      <Description>the length of subject</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>host life stage</Name>
+      <HarmonizedName>host_life_stage</HarmonizedName>
+      <Description>description of host life stage</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>host phenotype</Name>
+      <HarmonizedName>host_phenotype</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>host total mass</Name>
+      <HarmonizedName>host_tot_mass</HarmonizedName>
+      <Description>total mass of the host at collection, the unit depends on host</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>microbial biomass</Name>
+      <HarmonizedName>microbial_biomass</HarmonizedName>
+      <Description>the part of the organic matter in the soil that constitutes living microorganisms smaller than 5-10 µm. IF you keep this, you would need to have correction factors used for conversion to the final units, which should be mg C (or N)/kg soil).</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>microbial biomass method</Name>
+      <HarmonizedName>microbial_biomass_meth</HarmonizedName>
+      <Description>reference or method used in determining microbial biomass</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>sample storage duration</Name>
+      <HarmonizedName>samp_store_dur</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>sample storage location</Name>
+      <HarmonizedName>samp_store_loc</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>sieving</Name>
+      <HarmonizedName>sieving</HarmonizedName>
+      <Description>collection design of pooled samples and/or sieve size and amount of sample sieved</Description>
+      <Format>
+        <Description>{{text}|{float} {unit}};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>soil type</Name>
+      <HarmonizedName>soil_type</HarmonizedName>
+      <Description>soil series name or other lower-level classification</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>soil type method</Name>
+      <HarmonizedName>soil_type_meth</HarmonizedName>
+      <Description>reference or method used in determining soil series name or other lower-level classification</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Nucleic Acid Sequence Source">
+      <Name>source of UViGs</Name>
+      <HarmonizedName>source_uvig</HarmonizedName>
+      <Description>Type of dataset from which the UViG was obtained</Description>
+      <Format type="select">
+        <Description>metagenome (not viral targeted) | viral fraction metagenome (virome) | sequence-targeted metagenome | metatranscriptome (not viral targeted) | viral fraction RNA metagenome (RNA virome) | sequence-targeted RNA metagenome | microbial single amplified genome (SAG) | viral single amplified genome (vSAG) | isolate microbial genome | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>metagenome (not viral targeted)</Choice>
+        <Choice>viral fraction metagenome (virome)</Choice>
+        <Choice>sequence-targeted metagenome</Choice>
+        <Choice>metatranscriptome (not viral targeted)</Choice>
+        <Choice>viral fraction RNA metagenome (RNA virome)</Choice>
+        <Choice>sequence-targeted RNA metagenome</Choice>
+        <Choice>microbial single amplified genome (SAG)</Choice>
+        <Choice>viral single amplified genome (vSAG)</Choice>
+        <Choice>isolate microbial genome</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>storage conditions</Name>
+      <HarmonizedName>store_cond</HarmonizedName>
+      <Description>explain how and for how long the soil sample was stored before DNA extraction.</Description>
+      <Format>
+        <Description>{text};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Agriculture">
+      <Name>temperature</Name>
+      <HarmonizedName>temp</HarmonizedName>
+      <Description>temperature of the sample at time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Nucleic Acid Sequence Source">
+      <Name>virus enrichment approach</Name>
+      <HarmonizedName>virus_enrich_appr</HarmonizedName>
+      <Description>Approach used to enrich the sample for viruses, if any. If more than one approach was used, include multiple ‘virus_enrich_appr’ fields.</Description>
+      <Format type="select">
+        <Description>filtration | ultrafiltration | centrifugation | ultracentrifugation | PEG Precipitation | FeCl Precipitation | CsCl density gradient | DNAse | RNAse | targeted sequence capture | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>filtration</Choice>
+        <Choice>ultrafiltration</Choice>
+        <Choice>centrifugation</Choice>
+        <Choice>ultracentrifugation</Choice>
+        <Choice>PEG Precipitation</Choice>
+        <Choice>FeCl Precipitation</Choice>
+        <Choice>CsCl density gradient</Choice>
+        <Choice>DNAse</Choice>
+        <Choice>RNAse</Choice>
+        <Choice>targeted sequence capture</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>environment adjacent to site</Name>
+      <HarmonizedName>adjacent_environment</HarmonizedName>
+      <Description>Description of the environmental system or features that are adjacent to the sampling site. This field accepts terms under ecosystem (http://purl.obolibrary.org/obo/ENVO_01001110) and human construction (http://purl.obolibrary.org/obo/ENVO_00000070). Multiple terms can be separated by pipes</Description>
+      <Format>
+        <Description>{termLabel}{[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>agrochemical additions</Name>
+      <HarmonizedName>agrochem_addition</HarmonizedName>
+      <Description>addition of fertilizers, pesticides, etc. - amount and time of applications</Description>
+      <Format>
+        <Description>{text};{float} {unit};{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>ancestral data</Name>
+      <HarmonizedName>ances_data</HarmonizedName>
+      <Description>Information about either pedigree or other ancestral information description, e.g., parental variety in case of mutant or selection, A/3*B (meaning [(A x B) x B] x B)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>animal water delivery method</Name>
+      <HarmonizedName>anim_water_method</HarmonizedName>
+      <Description>Description of the equipment or method used to distribute water to livestock. This field accepts terms listed under water delivery equipment (http://opendata.inra.fr/EOL/EOL_0001653). Multiple terms can be separated by pipes</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>mean annual precipitation</Name>
+      <HarmonizedName>annual_precpt</HarmonizedName>
+      <Description>The average of all annual precipitation values known, or an estimated equivalent value derived by such methods as regional indexes or Isohyetal maps</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>mean annual temperature</Name>
+      <HarmonizedName>annual_temp</HarmonizedName>
+      <Description>Mean annual temperature</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>observed biotic relationship</Name>
+      <HarmonizedName>biotic_relationship</HarmonizedName>
+      <Description>Free-living or from host (define relationship)</Description>
+      <Format type="select">
+        <Description>free living | parasite | commensal | symbiont</Description>
+        <Choice/>
+        <Choice>free living</Choice>
+        <Choice>parasite</Choice>
+        <Choice>commensal</Choice>
+        <Choice>symbiont</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>climate environment</Name>
+      <HarmonizedName>climate_environment</HarmonizedName>
+      <Description>treatment involving an exposure to a particular climate; can include multiple climates</Description>
+      <Format>
+        <Description>{text};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>collection method </Name>
+      <HarmonizedName>collection_method</HarmonizedName>
+      <Description>Process used to collect the sample, e.g., bronchoalveolar lavage (BAL)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>crop rotation</Name>
+      <HarmonizedName>crop_rotation</HarmonizedName>
+      <Description>whether or not crop is rotated, and if yes, rotation schedule</Description>
+      <Format>
+        <Description>{boolean};Rn/{timestamp}/{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>crop yield</Name>
+      <HarmonizedName>crop_yield</HarmonizedName>
+      <Description>Amount of crop produced per unit or area of land</Description>
+      <Format>
+        <Description>{float}{unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>culture isolation date</Name>
+      <HarmonizedName>cult_isol_date</HarmonizedName>
+      <Description>A culture isolation date is a date-time entity marking the end of a process in which a sample yields a positive result for the target microbial analyte(s) in the form of an isolated colony or colonies, e.g., 5/24/2020</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>current land use</Name>
+      <HarmonizedName>cur_land_use</HarmonizedName>
+      <Description>present state of sample site</Description>
+      <Format type="select">
+        <Description>cities | farmstead | industrial areas | roads/railroads | rock | sand | gravel | mudflats | salt flats | badlands | permanent snow or ice | saline seeps | mines/quarries | oil waste areas | small grains | row crops | vegetable crops | horticultural plants (e.g. tulips) | marshlands (grass,sedges,rushes) | tundra (mosses,lichens) | rangeland | pastureland (grasslands used for livestock grazing) | hayland | meadows (grasses,alfalfa,fescue,bromegrass,timothy) | shrub land (e.g. mesquite,sage-brush,creosote bush,shrub oak,eucalyptus) | successional shrub land (tree saplings,hazels,sumacs,chokecherry,shrub dogwoods,blackberries) | shrub crops (blueberries,nursery ornamentals,filberts) | vine crops (grapes) | conifers (e.g. pine,spruce,fir,cypress) | hardwoods (e.g. oak,hickory,elm,aspen) | intermixed hardwood and conifers | tropical (e.g. mangrove,palms) | rainforest (evergreen forest receiving &gt;406 cm annual rainfall) | swamp (permanent or semi-permanent water body dominated by woody plants) | crop trees (nuts,fruit,christmas trees,nursery trees)</Description>
+        <Choice/>
+        <Choice>cities</Choice>
+        <Choice>farmstead</Choice>
+        <Choice>industrial areas</Choice>
+        <Choice>roads/railroads</Choice>
+        <Choice>rock</Choice>
+        <Choice>sand</Choice>
+        <Choice>gravel</Choice>
+        <Choice>mudflats</Choice>
+        <Choice>salt flats</Choice>
+        <Choice>badlands</Choice>
+        <Choice>permanent snow or ice</Choice>
+        <Choice>saline seeps</Choice>
+        <Choice>mines/quarries</Choice>
+        <Choice>oil waste areas</Choice>
+        <Choice>small grains</Choice>
+        <Choice>row crops</Choice>
+        <Choice>vegetable crops</Choice>
+        <Choice>horticultural plants (e.g. tulips)</Choice>
+        <Choice>marshlands (grass,sedges,rushes)</Choice>
+        <Choice>tundra (mosses,lichens)</Choice>
+        <Choice>rangeland</Choice>
+        <Choice>pastureland (grasslands used for livestock grazing)</Choice>
+        <Choice>hayland</Choice>
+        <Choice>meadows (grasses,alfalfa,fescue,bromegrass,timothy)</Choice>
+        <Choice>shrub land (e.g. mesquite,sage-brush,creosote bush,shrub oak,eucalyptus)</Choice>
+        <Choice>successional shrub land (tree saplings,hazels,sumacs,chokecherry,shrub dogwoods,blackberries)</Choice>
+        <Choice>shrub crops (blueberries,nursery ornamentals,filberts)</Choice>
+        <Choice>vine crops (grapes)</Choice>
+        <Choice>conifers (e.g. pine,spruce,fir,cypress)</Choice>
+        <Choice>hardwoods (e.g. oak,hickory,elm,aspen)</Choice>
+        <Choice>intermixed hardwood and conifers</Choice>
+        <Choice>tropical (e.g. mangrove,palms)</Choice>
+        <Choice>rainforest (evergreen forest receiving &gt;406 cm annual rainfall)</Choice>
+        <Choice>swamp (permanent or semi-permanent water body dominated by woody plants)</Choice>
+        <Choice>crop trees (nuts,fruit,christmas trees,nursery trees)</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>current vegetation</Name>
+      <HarmonizedName>cur_vegetation</HarmonizedName>
+      <Description>vegetation classification from one or more standard classification systems, or agricultural crop</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>current vegetation method</Name>
+      <HarmonizedName>cur_vegetation_meth</HarmonizedName>
+      <Description>reference or method used in vegetation classification</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>drainage classification</Name>
+      <HarmonizedName>drainage_class</HarmonizedName>
+      <Description>drainage classification from a standard system such as the USDA system</Description>
+      <Format type="select">
+        <Description>very poorly | poorly | somewhat poorly | moderately well | well | excessively drained</Description>
+        <Choice/>
+        <Choice>very poorly</Choice>
+        <Choice>poorly</Choice>
+        <Choice>somewhat poorly</Choice>
+        <Choice>moderately well</Choice>
+        <Choice>well</Choice>
+        <Choice>excessively drained</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>elevation</Name>
+      <HarmonizedName>elev</HarmonizedName>
+      <Description>The elevation of the sampling site as measured by the vertical distance from mean sea level.</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>enrichment protocol</Name>
+      <HarmonizedName>enrichment_protocol</HarmonizedName>
+      <Description>The microbiological workflow or protocol followed to test for the presence or enumeration of the target microbial analyte(s). Please provide a PubMed or DOI reference for published protocols</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>estimated size</Name>
+      <HarmonizedName>estimated_size</HarmonizedName>
+      <Description>Estimated size of genome</Description>
+      <Format>
+        <Description>{integer} bp</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>experimental factor</Name>
+      <HarmonizedName>experimental_factor</HarmonizedName>
+      <Description>Variable aspect of experimental design</Description>
+      <Format>
+        <Description>{term|text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>extreme event</Name>
+      <HarmonizedName>extreme_event</HarmonizedName>
+      <Description>unusual physical events that may have affected microbial populations</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>FAO classification</Name>
+      <HarmonizedName>fao_class</HarmonizedName>
+      <Description>soil classification from the FAO World Reference Database for Soil Resources</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>farm equipment used</Name>
+      <HarmonizedName>farm_equip</HarmonizedName>
+      <Description>List of relevant equipment used for planting, fertilization, harvesting, irrigation, land levelling, residue management, weeding or transplanting during the growing season.  This field encourages terms listed under agricultural implement (http://purl.obolibrary.org/obo/AGRO_00000416). Multiple terms can be separated by pipes, e.g., combine harvester [AGRO:00000473]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>farm equipment sanitization</Name>
+      <HarmonizedName>farm_equip_san</HarmonizedName>
+      <Description>Method used to sanitize growing and harvesting equipment including type and concentration of sanitizing solution and frequency of sanitization</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>equipment shared with other farms</Name>
+      <HarmonizedName>farm_equip_shared</HarmonizedName>
+      <Description>List of planting, growing or harvesting equipment shared with other farms</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>farm watering water source</Name>
+      <HarmonizedName>farm_water_source</HarmonizedName>
+      <Description>Source of water used on the farm for irrigation of crops or watering of livestock, e.g., water well</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>fertilizer administration</Name>
+      <HarmonizedName>fertilizer_admin</HarmonizedName>
+      <Description>Type of fertilizer or amendment added to the soil or water for the purpose of improving substrate health and quality for plant growth. This field encourages terms listed under agronomic fertilizer (http://purl.obolibrary.org/obo/AGRO_00002062). Multiple terms may apply and can be separated by pipes, listing in reverse chronological order, e.g., fish emulsion [AGRO:00000082]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>fire</Name>
+      <HarmonizedName>fire</HarmonizedName>
+      <Description>historical and/or physical evidence of fire</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>flooding</Name>
+      <HarmonizedName>flooding</HarmonizedName>
+      <Description>historical and/or physical evidence of flooding</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>Food harvesting process</Name>
+      <HarmonizedName>food_harvest_proc</HarmonizedName>
+      <Description>A harvesting process is a process which takes in some food material from an individual or community of plant or animal organisms in a given context and time, and outputs a precursor or consumable food product. This may include a part of an organism or the whole, and may involve killing the organism</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>food production characteristics</Name>
+      <HarmonizedName>food_prod_char</HarmonizedName>
+      <Description>Descriptors of the food production system such as wild caught, free-range, organic, free-range, industrial, dairy, beef</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>food product type</Name>
+      <HarmonizedName>food_product_type</HarmonizedName>
+      <Description>A food product type is a class of food products that is differentiated by its food composition (e.g., single- or multi-ingredient), processing and/or consumption characteristics. This does not include brand name products but it may include generic food dish categories. This field encourages terms under food product type (http://purl.obolibrary.org/obo/FOODON:03400361). For terms related to food product for an animal, consult food product for animal (http://purl.obolibrary.org/obo/FOODON_03309997). If the proper descriptor is not listed please use text to describe the food type. Multiple terms can be separated by one or more pipes, e.g., multi-component food product [FOODON:00002501]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>food shipping transportation method</Name>
+      <HarmonizedName>food_trav_mode</HarmonizedName>
+      <Description>A descriptor for the method of movement of food commodity along the food distribution system. This field accepts terms listed under travel mode (http://purl.obolibrary.org/obo/GENEPIO_0001064). If the proper descrptor is not listed please use text to describe the mode of travel. Multiple terms can be separated by one or more pipes</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>food shipping transportation vehicle</Name>
+      <HarmonizedName>food_trav_vehic</HarmonizedName>
+      <Description>A descriptor for the mobile machine which is used to transport food commodities along the food distribution system. This field accepts terms listed under vehicle (http://purl.obolibrary.org/obo/ENVO_01000604). If the proper descrptor is not listed please use text to describe the mode of travel. Multiple terms can be separated by one or more pipes</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>fungicide regimen</Name>
+      <HarmonizedName>fungicide_regm</HarmonizedName>
+      <Description>information about treatment involving use of fungicides; should include the name of fungicide, amount administered, treatment duration, interval and total experimental duration; can include multiple fungicide regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>gaseous environment</Name>
+      <HarmonizedName>gaseous_environment</HarmonizedName>
+      <Description>use of conditions with differing gaseous environments; should include the name of gaseous compound, amount administered, treatment duration, interval and total experimental duration; can include multiple gaseous environment regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>genetic modification</Name>
+      <HarmonizedName>genetic_mod</HarmonizedName>
+      <Description>Genetic modifications of the genome of an organism, which may occur naturally by spontaneous mutation, or be introduced by some experimental means, e.g. specification of a transgene or the gene knocked-out or details of transient transfection</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>heavy metals method</Name>
+      <HarmonizedName>heavy_metals_meth</HarmonizedName>
+      <Description>reference or method used in determining heavy metals</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>herbicide regimen</Name>
+      <HarmonizedName>herbicide_regm</HarmonizedName>
+      <Description>information about treatment involving use of herbicides; information about treatment involving use of growth hormones; should include the name of herbicide, amount administered, treatment duration, interval and total experimental duration; can include multiple regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>horizon method</Name>
+      <HarmonizedName>horizon_meth</HarmonizedName>
+      <Description>reference or method used in determining the horizon</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>host disease</Name>
+      <HarmonizedName>host_disease</HarmonizedName>
+      <Description>Name of relevant disease, e.g. Salmonella gastroenteritis. Controlled vocabulary, http://bioportal.bioontology.org/ontologies/1009 or http://www.ncbi.nlm.nih.gov/mesh</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>host dry mass</Name>
+      <HarmonizedName>host_dry_mass</HarmonizedName>
+      <Description>measurement of dry mass</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>host subspecific genetic lineage</Name>
+      <HarmonizedName>host_subspecf_genlin</HarmonizedName>
+      <Description>Information about the genetic distinctness of the host organism below the subspecies level e.g., serovar, serotype, biotype, ecotype, variety, cultivar, or any relevant genetic typing schemes like Group I plasmid. Subspecies should not be recorded in this term, but in the NCBI taxonomy. Supply both the lineage name and the lineage rank separated by a colon, e.g., biovar:abc123</Description>
+      <Format>
+        <Description>{rank name}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>observed host symbionts</Name>
+      <HarmonizedName>host_symbiont</HarmonizedName>
+      <Description>The taxonomic name of the organism(s) found living in mutualistic, commensalistic, or parasitic symbiosis with the specific host</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>host taxonomy ID</Name>
+      <HarmonizedName>host_taxid</HarmonizedName>
+      <Description>NCBI taxonomy ID of the host, e.g. 9606</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>humidity</Name>
+      <HarmonizedName>humidity</HarmonizedName>
+      <Description>amount of water vapour in the air, at the time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>isolation and growth condition</Name>
+      <HarmonizedName>isol_growth_condt</HarmonizedName>
+      <Description>PMID or url for isolation and growth condition specifications</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>link to classification information</Name>
+      <HarmonizedName>link_class_info</HarmonizedName>
+      <Description>link to digitized soil maps or other soil classification information</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>link to climate information</Name>
+      <HarmonizedName>link_climate_info</HarmonizedName>
+      <Description>link to climate resource</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>local classification</Name>
+      <HarmonizedName>local_class</HarmonizedName>
+      <Description>soil classification based on local soil classification system</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>local classification method</Name>
+      <HarmonizedName>local_class_meth</HarmonizedName>
+      <Description>reference or method used in determining the local soil classification</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>lot number</Name>
+      <HarmonizedName>lot_number</HarmonizedName>
+      <Description>A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch. The submitter should provide lot number of the item followed by the item name for which the lot number was provided</Description>
+      <Format>
+        <Description>{integer}, {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>miscellaneous parameter</Name>
+      <HarmonizedName>misc_param</HarmonizedName>
+      <Description>any other measurement performed or parameter collected, that is not listed here</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>negative control type</Name>
+      <HarmonizedName>neg_cont_type</HarmonizedName>
+      <Description>The substance or equipment used as a negative control in an investigation, e.g., distilled water, phosphate buffer, empty collection device, empty collection tube, DNA-free PCR mix, sterile swab, sterile syringe</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>non mineral nutrient regimen</Name>
+      <HarmonizedName>non_mineral_nutr_regm</HarmonizedName>
+      <Description>information about treatment involving the exposure of plant to non-mineral nutrient such as oxygen, hydrogen or carbon; should include the name of non-mineral nutrient, amount administered, treatment duration, interval and total experimental duration; can include multiple non-mineral nutrient regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>Omics Observatory ID</Name>
+      <HarmonizedName>omics_observ_id</HarmonizedName>
+      <Description>A unique identifier of the omics-enabled observatory (or comparable time series) your data derives from. This identifier should be provided by the OMICON ontology; if you require a new identifier for your time series, contact the ontology's developers. Information is available here: https://github.com/GLOMICON/omicon. This field is only applicable to records which derive from an omics time-series or observatory.</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>organism count</Name>
+      <HarmonizedName>organism_count</HarmonizedName>
+      <Description>total count of any organism per gram or volume of sample,should include name of organism followed by count; can include multiple organism counts</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>oxygenation status of sample</Name>
+      <HarmonizedName>oxy_stat_samp</HarmonizedName>
+      <Description>oxygenation status of sample</Description>
+      <Format type="select">
+        <Description>aerobic | anaerobic</Description>
+        <Choice/>
+        <Choice>aerobic</Choice>
+        <Choice>anaerobic</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>pathogenicity</Name>
+      <HarmonizedName>pathogenicity</HarmonizedName>
+      <Description>To what is the entity pathogenic</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>perturbation</Name>
+      <HarmonizedName>perturbation</HarmonizedName>
+      <Description>type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types</Description>
+      <Format>
+        <Description>{text};{interval}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>pesticide regimen</Name>
+      <HarmonizedName>pesticide_regm</HarmonizedName>
+      <Description>information about treatment involving use of insecticides; should include the name of pesticide, amount administered, treatment duration, interval and total experimental duration; can include multiple pesticide regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>pH method</Name>
+      <HarmonizedName>ph_meth</HarmonizedName>
+      <Description>reference or method used in determining pH</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>pH regimen</Name>
+      <HarmonizedName>ph_regm</HarmonizedName>
+      <Description>information about treatment involving exposure of plants to varying levels of pH of the growth media; can include multiple regimen</Description>
+      <Format>
+        <Description>{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>photosynthetic activity</Name>
+      <HarmonizedName>photosynt_activ</HarmonizedName>
+      <Description>Measurement of photosythetic activity (i.e. leaf gas exchange / chlorophyll fluorescence emissions / reflectance / transpiration) Please also include the term method term detailing the method of activity measurement</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>photosynthetic activity method</Name>
+      <HarmonizedName>photosynt_activ_meth</HarmonizedName>
+      <Description>Reference or method used in measurement of photosythetic activity</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>plant growth medium </Name>
+      <HarmonizedName>plant_growth_med</HarmonizedName>
+      <Description>Type of the media used for growing sampled plants, e.g., soil [ENVO:00001998]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>plant product</Name>
+      <HarmonizedName>plant_product</HarmonizedName>
+      <Description>substance produced by the plant, where the sample was obtained from</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>plant structure</Name>
+      <HarmonizedName>plant_struc</HarmonizedName>
+      <Description>Name of plant structure the sample was obtained from; for Plant Ontology (PO) (v releases/2017-12-14) terms, see http://purl.bioontology.org/ontology/PO, e.g., petiole epidermis (PO_0000051). If an individual flower is sampled, the sex of it can be recorded here</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>plant water delivery method</Name>
+      <HarmonizedName>plant_water_method</HarmonizedName>
+      <Description>Description of the equipment or method used to distribute water to crops. This field encourages terms listed under irrigation process (http://purl.obolibrary.org/obo/AGRO_00000006). Multiple terms can be separated by pipes, e.g., drip irrigation process [AGRO:00000056]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>porosity</Name>
+      <HarmonizedName>porosity</HarmonizedName>
+      <Description>porosity of deposited sediment is volume of voids divided by the total volume of sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>positive control type</Name>
+      <HarmonizedName>pos_cont_type</HarmonizedName>
+      <Description>The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive
+</Description>
+      <Format>
+        <Description>{term} or {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>presence of pets, animals, or insects</Name>
+      <HarmonizedName>pres_animal_insect</HarmonizedName>
+      <Description>The type and number of animals or insects present in the sampling space, e.g., cat 10, dog 2, rodent 100, snake 1</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>previous land use</Name>
+      <HarmonizedName>previous_land_use</HarmonizedName>
+      <Description>previous land use and dates</Description>
+      <Format>
+        <Description>{text};{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>previous land use method</Name>
+      <HarmonizedName>previous_land_use_meth</HarmonizedName>
+      <Description>reference or method used in determining previous land use and dates</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>profile position</Name>
+      <HarmonizedName>profile_position</HarmonizedName>
+      <Description>cross-sectional position in the hillslope where sample was collected.sample area position in relation to surrounding areas</Description>
+      <Format type="select">
+        <Description>summit | shoulder | backslope | footslope | toeslope</Description>
+        <Choice/>
+        <Choice>summit</Choice>
+        <Choice>shoulder</Choice>
+        <Choice>backslope</Choice>
+        <Choice>footslope</Choice>
+        <Choice>toeslope</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>reference for biomaterial</Name>
+      <HarmonizedName>ref_biomaterial</HarmonizedName>
+      <Description>Primary publication or genome report</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>relative location of sample</Name>
+      <HarmonizedName>rel_location</HarmonizedName>
+      <Description>Location of sample to other parts of the farm, e.g. under crop plant, near irrigation ditch, from the dirt road, from air above crops, nearby river, e.g., furrow</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>rooting medium carbon</Name>
+      <HarmonizedName>root_med_carbon</HarmonizedName>
+      <Description>Source of organic carbon in the culture rooting medium, e.g., sucrose</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>rooting medium macronutrients</Name>
+      <HarmonizedName>root_med_macronutr</HarmonizedName>
+      <Description>Measurement of the culture rooting medium macronutrients (N,P, K, Ca, Mg, S), e.g., KH2PO4 (170mg/L)</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>rooting medium pH</Name>
+      <HarmonizedName>root_med_ph</HarmonizedName>
+      <Description>pH measurement of the culture rooting medium, e.g., 5.5</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>salt regimen</Name>
+      <HarmonizedName>salt_regm</HarmonizedName>
+      <Description>information about treatment involving use of salts as supplement to liquid and soil growth media; should include the name of salt, amount administered, treatment duration, interval and total experimental duration; can include multiple salt regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample collection device or method</Name>
+      <HarmonizedName>samp_collect_device</HarmonizedName>
+      <Description>Method or device employed for collecting sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>sample collection method</Name>
+      <HarmonizedName>samp_collect_method</HarmonizedName>
+      <Description>The method employed for collecting the sample</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample material processing</Name>
+      <HarmonizedName>samp_mat_process</HarmonizedName>
+      <Description>Processing applied to the sample during or after isolation</Description>
+      <Format>
+        <Description>{text|term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>sample pooling</Name>
+      <HarmonizedName>samp_pooling</HarmonizedName>
+      <Description>Physical combination of several instances of like material, e.g., RNA extracted from samples or dishes of cell cultures into one big aliquot of cells. Please provide a short description of the samples that were pooled</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample size</Name>
+      <HarmonizedName>samp_size</HarmonizedName>
+      <Description>Amount or size of sample (volume, mass or area) that was collected</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>sample storage temperature</Name>
+      <HarmonizedName>samp_store_temp</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample volume or weight for DNA extraction</Name>
+      <HarmonizedName>samp_vol_we_dna_ext</HarmonizedName>
+      <Description>volume (mL) or weight (g) of sample processed for DNA extraction</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>season</Name>
+      <HarmonizedName>season</HarmonizedName>
+      <Description>The season when sampling occurred. Any of the four periods into which the year is divided by the equinoxes and solstices. This field accepts terms listed under season (http://purl.obolibrary.org/obo/NCIT_C94729)</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>seasonal environment</Name>
+      <HarmonizedName>season_environment</HarmonizedName>
+      <Description>treatment involving an exposure to a particular season (e.g. winter, summer, rabi, rainy etc.)</Description>
+      <Format>
+        <Description>{text};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>mean seasonal humidity</Name>
+      <HarmonizedName>season_humidity</HarmonizedName>
+      <Description>Average humidity of the region throughout the growing season</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>mean seasonal precipitation</Name>
+      <HarmonizedName>season_precpt</HarmonizedName>
+      <Description>The average of all seasonal precipitation values known, or an estimated equivalent value derived by such methods as regional indexes or Isohyetal maps</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>mean seasonal temperature</Name>
+      <HarmonizedName>season_temp</HarmonizedName>
+      <Description>Mean seasonal temperature</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>size fraction selected</Name>
+      <HarmonizedName>size_frac</HarmonizedName>
+      <Description>Filtering pore size used in sample preparation, e.g., 0-0.22 micrometer</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>size-fraction lower threshold</Name>
+      <HarmonizedName>size_frac_low</HarmonizedName>
+      <Description>Refers to the mesh/pore size used to pre-filter/pre-sort the sample. Materials larger than the size threshold are excluded from the sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>size-fraction upper threshold</Name>
+      <HarmonizedName>size_frac_up</HarmonizedName>
+      <Description>Refers to the mesh/pore size used to retain the sample. Materials smaller than the size threshold are excluded from the sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>slope aspect</Name>
+      <HarmonizedName>slope_aspect</HarmonizedName>
+      <Description>the direction a slope faces. While looking down a slope use a compass to record the direction you are facing (direction or degrees); e.g., NW or 315°. This measure provides an indication of sun and wind exposure that will influence soil temperature and evapotranspiration.</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>slope gradient</Name>
+      <HarmonizedName>slope_gradient</HarmonizedName>
+      <Description>commonly called “slope.” The angle between ground surface and a horizontal line (in percent). This is the direction that overland water would flow. This measure is usually taken with a hand level meter or clinometer.</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>soil conductivity</Name>
+      <HarmonizedName>soil_conductivity</HarmonizedName>
+      <Description>Conductivity of soil at time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>soil cover</Name>
+      <HarmonizedName>soil_cover</HarmonizedName>
+      <Description>Description of the material covering the sampled soil. This field accepts terms under ENVO:00010483, environmental material</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>soil depth</Name>
+      <HarmonizedName>soil_depth</HarmonizedName>
+      <Description>The vertical distance below local surface, e.g., for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>soil horizon</Name>
+      <HarmonizedName>soil_horizon</HarmonizedName>
+      <Description>specific layer in the land area which measures parallel to the soil surface and possesses physical characteristics which differ from the layers above and beneath</Description>
+      <Format type="select">
+        <Description>O horizon | A horizon | E horizon | B horizon | C horizon | R layer | Permafrost</Description>
+        <Choice/>
+        <Choice>O horizon</Choice>
+        <Choice>A horizon</Choice>
+        <Choice>E horizon</Choice>
+        <Choice>B horizon</Choice>
+        <Choice>C horizon</Choice>
+        <Choice>R layer</Choice>
+        <Choice>Permafrost</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>soil pH</Name>
+      <HarmonizedName>soil_ph</HarmonizedName>
+      <Description>The pH of soil at time of sampling</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>soil temperature</Name>
+      <HarmonizedName>soil_temp</HarmonizedName>
+      <Description>Temperature of soil at the time of sampling</Description>
+      <Format>
+        <Description>{float}{unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>soil texture measurement</Name>
+      <HarmonizedName>soil_text_measure</HarmonizedName>
+      <Description>the relative proportion of different grain sizes of mineral particles in a soil, as described using a standard system; express as % sand (50 um to 2 mm), silt (2 um to 50 um), and clay (&lt;2 um) with textural name (e.g., silty clay loam) optional.</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>soil texture method</Name>
+      <HarmonizedName>soil_texture_meth</HarmonizedName>
+      <Description>reference or method used in determining soil texture</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>solar irradiance</Name>
+      <HarmonizedName>solar_irradiance</HarmonizedName>
+      <Description>the amount of solar energy that arrives at a specific area of a surface during a specific time interval</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>source material identifiers</Name>
+      <HarmonizedName>source_material_id</HarmonizedName>
+      <Description>unique identifier assigned to a material sample used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>spike-in microbial strain</Name>
+      <HarmonizedName>spikein_strain</HarmonizedName>
+      <Description>Taxonomic information about the spike-in organism(s) at the strain level. This field accepts terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also accepts identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy. Multiple terms can be separated by pipes</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}|{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>standing water regimen</Name>
+      <HarmonizedName>standing_water_regm</HarmonizedName>
+      <Description>treatment involving an exposure to standing water during a plant's life span, types can be flood water or standing water; can include multiple regimens</Description>
+      <Format>
+        <Description>{text};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>tillage</Name>
+      <HarmonizedName>tillage</HarmonizedName>
+      <Description>note method(s) used for tilling</Description>
+      <Format type="select">
+        <Description>drill | cutting disc | ridge till | strip tillage | zonal tillage | chisel | tined | mouldboard | disc plough</Description>
+        <Choice/>
+        <Choice>drill</Choice>
+        <Choice>cutting disc</Choice>
+        <Choice>ridge till</Choice>
+        <Choice>strip tillage</Choice>
+        <Choice>zonal tillage</Choice>
+        <Choice>chisel</Choice>
+        <Choice>tined</Choice>
+        <Choice>mouldboard</Choice>
+        <Choice>disc plough</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>total carbon</Name>
+      <HarmonizedName>tot_carb</HarmonizedName>
+      <Description>total carbon content</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>total nitrogen</Name>
+      <HarmonizedName>tot_nitro</HarmonizedName>
+      <Description>total nitrogen content of the sample</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>total nitrogen content method</Name>
+      <HarmonizedName>tot_nitro_cont_meth</HarmonizedName>
+      <Description>Reference or method used in determining the total nitrogen</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>total organic carbon method</Name>
+      <HarmonizedName>tot_org_c_meth</HarmonizedName>
+      <Description>reference or method used in determining total organic C</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>total organic carbon</Name>
+      <HarmonizedName>tot_org_carb</HarmonizedName>
+      <Description>Definition for soil: total organic C content of the soil units of g C/kg soil. Definition otherwise: total organic carbon content</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>total phosphorus</Name>
+      <HarmonizedName>tot_phosp</HarmonizedName>
+      <Description>total phosphorus concentration, calculated by: total phosphorus = total dissolved phosphorus + particulate phosphorus. Can also be measured without filtering, reported as phosphorus</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>trophic level</Name>
+      <HarmonizedName>trophic_level</HarmonizedName>
+      <Description>Feeding position in food chain (eg., chemolithotroph)</Description>
+      <Format type="select">
+        <Description>autotroph | carboxydotroph | chemoautotroph | chemoheterotroph | chemolithoautotroph | chemolithotroph | chemoorganoheterotroph | chemoorganotroph | chemosynthetic | chemotroph | copiotroph | diazotroph | facultative | heterotroph | lithoautotroph | lithoheterotroph | lithotroph | methanotroph | methylotroph | mixotroph | obligate | chemoautolithotroph | oligotroph | organoheterotroph | organotroph | photoautotroph | photoheterotroph | photolithoautotroph | photolithotroph | photosynthetic | phototroph</Description>
+        <Choice/>
+        <Choice>autotroph</Choice>
+        <Choice>carboxydotroph</Choice>
+        <Choice>chemoautotroph</Choice>
+        <Choice>chemoheterotroph</Choice>
+        <Choice>chemolithoautotroph</Choice>
+        <Choice>chemolithotroph</Choice>
+        <Choice>chemoorganoheterotroph</Choice>
+        <Choice>chemoorganotroph</Choice>
+        <Choice>chemosynthetic</Choice>
+        <Choice>chemotroph</Choice>
+        <Choice>copiotroph</Choice>
+        <Choice>diazotroph</Choice>
+        <Choice>facultative</Choice>
+        <Choice>heterotroph</Choice>
+        <Choice>lithoautotroph</Choice>
+        <Choice>lithoheterotroph</Choice>
+        <Choice>lithotroph</Choice>
+        <Choice>methanotroph</Choice>
+        <Choice>methylotroph</Choice>
+        <Choice>mixotroph</Choice>
+        <Choice>obligate</Choice>
+        <Choice>chemoautolithotroph</Choice>
+        <Choice>oligotroph</Choice>
+        <Choice>organoheterotroph</Choice>
+        <Choice>organotroph</Choice>
+        <Choice>photoautotroph</Choice>
+        <Choice>photoheterotroph</Choice>
+        <Choice>photolithoautotroph</Choice>
+        <Choice>photolithotroph</Choice>
+        <Choice>photosynthetic</Choice>
+        <Choice>phototroph</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>water pH</Name>
+      <HarmonizedName>water_ph</HarmonizedName>
+      <Description>The pH measurement of the sample, or liquid portion of sample, or aqueous phase of the fluid</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>water source shared</Name>
+      <HarmonizedName>water_source_shared</HarmonizedName>
+      <Description>Other users sharing access to the same water source, e.g., multiple users, agricutural, multiple users, no sharing</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>water temperature regimen</Name>
+      <HarmonizedName>water_temp_regm</HarmonizedName>
+      <Description>information about treatment involving an exposure to water with varying degree of temperature; can include multiple regimens</Description>
+      <Format>
+        <Description>{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Agriculture">
+      <Name>watering regimen</Name>
+      <HarmonizedName>watering_regm</HarmonizedName>
+      <Description>information about treatment involving an exposure to watering frequencies; can include multiple regimens</Description>
+      <Format>
+        <Description>{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package>
+    <Name>SARS-CoV-2.cl.1.0</Name>
+    <DisplayName>SARS-CoV-2: clinical or host-associated; version 1.0</DisplayName>
+    <ShortName>SARS-CoV-2: clinical or host-associated</ShortName>
+    <EnvPackage/>
+    <EnvPackageDisplay/>
+    <NotAppropriateFor>wgs_single;wgs_batch;wgs_diploid</NotAppropriateFor>
+    <Description>Use for SARS-CoV-2 samples that are relevant to public health. Required attributes include those considered useful for the rapid analysis and trace back of SARS-CoV-2 cases.</Description>
+    <Example/>
+    <TemplateHeader># This is a submission template for batch deposit of 'SARS-CoV-2: clinical or host-associated; version 1.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="mandatory">
+      <Name>collected by</Name>
+      <HarmonizedName>collected_by</HarmonizedName>
+      <Description>Name of persons or institute who collected the sample</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>host</Name>
+      <HarmonizedName>host</HarmonizedName>
+      <Description>The natural (as opposed to laboratory) host to the organism from which the sample was obtained. Use the full taxonomic name, eg, "Homo sapiens".</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>host disease</Name>
+      <HarmonizedName>host_disease</HarmonizedName>
+      <Description>Name of relevant disease, e.g. Salmonella gastroenteritis. Controlled vocabulary, http://bioportal.bioontology.org/ontologies/1009 or http://www.ncbi.nlm.nih.gov/mesh</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>isolate</Name>
+      <HarmonizedName>isolate</HarmonizedName>
+      <Description>identification or description of the specific individual from which this sample was obtained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>antiviral treatment agent</Name>
+      <HarmonizedName>antiviral_treatment_agent</HarmonizedName>
+      <Description>What was the antiviral treatment agent?</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>collection device</Name>
+      <HarmonizedName>collection_device</HarmonizedName>
+      <Description>Instrument or container used to collect sample, e.g., swab</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>collection method </Name>
+      <HarmonizedName>collection_method</HarmonizedName>
+      <Description>Process used to collect the sample, e.g., bronchoalveolar lavage (BAL)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>date of prior SARS-CoV-2 antiviral treatment</Name>
+      <HarmonizedName>date_of_prior_antiviral_treat</HarmonizedName>
+      <Description>Date of the SARS-CoV-2 antiviral treatment, e.g., 2021-03-30</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>date of prior SARS-CoV-2 infection</Name>
+      <HarmonizedName>date_of_prior_sars_cov_2_infection</HarmonizedName>
+      <Description>Date of the prior SARS-CoV-2 infection, e.g., 2021-03-30</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>date of SARS-CoV-2 vaccination</Name>
+      <HarmonizedName>date_of_sars_cov_2_vaccination</HarmonizedName>
+      <Description>Date of the 1st dose of the SARS-CoV-2 vaccine, e.g., 2021-03-30</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>exposure event</Name>
+      <HarmonizedName>exposure_event</HarmonizedName>
+      <Description>Event leading to exposure, e.g., mass gathering</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>geo loc exposure</Name>
+      <HarmonizedName>geo_loc_exposure</HarmonizedName>
+      <Description>The country where the host was likely exposed to the causative agent of the illness.  This location pertains to the country the host was believed to be exposed, and may not be the same as the host's country of residence, e.g., Canada</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>GISAID accession</Name>
+      <HarmonizedName>gisaid_accession</HarmonizedName>
+      <Description>The GISAID accession assigned to the sequence. GISAID Accession Numbers are used as unique and permanent identifiers for each virus beginning with the letters EPI and followed by numbers, to identify viruses and/or segments; https://www.gisaid.org/; e.g., EPI_ISL_1091361</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>GISAID virus name</Name>
+      <HarmonizedName>gisaid_virus_name</HarmonizedName>
+      <Description>The full virus name submitted to GISAID (https://www.gisaid.org/), e.g., hCoV-19/Belgium/rega-3187/2021</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host age</Name>
+      <HarmonizedName>host_age</HarmonizedName>
+      <Description>Age of host at the time of sampling</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host anatomical material</Name>
+      <HarmonizedName>host_anatomical_material</HarmonizedName>
+      <Description>Host anatomical material or substance produced by the body where the sample was obtained, e.g., stool, mucus, saliva</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host anatomical part</Name>
+      <HarmonizedName>host_anatomical_part</HarmonizedName>
+      <Description>Anatomical part of the host organism (e.g. tissue) that was sampled, e.g., nasopharynx</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host body product</Name>
+      <HarmonizedName>host_body_product</HarmonizedName>
+      <Description>substance produced by the host, e.g. stool, mucus, where the sample was obtained from</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host disease outcome</Name>
+      <HarmonizedName>host_disease_outcome</HarmonizedName>
+      <Description>Final outcome of disease, e.g., death, chronic disease, recovery</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host health state</Name>
+      <HarmonizedName>host_health_state</HarmonizedName>
+      <Description>Information regarding health state of the individual sampled at the time of sampling</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host recent travel location</Name>
+      <HarmonizedName>host_recent_travel_loc</HarmonizedName>
+      <Description>The name of the country that was the destination of most recent travel. Specify the countries (and more granular locations if known) travelled, e.g., United Kingdom. Can include multiple travels; separate multiple travel events with a semicolon.</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host recent travel return date</Name>
+      <HarmonizedName>host_recent_travel_return_date</HarmonizedName>
+      <Description>The date of a person's most recent return to some residence from a journey originating at that residence, e.g., 2021-03-30</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host sex</Name>
+      <HarmonizedName>host_sex</HarmonizedName>
+      <Description>Gender or physical sex of the host</Description>
+      <Format type="select">
+        <Description>male | female | pooled male and female | neuter | hermaphrodite | intersex | not determined | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>male</Choice>
+        <Choice>female</Choice>
+        <Choice>pooled male and female</Choice>
+        <Choice>neuter</Choice>
+        <Choice>hermaphrodite</Choice>
+        <Choice>intersex</Choice>
+        <Choice>not determined</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host specimen voucher</Name>
+      <HarmonizedName>host_specimen_voucher</HarmonizedName>
+      <Description>Identifier for the physical specimen. Include a URI (Uniform Resource Identifier) in the form of a URL providing a direct link to the physical host specimen. If the specimen was destroyed in the process of analysis, electronic images (e-vouchers) are an adequate substitute for a physical host voucher specimen. If a URI is not available, a museum-provided globally unique identifier (GUID) can be used. URI example:  http://portal.vertnet.org/o/fmnh/mammals?id=33e55cfe-330b-40d9-aaae-8d042cba7542; INSDC triplet example: UAM:Mamm:52179</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host subject id</Name>
+      <HarmonizedName>host_subject_id</HarmonizedName>
+      <Description>a unique identifier by which each subject can be referred to, de-identified, e.g. #131</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>passage method</Name>
+      <HarmonizedName>passage_method</HarmonizedName>
+      <Description>Description of how the organism was passaged. Provide a short description, e.g., AVL buffer+30%EtOH lysate received from Respiratory Lab. P3 passage in Vero-1 via bioreactor large-scale batch passage. P3 batch derived from the SP-2/reference lab strain. If not passaged, put ""not applicable"".</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>passage number</Name>
+      <HarmonizedName>passage_number</HarmonizedName>
+      <Description>The number of known passages, e.g., 3. If not passaged, put ""not applicable"".</Description>
+      <Format>
+        <Description>{integer}{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>prior SARS-CoV-2 antiviral treatment</Name>
+      <HarmonizedName>prior_sars_cov_2_antiviral_treat</HarmonizedName>
+      <Description>Has the host received SARS-CoV-2 antiviral treatment?</Description>
+      <Format type="select">
+        <Description>no | yes</Description>
+        <Choice/>
+        <Choice>no</Choice>
+        <Choice>yes</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>prior SARS-CoV-2 infection</Name>
+      <HarmonizedName>prior_sars_cov_2_infection</HarmonizedName>
+      <Description>Did the host have a prior SARS-CoV-2 infection?</Description>
+      <Format type="select">
+        <Description>no | yes</Description>
+        <Choice/>
+        <Choice>no</Choice>
+        <Choice>yes</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>prior SARS-CoV-2 vaccination</Name>
+      <HarmonizedName>prior_sars_cov_2_vaccination</HarmonizedName>
+      <Description>Has the host received a SARS-CoV-2 vaccination? </Description>
+      <Format type="select">
+        <Description>no | yes - completed | yes - partially completed</Description>
+        <Choice/>
+        <Choice>no</Choice>
+        <Choice>yes - completed</Choice>
+        <Choice>yes - partially completed</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>purpose of sampling</Name>
+      <HarmonizedName>purpose_of_sampling</HarmonizedName>
+      <Description>the reason that the sample was collected, e.g., active surveillance in response to an outbreak, active surveillance not initiated by an outbreak, clinical trial, cluster investigation, environmental assessment, farm sample, field trial, for cause, industry internal investigation, market sample, passive surveillance, population based studies, research, research and development</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>purpose of sequencing</Name>
+      <HarmonizedName>purpose_of_sequencing</HarmonizedName>
+      <Description>The reason the sample was sequenced, e.g., baseline surveillance (random sampling)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>SARS-CoV-2 diagnostic gene name 1</Name>
+      <HarmonizedName>sars_cov_2_diag_gene_name_1</HarmonizedName>
+      <Description>The name of the gene used in the first diagnostic SARS-CoV-2 RT-PCR test.</Description>
+      <Format type="select">
+        <Description>E (orf4) | M (orf5) | N (orf9) | spike (orf2) | ORF1ab (rep) | ORF1a (pp1a) | nsp11 | nsp1 | nsp2 | nsp3 | nsp4 | nsp5 | nsp6 | nsp7 | nsp8 | nsp9 | nsp10 | nsp12 (RdRp) | nsp13 (Hel) | nsp14 (ExoN) | nsp15 | nsp16 | ORF3a | ORF3b | ORF6 (ns6) | ORF7a | ORF7b (ns7b) | ORF8 (ns8) | ORF9b | ORF9c | ORF10 | ORF14</Description>
+        <Choice/>
+        <Choice>E (orf4)</Choice>
+        <Choice>M (orf5)</Choice>
+        <Choice>N (orf9)</Choice>
+        <Choice>spike (orf2)</Choice>
+        <Choice>ORF1ab (rep)</Choice>
+        <Choice>ORF1a (pp1a)</Choice>
+        <Choice>nsp11</Choice>
+        <Choice>nsp1</Choice>
+        <Choice>nsp2</Choice>
+        <Choice>nsp3</Choice>
+        <Choice>nsp4</Choice>
+        <Choice>nsp5</Choice>
+        <Choice>nsp6</Choice>
+        <Choice>nsp7</Choice>
+        <Choice>nsp8</Choice>
+        <Choice>nsp9</Choice>
+        <Choice>nsp10</Choice>
+        <Choice>nsp12 (RdRp)</Choice>
+        <Choice>nsp13 (Hel)</Choice>
+        <Choice>nsp14 (ExoN)</Choice>
+        <Choice>nsp15</Choice>
+        <Choice>nsp16</Choice>
+        <Choice>ORF3a</Choice>
+        <Choice>ORF3b</Choice>
+        <Choice>ORF6 (ns6)</Choice>
+        <Choice>ORF7a</Choice>
+        <Choice>ORF7b (ns7b)</Choice>
+        <Choice>ORF8 (ns8)</Choice>
+        <Choice>ORF9b</Choice>
+        <Choice>ORF9c</Choice>
+        <Choice>ORF10</Choice>
+        <Choice>ORF14</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>SARS-CoV-2 diagnostic gene name 2</Name>
+      <HarmonizedName>sars_cov_2_diag_gene_name_2</HarmonizedName>
+      <Description>The name of the gene used in the second diagnostic SARS-CoV-2 RT-PCR test.</Description>
+      <Format type="select">
+        <Description>E (orf4) | M (orf5) | N (orf9) | spike (orf2) | ORF1ab (rep) | ORF1a (pp1a) | nsp11 | nsp1 | nsp2 | nsp3 | nsp4 | nsp5 | nsp6 | nsp7 | nsp8 | nsp9 | nsp10 | nsp12 (RdRp) | nsp13 (Hel) | nsp14 (ExoN) | nsp15 | nsp16 | ORF3a | ORF3b | ORF6 (ns6) | ORF7a | ORF7b (ns7b) | ORF8 (ns8) | ORF9b | ORF9c | ORF10 | ORF14</Description>
+        <Choice/>
+        <Choice>E (orf4)</Choice>
+        <Choice>M (orf5)</Choice>
+        <Choice>N (orf9)</Choice>
+        <Choice>spike (orf2)</Choice>
+        <Choice>ORF1ab (rep)</Choice>
+        <Choice>ORF1a (pp1a)</Choice>
+        <Choice>nsp11</Choice>
+        <Choice>nsp1</Choice>
+        <Choice>nsp2</Choice>
+        <Choice>nsp3</Choice>
+        <Choice>nsp4</Choice>
+        <Choice>nsp5</Choice>
+        <Choice>nsp6</Choice>
+        <Choice>nsp7</Choice>
+        <Choice>nsp8</Choice>
+        <Choice>nsp9</Choice>
+        <Choice>nsp10</Choice>
+        <Choice>nsp12 (RdRp)</Choice>
+        <Choice>nsp13 (Hel)</Choice>
+        <Choice>nsp14 (ExoN)</Choice>
+        <Choice>nsp15</Choice>
+        <Choice>nsp16</Choice>
+        <Choice>ORF3a</Choice>
+        <Choice>ORF3b</Choice>
+        <Choice>ORF6 (ns6)</Choice>
+        <Choice>ORF7a</Choice>
+        <Choice>ORF7b (ns7b)</Choice>
+        <Choice>ORF8 (ns8)</Choice>
+        <Choice>ORF9b</Choice>
+        <Choice>ORF9c</Choice>
+        <Choice>ORF10</Choice>
+        <Choice>ORF14</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>SARS-CoV-2 diagnostic pcr Ct value 1</Name>
+      <HarmonizedName>sars_cov_2_diag_pcr_ct_value_1</HarmonizedName>
+      <Description>The cycle threshold (CT) value result from the first diagnostic SARS-CoV-2 RT-PCR test, e.g., 21</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>SARS-CoV-2 diagnostic pcr Ct value 2</Name>
+      <HarmonizedName>sars_cov_2_diag_pcr_ct_value_2</HarmonizedName>
+      <Description>The cycle threshold (CT) value result from the second diagnostic SARS-CoV-2 RT-PCR test, e.g., 36</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>sequenced by</Name>
+      <HarmonizedName>sequenced_by</HarmonizedName>
+      <Description>The name of the agency that generated the sequence, e.g., Centers for Disease Control and Prevention</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>vaccine received</Name>
+      <HarmonizedName>vaccine_received</HarmonizedName>
+      <Description>Which vaccine did the host receive, e.g., Pfizer-BioNTech COVID-19 vaccine</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>virus isolate of prior infection</Name>
+      <HarmonizedName>virus_isolate_of_prior_infection</HarmonizedName>
+      <Description>Specific isolate of SARS-CoV-2 in prior infection (if known), e.g., SARS-CoV-2/human/USA/CA-CDPH-001/2020</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package>
+    <Name>Beta-lactamase.1.0</Name>
+    <DisplayName>Beta-lactamase; version 1.0</DisplayName>
+    <ShortName>Beta-lactamase</ShortName>
+    <EnvPackage/>
+    <EnvPackageDisplay/>
+    <NotAppropriateFor>wgs_single;wgs_batch;wgs_diploid</NotAppropriateFor>
+    <Description>Use for beta-lactamase gene transformants that have sequence and antibiotic resistance data. Please use the 'Supplementary Files' wizard to submit corresponding Sequin and Antibiogram files.</Description>
+    <Example>SAMN04099646</Example>
+    <TemplateHeader># This is a submission template for batch deposit of 'Beta-lactamase; version 1.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# See SAMN04099646 for an example record of this type of BioSample (https://www.ncbi.nlm.nih.gov/biosample/SAMN04099646).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>strain</Name>
+      <HarmonizedName>strain</HarmonizedName>
+      <Description>microbial or eukaryotic strain name</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="either_one_mandatory" group_name="Organism">
+      <Name>isolate</Name>
+      <HarmonizedName>isolate</HarmonizedName>
+      <Description>identification or description of the specific individual from which this sample was obtained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>beta-lactamase family</Name>
+      <HarmonizedName>beta_lactamase_family</HarmonizedName>
+      <Description>Specify the beta-lactamase family for this gene.</Description>
+      <Format type="select">
+        <Description>ACC | ACT | ADC | BEL | CARB | CBP | CFE | CMY | CTX-M | DHA | FOX | GES | GIM | KPC | IMI | IMP | IND | LAT | MIR | MOX | NDM | OXA | PER | PDC | SHV | SME | TEM | VEB | VIM | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>ACC</Choice>
+        <Choice>ACT</Choice>
+        <Choice>ADC</Choice>
+        <Choice>BEL</Choice>
+        <Choice>CARB</Choice>
+        <Choice>CBP</Choice>
+        <Choice>CFE</Choice>
+        <Choice>CMY</Choice>
+        <Choice>CTX-M</Choice>
+        <Choice>DHA</Choice>
+        <Choice>FOX</Choice>
+        <Choice>GES</Choice>
+        <Choice>GIM</Choice>
+        <Choice>KPC</Choice>
+        <Choice>IMI</Choice>
+        <Choice>IMP</Choice>
+        <Choice>IND</Choice>
+        <Choice>LAT</Choice>
+        <Choice>MIR</Choice>
+        <Choice>MOX</Choice>
+        <Choice>NDM</Choice>
+        <Choice>OXA</Choice>
+        <Choice>PER</Choice>
+        <Choice>PDC</Choice>
+        <Choice>SHV</Choice>
+        <Choice>SME</Choice>
+        <Choice>TEM</Choice>
+        <Choice>VEB</Choice>
+        <Choice>VIM</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>carbapenemase</Name>
+      <HarmonizedName>carbapenemase</HarmonizedName>
+      <Description>Does the enzyme exhibit carbapenemase activity? If the enzyme does exhibit carbapenemase activity, the response should be "yes", otherwise "no."</Description>
+      <Format type="select">
+        <Description>yes | no | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>yes</Choice>
+        <Choice>no</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>EDTA inhibitor tested</Name>
+      <HarmonizedName>edta_inhibitor_tested</HarmonizedName>
+      <Description>Was carbapenemase activity tested in the presence of EDTA? If carbapenemase activity was tested in the presence of EDTA, the response should be "yes", otherwise "no”.</Description>
+      <Format type="select">
+        <Description>yes | no | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>yes</Choice>
+        <Choice>no</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>collected by</Name>
+      <HarmonizedName>collected_by</HarmonizedName>
+      <Description>Name of persons or institute who collected the sample</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host</Name>
+      <HarmonizedName>host</HarmonizedName>
+      <Description>The natural (as opposed to laboratory) host to the organism from which the sample was obtained. Use the full taxonomic name, eg, "Homo sapiens".</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>lab host</Name>
+      <HarmonizedName>lab_host</HarmonizedName>
+      <Description>Scientific name and description of the laboratory host used to propagate the source organism or material from which the sample was obtained, e.g., Escherichia coli DH5a, or Homo sapiens HeLa cells</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

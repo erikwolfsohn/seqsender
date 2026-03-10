@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package group="MIMAG">
+    <Name>MIMAG.plant-associated.6.0</Name>
+    <DisplayName>MIMAG: metagenome-assembled genome, plant-associated; version 6.0</DisplayName>
+    <ShortName>MIMAG Metagenome-assembled Genome</ShortName>
+    <EnvPackage>plant-associated</EnvPackage>
+    <EnvPackageDisplay>plant-associated</EnvPackageDisplay>
+    <NotAppropriateFor>wgs_diploid</NotAppropriateFor>
+    <Description>Use for metagenome-assembled genome sequences produced using computational binning tools that group sequences into individual organism genome assemblies starting from metagenomic data sets. Organism cannot contain the term 'metagenome'. Use the MIUVIG package for virus genomes. Before creating BioSamples for prokaryotic and eukaryotic MAGs, please read and follow the MAG submission instructions at https://www.ncbi.nlm.nih.gov/genbank/wgsfaq/#metagen.</Description>
+    <Example/>
+    <TemplateHeader># This is a submission template for batch deposit of 'MIMAG: metagenome-assembled genome, plant-associated; version 6.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="mandatory" group_name="Organism">
+      <Name>isolate</Name>
+      <HarmonizedName>isolate</HarmonizedName>
+      <Description>identification or description of the specific individual from which this sample was obtained</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>broad-scale environmental context</Name>
+      <HarmonizedName>env_broad_scale</HarmonizedName>
+      <Description>Add terms that identify the major environment type(s) where your sample was collected. Recommend subclasses of biome [ENVO:00000428]. Multiple terms can be separated by one or more pipes e.g.:  mangrove biome [ENVO:01000181]|estuarine biome [ENVO:01000020]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>local-scale environmental context</Name>
+      <HarmonizedName>env_local_scale</HarmonizedName>
+      <Description>Add terms that identify environmental entities having causal influences upon the entity at time of sampling, multiple terms can be separated by pipes, e.g.:  shoreline [ENVO:00000486]|intertidal zone [ENVO:00000316]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>environmental medium</Name>
+      <HarmonizedName>env_medium</HarmonizedName>
+      <Description>Add terms that identify the material displaced by the entity at time of sampling. Recommend subclasses of environmental material [ENVO:00010483]. Multiple terms can be separated by pipes e.g.: estuarine water [ENVO:01000301]|estuarine mud [ENVO:00002160]&#13;
+</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory" group_name="Environment">
+      <Name>latitude and longitude</Name>
+      <HarmonizedName>lat_lon</HarmonizedName>
+      <Description>The geographical coordinates of the location where the sample was collected. Specify as degrees latitude and longitude in format "d[d.dddd] N|S d[dd.dddd] W|E", eg, 38.98 N 77.11 W</Description>
+      <Format>
+        <Description>{float} {float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>air temperature regimen</Name>
+      <HarmonizedName>air_temp_regm</HarmonizedName>
+      <Description>information about treatment involving an exposure to varying temperatures; should include the temperature, treatment duration, interval and total experimental duration; can include different temperature regimens</Description>
+      <Format>
+        <Description>{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>altitude</Name>
+      <HarmonizedName>altitude</HarmonizedName>
+      <Description>The altitude of the sample is the vertical distance between Earth's surface above Sea Level and the sampled position in the air.</Description>
+      <Format>
+        <Description>{float} m</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>ancestral data</Name>
+      <HarmonizedName>ances_data</HarmonizedName>
+      <Description>Information about either pedigree or other ancestral information description, e.g., parental variety in case of mutant or selection, A/3*B (meaning [(A x B) x B] x B)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>antibiotic regimen</Name>
+      <HarmonizedName>antibiotic_regm</HarmonizedName>
+      <Description>information about treatment involving antibiotic administration; should include the name of antibiotic, amount administered, treatment duration, interval and total experimental duration; can include multiple antibiotic regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>biological status</Name>
+      <HarmonizedName>biol_stat</HarmonizedName>
+      <Description>The level of genome modification, e.g., wild, natural, semi-natural, inbred line, breeder's line, hybrid, clonal selection, mutant</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>biotic regimen</Name>
+      <HarmonizedName>biotic_regm</HarmonizedName>
+      <Description>Information about treatment(s) involving use of biotic factors, such as bacteria, viruses or fungi</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>chemical administration</Name>
+      <HarmonizedName>chem_administration</HarmonizedName>
+      <Description>list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v1.72), please see http://bioportal.bioontology.org/visualize/44603</Description>
+      <Format>
+        <Description>{term}; {timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>chemical mutagen</Name>
+      <HarmonizedName>chem_mutagen</HarmonizedName>
+      <Description>treatment involving use of mutagens; should include the name of mutagen, amount administered, treatment duration, interval and total experimental duration; can include multiple mutagen regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>climate environment</Name>
+      <HarmonizedName>climate_environment</HarmonizedName>
+      <Description>treatment involving an exposure to a particular climate; can include multiple climates</Description>
+      <Format>
+        <Description>{text};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>collection method </Name>
+      <HarmonizedName>collection_method</HarmonizedName>
+      <Description>Process used to collect the sample, e.g., bronchoalveolar lavage (BAL)</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>culture rooting medium</Name>
+      <HarmonizedName>cult_root_med</HarmonizedName>
+      <Description>Name or reference for the hydroponic or in vitro culture rooting medium; can be the name of a commonly used medium or reference to a specific medium, e.g., Murashige and Skoog medium. If the medium has not been formally published, use the rooting medium descriptors</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>depth</Name>
+      <HarmonizedName>depth</HarmonizedName>
+      <Description>Depth is defined as the vertical distance below surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples.</Description>
+      <Format>
+        <Description>{float} m</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>derived from</Name>
+      <HarmonizedName>derived_from</HarmonizedName>
+      <Description>Indicates when one BioSample was derived from another BioSample. Value should include BioSample accession number(s) (SAMNxxxxxxxx).</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>elevation</Name>
+      <HarmonizedName>elev</HarmonizedName>
+      <Description>The elevation of the sampling site as measured by the vertical distance from mean sea level.</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>experimental factor</Name>
+      <HarmonizedName>experimental_factor</HarmonizedName>
+      <Description>Variable aspect of experimental design</Description>
+      <Format>
+        <Description>{term|text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>fertilizer regimen</Name>
+      <HarmonizedName>fertilizer_regm</HarmonizedName>
+      <Description>information about treatment involving the use of fertilizers; should include the name fertilizer, amount administered, treatment duration, interval and total experimental duration; can include multiple fertilizer regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>fungicide regimen</Name>
+      <HarmonizedName>fungicide_regm</HarmonizedName>
+      <Description>information about treatment involving use of fungicides; should include the name of fungicide, amount administered, treatment duration, interval and total experimental duration; can include multiple fungicide regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>gaseous environment</Name>
+      <HarmonizedName>gaseous_environment</HarmonizedName>
+      <Description>use of conditions with differing gaseous environments; should include the name of gaseous compound, amount administered, treatment duration, interval and total experimental duration; can include multiple gaseous environment regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>genetic modification</Name>
+      <HarmonizedName>genetic_mod</HarmonizedName>
+      <Description>Genetic modifications of the genome of an organism, which may occur naturally by spontaneous mutation, or be introduced by some experimental means, e.g. specification of a transgene or the gene knocked-out or details of transient transfection</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>gravity</Name>
+      <HarmonizedName>gravity</HarmonizedName>
+      <Description>information about treatment involving use of gravity factor to study various types of responses in presence, absence or modified levels of gravity; can include multiple treatments</Description>
+      <Format>
+        <Description>{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>growth facility</Name>
+      <HarmonizedName>growth_facil</HarmonizedName>
+      <Description>Type of facility where the sampled plant was grown; controlled vocabulary: growth chamber, open top chamber, glasshouse, experimental garden, field. Alternatively use Crop Ontology (CO) terms, see http://www.cropontology.org/ontology/CO_715/Crop%20Research</Description>
+      <Format>
+        <Description>{text}|{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>growth habit</Name>
+      <HarmonizedName>growth_habit</HarmonizedName>
+      <Description>Characteristic shape, appearance or growth form of a plant species, e.g., erect, semi-erect, spreading, prostrate</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>growth hormone regimen</Name>
+      <HarmonizedName>growth_hormone_regm</HarmonizedName>
+      <Description>information about treatment involving use of growth hormones; should include the name of growth hormone, amount administered, treatment duration, interval and total experimental duration; can include multiple growth hormone regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>herbicide regimen</Name>
+      <HarmonizedName>herbicide_regm</HarmonizedName>
+      <Description>information about treatment involving use of herbicides; information about treatment involving use of growth hormones; should include the name of herbicide, amount administered, treatment duration, interval and total experimental duration; can include multiple regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>host age</Name>
+      <HarmonizedName>host_age</HarmonizedName>
+      <Description>Age of host at the time of sampling</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>host common name</Name>
+      <HarmonizedName>host_common_name</HarmonizedName>
+      <Description>The natural language (non-taxonomic) name of the host organism, e.g., mouse</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>host disease</Name>
+      <HarmonizedName>host_disease</HarmonizedName>
+      <Description>Name of relevant disease, e.g. Salmonella gastroenteritis. Controlled vocabulary, http://bioportal.bioontology.org/ontologies/1009 or http://www.ncbi.nlm.nih.gov/mesh</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>host dry mass</Name>
+      <HarmonizedName>host_dry_mass</HarmonizedName>
+      <Description>measurement of dry mass</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>host genotype</Name>
+      <HarmonizedName>host_genotype</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>host height</Name>
+      <HarmonizedName>host_height</HarmonizedName>
+      <Description>the height of subject</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>host length</Name>
+      <HarmonizedName>host_length</HarmonizedName>
+      <Description>the length of subject</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>host life stage</Name>
+      <HarmonizedName>host_life_stage</HarmonizedName>
+      <Description>description of host life stage</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>host phenotype</Name>
+      <HarmonizedName>host_phenotype</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>host subspecific genetic lineage</Name>
+      <HarmonizedName>host_subspecf_genlin</HarmonizedName>
+      <Description>Information about the genetic distinctness of the host organism below the subspecies level e.g., serovar, serotype, biotype, ecotype, variety, cultivar, or any relevant genetic typing schemes like Group I plasmid. Subspecies should not be recorded in this term, but in the NCBI taxonomy. Supply both the lineage name and the lineage rank separated by a colon, e.g., biovar:abc123</Description>
+      <Format>
+        <Description>{rank name}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>observed host symbionts</Name>
+      <HarmonizedName>host_symbiont</HarmonizedName>
+      <Description>The taxonomic name of the organism(s) found living in mutualistic, commensalistic, or parasitic symbiosis with the specific host</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>host taxonomy ID</Name>
+      <HarmonizedName>host_taxid</HarmonizedName>
+      <Description>NCBI taxonomy ID of the host, e.g. 9606</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>host total mass</Name>
+      <HarmonizedName>host_tot_mass</HarmonizedName>
+      <Description>total mass of the host at collection, the unit depends on host</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>host wet mass</Name>
+      <HarmonizedName>host_wet_mass</HarmonizedName>
+      <Description>measurement of wet mass</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>humidity regimen</Name>
+      <HarmonizedName>humidity_regm</HarmonizedName>
+      <Description>information about treatment involving an exposure to varying degree of humidity; information about treatment involving use of growth hormones; should include amount of humidity administered, treatment duration, interval and total experimental duration; can include multiple regimens</Description>
+      <Format>
+        <Description>{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>light regimen</Name>
+      <HarmonizedName>light_regm</HarmonizedName>
+      <Description>Information about treatment(s) involving exposure to light, including both light intensity and quality</Description>
+      <Format>
+        <Description>{text};{float} {unit};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>mechanical damage</Name>
+      <HarmonizedName>mechanical_damage</HarmonizedName>
+      <Description>information about any mechanical damage exerted on the plant; can include multiple damages and sites</Description>
+      <Format>
+        <Description>{text};{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>metagenome source</Name>
+      <HarmonizedName>metagenome_source</HarmonizedName>
+      <Description>describes the original source of a metagenome assembled genome (MAG). Examples: soil metagenome, gut metagenome</Description>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>mineral nutrient regimen</Name>
+      <HarmonizedName>mineral_nutr_regm</HarmonizedName>
+      <Description>information about treatment involving the use of mineral supplements; should include the name of mineral nutrient, amount administered, treatment duration, interval and total experimental duration; can include multiple mineral nutrient regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>miscellaneous parameter</Name>
+      <HarmonizedName>misc_param</HarmonizedName>
+      <Description>any other measurement performed or parameter collected, that is not listed here</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>negative control type</Name>
+      <HarmonizedName>neg_cont_type</HarmonizedName>
+      <Description>The substance or equipment used as a negative control in an investigation, e.g., distilled water, phosphate buffer, empty collection device, empty collection tube, DNA-free PCR mix, sterile swab, sterile syringe</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>non mineral nutrient regimen</Name>
+      <HarmonizedName>non_mineral_nutr_regm</HarmonizedName>
+      <Description>information about treatment involving the exposure of plant to non-mineral nutrient such as oxygen, hydrogen or carbon; should include the name of non-mineral nutrient, amount administered, treatment duration, interval and total experimental duration; can include multiple non-mineral nutrient regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Environment">
+      <Name>Omics Observatory ID</Name>
+      <HarmonizedName>omics_observ_id</HarmonizedName>
+      <Description>A unique identifier of the omics-enabled observatory (or comparable time series) your data derives from. This identifier should be provided by the OMICON ontology; if you require a new identifier for your time series, contact the ontology's developers. Information is available here: https://github.com/GLOMICON/omicon. This field is only applicable to records which derive from an omics time-series or observatory.</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>organism count</Name>
+      <HarmonizedName>organism_count</HarmonizedName>
+      <Description>total count of any organism per gram or volume of sample,should include name of organism followed by count; can include multiple organism counts</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>oxygenation status of sample</Name>
+      <HarmonizedName>oxy_stat_samp</HarmonizedName>
+      <Description>oxygenation status of sample</Description>
+      <Format type="select">
+        <Description>aerobic | anaerobic</Description>
+        <Choice/>
+        <Choice>aerobic</Choice>
+        <Choice>anaerobic</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>perturbation</Name>
+      <HarmonizedName>perturbation</HarmonizedName>
+      <Description>type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types</Description>
+      <Format>
+        <Description>{text};{interval}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>pesticide regimen</Name>
+      <HarmonizedName>pesticide_regm</HarmonizedName>
+      <Description>information about treatment involving use of insecticides; should include the name of pesticide, amount administered, treatment duration, interval and total experimental duration; can include multiple pesticide regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>pH regimen</Name>
+      <HarmonizedName>ph_regm</HarmonizedName>
+      <Description>information about treatment involving exposure of plants to varying levels of pH of the growth media; can include multiple regimen</Description>
+      <Format>
+        <Description>{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>plant growth medium </Name>
+      <HarmonizedName>plant_growth_med</HarmonizedName>
+      <Description>Type of the media used for growing sampled plants, e.g., soil [ENVO:00001998]</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>plant product</Name>
+      <HarmonizedName>plant_product</HarmonizedName>
+      <Description>substance produced by the plant, where the sample was obtained from</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>plant sex</Name>
+      <HarmonizedName>plant_sex</HarmonizedName>
+      <Description>Sex of the reproductive parts on the whole plant, e.g., androdioecious, androecious, androgynous, androgynomonoecious, andromonoecious, bisexual, dichogamous, diclinous, dioecious, gynodioecious, gynoecious, gynomonoecious, hermaphroditic, imperfect, monoclinous, monoecious, perfect, polygamodioecious, polygamomonoecious, polygamous, protandrous, protogynous, subandroecious, subdioecious, subgynoecious, synoecious, trimonoecious, trioecious, unisexual</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>plant structure</Name>
+      <HarmonizedName>plant_struc</HarmonizedName>
+      <Description>Name of plant structure the sample was obtained from; for Plant Ontology (PO) (v releases/2017-12-14) terms, see http://purl.bioontology.org/ontology/PO, e.g., petiole epidermis (PO_0000051). If an individual flower is sampled, the sex of it can be recorded here</Description>
+      <Format>
+        <Description>{termLabel} {[termID]}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>positive control type</Name>
+      <HarmonizedName>pos_cont_type</HarmonizedName>
+      <Description>The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive
+</Description>
+      <Format>
+        <Description>{term} or {text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>radiation regimen</Name>
+      <HarmonizedName>radiation_regm</HarmonizedName>
+      <Description>information about treatment involving exposure of plant or a plant part to a particular radiation regimen; should include the radiation type, amount or intensity administered, treatment duration, interval and total experimental duration; can include multiple radiation regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>rainfall regimen</Name>
+      <HarmonizedName>rainfall_regm</HarmonizedName>
+      <Description>information about treatment involving an exposure to a given amount of rainfall; can include multiple regimens</Description>
+      <Format>
+        <Description>{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>reference for biomaterial</Name>
+      <HarmonizedName>ref_biomaterial</HarmonizedName>
+      <Description>Primary publication or genome report</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>relationship to oxygen</Name>
+      <HarmonizedName>rel_to_oxygen</HarmonizedName>
+      <Description>Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments, eg, aerobe, anaerobe, facultative, microaerophilic, microanaerobe, obligate aerobe, obligate anaerobe, missing, not applicable, not collected, not provided, restricted access</Description>
+      <Format type="select">
+        <Description>aerobe | anaerobe | facultative | microaerophilic | microanaerobe | obligate aerobe | obligate anaerobe | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>aerobe</Choice>
+        <Choice>anaerobe</Choice>
+        <Choice>facultative</Choice>
+        <Choice>microaerophilic</Choice>
+        <Choice>microanaerobe</Choice>
+        <Choice>obligate aerobe</Choice>
+        <Choice>obligate anaerobe</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>rooting conditions</Name>
+      <HarmonizedName>root_cond</HarmonizedName>
+      <Description>Relevant rooting conditions such as field plot size, sowing density, container dimensions, number of plants per container</Description>
+      <Format>
+        <Description>{text}|{PMID}|{DOI}|{URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>rooting medium carbon</Name>
+      <HarmonizedName>root_med_carbon</HarmonizedName>
+      <Description>Source of organic carbon in the culture rooting medium, e.g., sucrose</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>rooting medium macronutrients</Name>
+      <HarmonizedName>root_med_macronutr</HarmonizedName>
+      <Description>Measurement of the culture rooting medium macronutrients (N,P, K, Ca, Mg, S), e.g., KH2PO4 (170mg/L)</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>rooting medium micronutrients</Name>
+      <HarmonizedName>root_med_micronutr</HarmonizedName>
+      <Description>Measurement of the culture rooting medium micronutrients (Fe, Mn, Zn, B, Cu, Mo), e.g., H3BO3 (6.2mg/L)</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>rooting medium pH</Name>
+      <HarmonizedName>root_med_ph</HarmonizedName>
+      <Description>pH measurement of the culture rooting medium, e.g., 5.5</Description>
+      <Format>
+        <Description>{float}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>rooting medium regulators</Name>
+      <HarmonizedName>root_med_regl</HarmonizedName>
+      <Description>Growth regulators in the culture rooting medium such as cytokinins, auxins, gybberellins, abscisic acid, e.g., 0.5 mg/L NAA</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>rooting medium solidifier</Name>
+      <HarmonizedName>root_med_solid</HarmonizedName>
+      <Description>Specification of the solidifying agent in the culture rooting medium, e.g., agar</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>rooting medium organic supplements</Name>
+      <HarmonizedName>root_med_suppl</HarmonizedName>
+      <Description>Organic supplements of the culture rooting medium, such as vitamins, amino acids, organic acids, antibiotics activated charcoal, e.g., nicotinic acid (0.5 mg/L)</Description>
+      <Format>
+        <Description>{text};{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>salt regimen</Name>
+      <HarmonizedName>salt_regm</HarmonizedName>
+      <Description>information about treatment involving use of salts as supplement to liquid and soil growth media; should include the name of salt, amount administered, treatment duration, interval and total experimental duration; can include multiple salt regimens</Description>
+      <Format>
+        <Description>{text};{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>sample capture status</Name>
+      <HarmonizedName>samp_capt_status</HarmonizedName>
+      <Description>Reason for the sample, e.g., active surveillance in response to an outbreak, active surveillance not initiated by an outbreak, farm sample, market sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample collection device or method</Name>
+      <HarmonizedName>samp_collect_device</HarmonizedName>
+      <Description>Method or device employed for collecting sample</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>sample disease stage</Name>
+      <HarmonizedName>samp_dis_stage</HarmonizedName>
+      <Description>Stage of the disease at the time of sample collection, e.g., dissemination, growth and reproduction, infection, inoculation, penetration</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample material processing</Name>
+      <HarmonizedName>samp_mat_process</HarmonizedName>
+      <Description>Processing applied to the sample during or after isolation</Description>
+      <Format>
+        <Description>{text|term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>sample salinity</Name>
+      <HarmonizedName>samp_salinity</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample size</Name>
+      <HarmonizedName>samp_size</HarmonizedName>
+      <Description>Amount or size of sample (volume, mass or area) that was collected</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>sample storage duration</Name>
+      <HarmonizedName>samp_store_dur</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>sample storage location</Name>
+      <HarmonizedName>samp_store_loc</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>sample storage temperature</Name>
+      <HarmonizedName>samp_store_temp</HarmonizedName>
+      <Description/>
+      <Format>
+        <Description/>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>sample volume or weight for DNA extraction</Name>
+      <HarmonizedName>samp_vol_we_dna_ext</HarmonizedName>
+      <Description>volume (mL) or weight (g) of sample processed for DNA extraction</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>seasonal environment</Name>
+      <HarmonizedName>season_environment</HarmonizedName>
+      <Description>treatment involving an exposure to a particular season (e.g. winter, summer, rabi, rainy etc.)</Description>
+      <Format>
+        <Description>{text};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>size fraction selected</Name>
+      <HarmonizedName>size_frac</HarmonizedName>
+      <Description>Filtering pore size used in sample preparation, e.g., 0-0.22 micrometer</Description>
+      <Format>
+        <Description>{term}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Nucleic Acid Sequence Source">
+      <Name>source material identifiers</Name>
+      <HarmonizedName>source_material_id</HarmonizedName>
+      <Description>unique identifier assigned to a material sample used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>standing water regimen</Name>
+      <HarmonizedName>standing_water_regm</HarmonizedName>
+      <Description>treatment involving an exposure to standing water during a plant's life span, types can be flood water or standing water; can include multiple regimens</Description>
+      <Format>
+        <Description>{text};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>temperature</Name>
+      <HarmonizedName>temp</HarmonizedName>
+      <Description>temperature of the sample at time of sampling</Description>
+      <Format>
+        <Description>{float} {unit}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>tissue culture growth media</Name>
+      <HarmonizedName>tiss_cult_growth_med</HarmonizedName>
+      <Description>description of plant tissue culture growth media used</Description>
+      <Format>
+        <Description>{PMID|DOI|URL}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>water temperature regimen</Name>
+      <HarmonizedName>water_temp_regm</HarmonizedName>
+      <Description>information about treatment involving an exposure to water with varying degree of temperature; can include multiple regimens</Description>
+      <Format>
+        <Description>{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional" group_name="Plant-associated">
+      <Name>watering regimen</Name>
+      <HarmonizedName>watering_regm</HarmonizedName>
+      <Description>information about treatment involving an exposure to watering frequencies; can include multiple regimens</Description>
+      <Format>
+        <Description>{float} {unit};{period};{interval};{period}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>

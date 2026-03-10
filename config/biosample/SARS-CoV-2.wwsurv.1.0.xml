@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BioSamplePackages>
+  <Package>
+    <Name>SARS-CoV-2.wwsurv.1.0</Name>
+    <DisplayName>SARS-CoV-2: wastewater surveillance; version 1.0</DisplayName>
+    <ShortName>SARS-CoV-2: wastewater surveillance</ShortName>
+    <EnvPackage/>
+    <EnvPackageDisplay/>
+    <NotAppropriateFor>wgs_single;wgs_batch;wgs_diploid</NotAppropriateFor>
+    <Description>Use for SARS-CoV-2 wastewater surveillance samples that are relevant to public health. Required attributes include those considered useful for the rapid analysis and trace back of SARS-CoV-2 cases.</Description>
+    <Example/>
+    <TemplateHeader># This is a submission template for batch deposit of 'SARS-CoV-2: wastewater surveillance; version 1.0' samples to the NCBI BioSample database (https://www.ncbi.nlm.nih.gov/biosample/).&#13;
+# Fields with an asterisk (*) are mandatory. Your submission will fail if any mandatory fields are not completed. If information is unavailable for any mandatory field, please enter 'not collected', 'not applicable' or 'missing' as appropriate.&#13;
+# All other fields are optional. Leave optional fields empty if no information is available.&#13;
+# You can add any number of custom fields to fully describe your BioSamples, simply include them in the table.&#13;
+# CAUTION: Be aware that Excel may automatically apply formatting to your data. In particular, take care with dates, incrementing autofills and special characters like / or -. Doublecheck that your text file is accurate before uploading to BioSample.&#13;
+# TO MAKE A SUBMISSION:&#13;
+#     1. Complete the template table (typically in Excel, or another spreadsheet application)&#13;
+#     2. Save the worksheet as a Text (Tab-delimited) file - use 'File, Save as, Save as type: Text (Tab-delimited)'&#13;
+#     3. Upload the file on the 'Attributes' tab of the BioSample Submission Portal at https://submit.ncbi.nlm.nih.gov/subs/biosample/.&#13;
+#     4. If you have any questions, please contact us at biosamplehelp@ncbi.nlm.nih.gov.</TemplateHeader>
+    <Attribute use="mandatory">
+      <Name>collection date</Name>
+      <HarmonizedName>collection_date</HarmonizedName>
+      <Description>the date on which the sample was collected; date/time ranges are supported by providing two dates from among the supported value formats, delimited by a forward-slash character; collection times are supported by adding "T", then the hour and minute after the date, and must be in Coordinated Universal Time (UTC), otherwise known as "Zulu Time" (Z); supported formats include "DD-Mmm-YYYY", "Mmm-YYYY", "YYYY" or ISO 8601 standard "YYYY-mm-dd", "YYYY-mm", "YYYY-mm-ddThh:mm:ss"; e.g., 30-Oct-1990, Oct-1990, 1990, 1990-10-30, 1990-10,  21-Oct-1952/15-Feb-1953, 2015-10-11T17:53:03Z; valid non-ISO dates will be automatically transformed to ISO format</Description>
+      <Format>
+        <Description>{timestamp}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>geographic location</Name>
+      <HarmonizedName>geo_loc_name</HarmonizedName>
+      <Description>Geographical origin of the sample; use the appropriate name from this list http://www.insdc.org/documents/country-qualifier-vocabulary. Use a colon to separate the country or ocean from more detailed information about the location, eg "Canada: Vancouver" or "Germany: halfway down Zugspitze, Alps"</Description>
+      <Format>
+        <Description>{term}:{term}:{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>isolation source</Name>
+      <HarmonizedName>isolation_source</HarmonizedName>
+      <Description>Describes the physical, environmental and/or local geographical source of the biological sample from which the sample was derived.</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>wastewater population</Name>
+      <HarmonizedName>ww_population</HarmonizedName>
+      <Description>Number of persons contributing wastewater to this sample collection site; if unknown, estimate to the nearest order of magnitude, e.g., 10000.  If no estimate is available, input NA.</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>wastewater sample duration</Name>
+      <HarmonizedName>ww_sample_duration</HarmonizedName>
+      <Description>Duration of composite sample collected, in units of hours, e.g., 24. Specify integer values. If the sample is not a composite sample, use 0.</Description>
+      <Format>
+        <Description>{integer}{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>wastewater sample matrix</Name>
+      <HarmonizedName>ww_sample_matrix</HarmonizedName>
+      <Description>The wastewater matrix that was sampled</Description>
+      <Format type="select">
+        <Description>raw wastewater | sewer pipeline sediments | post grit removal | primary sludge | primary effluent | secondary sludge | secondary effluent | other | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>raw wastewater</Choice>
+        <Choice>sewer pipeline sediments</Choice>
+        <Choice>post grit removal</Choice>
+        <Choice>primary sludge</Choice>
+        <Choice>primary effluent</Choice>
+        <Choice>secondary sludge</Choice>
+        <Choice>secondary effluent</Choice>
+        <Choice>other</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>wastewater sample type</Name>
+      <HarmonizedName>ww_sample_type</HarmonizedName>
+      <Description>Type of wastewater sample collected</Description>
+      <Format type="select">
+        <Description>grab | composite | swab-grab | swab-composite | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>grab</Choice>
+        <Choice>composite</Choice>
+        <Choice>swab-grab</Choice>
+        <Choice>swab-composite</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>wastewater surveillance target 1</Name>
+      <HarmonizedName>ww_surv_target_1</HarmonizedName>
+      <Description>Taxonomic name of the surveillance target. For the COVID-19 response, use 'SARS-CoV-2'.</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="mandatory">
+      <Name>wastewater surveillance target 1 known present</Name>
+      <HarmonizedName>ww_surv_target_1_known_present</HarmonizedName>
+      <Description>Is genetic material of the surveillance target(s) known to the submitter to be present in this wastewater sample? Presence defined as microbiological evidence of the target organism in the wastewater sample, such as genetic- or culture-based detection.</Description>
+      <Format type="select">
+        <Description>no | yes</Description>
+        <Choice/>
+        <Choice>no</Choice>
+        <Choice>yes</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>collected by</Name>
+      <HarmonizedName>collected_by</HarmonizedName>
+      <Description>Name of persons or institute who collected the sample</Description>
+      <Format>
+        <Description>None</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>purpose of wastewater sampling</Name>
+      <HarmonizedName>purpose_of_ww_sampling</HarmonizedName>
+      <Description>The reason the sample was collected</Description>
+      <Format type="select">
+        <Description>public health surveillance community-level | public health surveillance institution-level | public health surveillance building-level | research | other | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>public health surveillance community-level</Choice>
+        <Choice>public health surveillance institution-level</Choice>
+        <Choice>public health surveillance building-level</Choice>
+        <Choice>research</Choice>
+        <Choice>other</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>purpose of wastewater sequencing</Name>
+      <HarmonizedName>purpose_of_ww_sequencing</HarmonizedName>
+      <Description>The reason the sample was sequenced, e.g., identification of mutations within a specific region, presence of clinically known mutations, or diversity of mutations across entire genome</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>sequenced by</Name>
+      <HarmonizedName>sequenced_by</HarmonizedName>
+      <Description>The name of the agency that generated the sequence, e.g., Centers for Disease Control and Prevention</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater endogenous control 1</Name>
+      <HarmonizedName>ww_endog_control_1</HarmonizedName>
+      <Description>The name of an organism, gene, or compound used as an endogenous wastewater control, e.g., pepper mild mottle virus</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater endogenous control 1 concentration</Name>
+      <HarmonizedName>ww_endog_control_1_conc</HarmonizedName>
+      <Description>The concentration of the endogenous control specified in 'ww_endog_control_1' on a per wastewater unit basis, e.g., 700000000</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater endogenous control 1 protocol</Name>
+      <HarmonizedName>ww_endog_control_1_protocol</HarmonizedName>
+      <Description>The protocol used to quantify 'ww_endog_control_1'. Specify a reference, website, or brief description. </Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater endogenous control 1 units</Name>
+      <HarmonizedName>ww_endog_control_1_units</HarmonizedName>
+      <Description>The units of the value specified in 'ww_endog_control_1_conc', e.g., copies/L wastewater</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater endogenous control 2</Name>
+      <HarmonizedName>ww_endog_control_2</HarmonizedName>
+      <Description>The name of an organism, gene, or compound used as an endogenous wastewater control, e.g., crassphage</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater endogenous control 2 concentration</Name>
+      <HarmonizedName>ww_endog_control_2_conc</HarmonizedName>
+      <Description>The concentration of the endogenous control specified in 'ww_endog_control_2' on a per wastewater unit basis, e.g., 140000000</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater endogenous control 2 protocol</Name>
+      <HarmonizedName>ww_endog_control_2_protocol</HarmonizedName>
+      <Description>The protocol used to quantify 'ww_endog_control_2'. Specify a reference, website, or brief description. </Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater endogenous control 2 units</Name>
+      <HarmonizedName>ww_endog_control_2_units</HarmonizedName>
+      <Description>The units of the value specified in 'ww_endog_control_2_conc', e.g., copies/L wastewater</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater flow</Name>
+      <HarmonizedName>ww_flow</HarmonizedName>
+      <Description>Daily volumetric flow through collection site, in units of liters per day, e.g., 110000000.</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater industrial effluent percent</Name>
+      <HarmonizedName>ww_industrial_effluent_percent</HarmonizedName>
+      <Description>Percentage of industrial effluents received by wastewater treatment plant, e.g., 10</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater pH</Name>
+      <HarmonizedName>ww_ph</HarmonizedName>
+      <Description>pH measurement of the sample, or liquid portion of sample, or aqueous phase of the fluid, e.g., 7.2</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater population source</Name>
+      <HarmonizedName>ww_population_source</HarmonizedName>
+      <Description>Source of value specified in 'ww_population', e.g., wastewater utility billing records, population of jurisdiction encompassing the wastewater service area, census blocks clipped to wastewater service area polygon </Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater pre-treatment</Name>
+      <HarmonizedName>ww_pre_treatment</HarmonizedName>
+      <Description>Describe any process of pre-treatment that removes materials that can be easily collected from the raw wastewater, e.g., flow equilibration basin promotes settling of some solids</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater primary sludge retention time</Name>
+      <HarmonizedName>ww_primary_sludge_retention_time</HarmonizedName>
+      <Description>The time primary sludge remains in tank, in hours, e.g., 4.</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater processing protocol</Name>
+      <HarmonizedName>ww_processing_protocol</HarmonizedName>
+      <Description>The protocol used to process the wastewater sample. Processing includes laboratory procedures prior to and including nucleic acid purification (e.g., pasteurization, concentration, extraction, etc). Specify a reference, website, or brief description. </Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater sample salinity</Name>
+      <HarmonizedName>ww_sample_salinity</HarmonizedName>
+      <Description>Salinity is the total concentration of all dissolved salts in a liquid or solid (in the form of an extract obtained by centrifugation) sample or derived from the conductivity measurement (practical salinity) in milligrams per liter, e.g., 100.</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater sample site</Name>
+      <HarmonizedName>ww_sample_site</HarmonizedName>
+      <Description>The type of site where the wastewater sample was collected</Description>
+      <Format type="select">
+        <Description>correctional facility | long-term care facility | hospital | child day care | school | college or university | social services shelter | other residential building | ship | airplane | airport | septic tank | other holding tank | wastewater treatment plant | wastewater lagoon | sewer pipeline | food or meat processing plant | other | missing | not applicable | not collected | not provided | restricted access</Description>
+        <Choice/>
+        <Choice>correctional facility</Choice>
+        <Choice>long-term care facility</Choice>
+        <Choice>hospital</Choice>
+        <Choice>child day care</Choice>
+        <Choice>school</Choice>
+        <Choice>college or university</Choice>
+        <Choice>social services shelter</Choice>
+        <Choice>other residential building</Choice>
+        <Choice>ship</Choice>
+        <Choice>airplane</Choice>
+        <Choice>airport</Choice>
+        <Choice>septic tank</Choice>
+        <Choice>other holding tank</Choice>
+        <Choice>wastewater treatment plant</Choice>
+        <Choice>wastewater lagoon</Choice>
+        <Choice>sewer pipeline</Choice>
+        <Choice>food or meat processing plant</Choice>
+        <Choice>other</Choice>
+        <Choice>missing</Choice>
+        <Choice>not applicable</Choice>
+        <Choice>not collected</Choice>
+        <Choice>not provided</Choice>
+        <Choice>restricted access</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance jurisdiction</Name>
+      <HarmonizedName>ww_surv_jurisdiction</HarmonizedName>
+      <Description>A jurisdiction identifer that can be used to support linking the sample to a public health surveillance system, e.g., va</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance system sample ID</Name>
+      <HarmonizedName>ww_surv_system_sample_id</HarmonizedName>
+      <Description>The sample ID used for submission to a public health surveillance system (e.g., CDC's National Wastewater Surveillance System), e.g., s123456</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 1 concentration</Name>
+      <HarmonizedName>ww_surv_target_1_conc</HarmonizedName>
+      <Description>The concentration of the wastewater surveillance target specified in 'ww_surv_target_1' on a per wastewater unit basis, e.g., 200000</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 1 conc unit</Name>
+      <HarmonizedName>ww_surv_target_1_conc_unit</HarmonizedName>
+      <Description>The units of the value specified in 'ww_surv_target_1_conc', e.g., copies/L wastewater</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 1 extract</Name>
+      <HarmonizedName>ww_surv_target_1_extract</HarmonizedName>
+      <Description>Measured amount of surveillance target in the nucleic acid extract that was sequenced; on a per extract unit basis, rather than on a per wastewater sample unit basis, e.g., 100000</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 1 extract unit</Name>
+      <HarmonizedName>ww_surv_target_1_extract_unit</HarmonizedName>
+      <Description>The units of the value specified in 'ww_surv_target_1_extract', e.g., copies/microliter extract</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 1 gene</Name>
+      <HarmonizedName>ww_surv_target_1_gene</HarmonizedName>
+      <Description>The name of the gene quantified for the the surveillance target specified in 'ww_surv_target_1', e.g., N gene</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 1 protocol</Name>
+      <HarmonizedName>ww_surv_target_1_protocol</HarmonizedName>
+      <Description>The protocol used to quantify 'ww_surv_target_1'. Specify a reference, website, or brief description. </Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 2</Name>
+      <HarmonizedName>ww_surv_target_2</HarmonizedName>
+      <Description>Taxonomic name of the surveillance target, eg, Norovirus</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 2 conc</Name>
+      <HarmonizedName>ww_surv_target_2_conc</HarmonizedName>
+      <Description>The concentration of the wastewater surveillance target specified in 'ww_surv_target_2' on a per wastewater unit basis, e.g., 24000</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 2 conc unit</Name>
+      <HarmonizedName>ww_surv_target_2_conc_unit</HarmonizedName>
+      <Description>The units of the value specified in 'ww_surv_target_2_conc', e.g., copies/L wastewater</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 2 extract</Name>
+      <HarmonizedName>ww_surv_target_2_extract</HarmonizedName>
+      <Description>Measured amount of surveillance target in the nucleic acid extract that was sequenced; on a per extract unit basis, rather than on a per wastewater sample unit basis, e.g., 12000</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 2 extract unit</Name>
+      <HarmonizedName>ww_surv_target_2_extract_unit</HarmonizedName>
+      <Description>The units of the value specified in 'ww_surv_target_2_extract', e.g., copies/microliter extract</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 2 gene</Name>
+      <HarmonizedName>ww_surv_target_2_gene</HarmonizedName>
+      <Description>The name of the gene quantified for the the surveillance target specified in 'ww_surv_target_2', e.g., ORF1-ORF2 junction</Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 2 known present</Name>
+      <HarmonizedName>ww_surv_target_2_known_present</HarmonizedName>
+      <Description>Is genetic material of the surveillance target(s) known to the submitter to be present in this wastewater sample? Presence defined as microbiological evidence of the target organism in the wastewater sample, such as genetic- or culture-based detection.</Description>
+      <Format type="select">
+        <Description>no | yes</Description>
+        <Choice/>
+        <Choice>no</Choice>
+        <Choice>yes</Choice>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater surveillance target 2 protocol</Name>
+      <HarmonizedName>ww_surv_target_2_protocol</HarmonizedName>
+      <Description>The protocol used to quantify 'ww_surv_target_2'. Specify a reference, website, or brief description. </Description>
+      <Format>
+        <Description>{text}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater temperature</Name>
+      <HarmonizedName>ww_temperature</HarmonizedName>
+      <Description>Temperature of the wastewater sample at the time of sampling in Celsius, e.g., 25.</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+    <Attribute use="optional">
+      <Name>wastewater total suspended solids</Name>
+      <HarmonizedName>ww_total_suspended_solids</HarmonizedName>
+      <Description>Total concentration of solids in raw wastewater influent sample including a wide variety of material, such as silt, decaying plant and animal matter in milligrams per liter, e.g., 500.</Description>
+      <Format>
+        <Description>{integer}</Description>
+      </Format>
+    </Attribute>
+  </Package>
+</BioSamplePackages>
