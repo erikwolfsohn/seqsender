@@ -345,10 +345,10 @@ schema = DataFrameSchema(
 			checks=[
 				Check.str_matches(r"(?i)(\W|^)(male|m|female|f|unknown|missing)(\W|$)"),
 			],
-			nullable=False,
+			nullable=True,
 			unique=False,
 			coerce=False,
-			required=True,
+			required=False,
 			description="Biological sex. Should be \"Female\", \"Male\", or \"Unknown\".",
 			title="sex",
 		),

@@ -31,10 +31,10 @@ schema = DataFrameSchema(
 			checks=[
 				Check.str_matches(r"^(?!\s*$).+"),
 			],
-			nullable=False,
+			nullable=True,
 			unique=False,
 			coerce=False,
-			required=True,
+			required=False,
 			description="\"Original\" if the sample was sequenced directly from swabs, otherwise add the name of the cell line (e.g., \"Vero\") used to culture the specimen.",
 			title="passage",
 		),

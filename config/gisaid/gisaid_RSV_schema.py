@@ -31,10 +31,10 @@ schema = DataFrameSchema(
 			checks=[
 				Check.str_matches(r"^(?!\s*$).+"),
 			],
-			nullable=False,
+			nullable=True,
 			unique=False,
 			coerce=False,
-			required=True,
+			required=False,
 			description="For RSV, there are two subtypes, \"RSV-A\" or \"RSV-B\".",
 			title="virus subtype",
 		),
